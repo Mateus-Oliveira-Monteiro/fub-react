@@ -7,12 +7,12 @@ function Vagas() {
     return (
         <>
         <div className="header">
-                    <Link to="/"><a><img src={logo} alt="logo" className="logo" /></a></Link>
+                    <Link to="/"><img src={logo} alt="logo" className="logo" /></Link>
                     <nav>
                         <ul>
-                            <li><Link to="/vagas"><a>Vagas</a></Link></li>
-                            <li><Link to="/notificacoes"><a>Notificações</a></Link></li>
-                            <li><Link to="/perfil"><a>Meu Perfil</a></Link></li>
+                            <li><Link to="/vagas">Vagas</Link></li>
+                            <li><Link to="/notificacoes">Notificações</Link></li>
+                            <li><Link to="/perfil">Meu Perfil</Link></li>
                         </ul>
                     </nav>
                 </div>
@@ -52,7 +52,7 @@ function Vagas() {
                 <div className="preco_da_vaga">
                     <strong>20.00</strong>
                 </div>
-                    <a href="mais_info.html" className="saber_mais">+</a></div>
+                    <Link to="/mais_info"  className="saber_mais">+</Link></div>
             <div className="vaga">
                 <div className="desc_da_vaga">
                     <strong>Cortar grama</strong>
@@ -63,7 +63,7 @@ function Vagas() {
                 <div className="preco_da_vaga">
                     <strong>20.00</strong>
                 </div>
-                    <a href="mais_info.html" className="saber_mais">+</a>
+                    <Link to="/mais_info"  className="saber_mais">+</Link>
             </div>
             <div className="vaga">
                 <div className="desc_da_vaga">
@@ -75,7 +75,7 @@ function Vagas() {
                 <div className="preco_da_vaga">
                     <strong>20.00</strong>
                 </div>
-                    <a href="mais_info.html" className="saber_mais">+</a>
+                    <Link to="/mais_info"  className="saber_mais">+</Link>
             </div>
             <div className="vaga">
                 <div className="desc_da_vaga">
@@ -87,7 +87,7 @@ function Vagas() {
                 <div className="preco_da_vaga">
                     <strong>20.00</strong>
                 </div>
-                    <a href="mais_info.html" className="saber_mais">+</a>
+                    <Link to="/mais_info"  className="saber_mais">+</Link>
             </div>
             <div className="vaga">
                 <div className="desc_da_vaga">
@@ -99,7 +99,7 @@ function Vagas() {
                 <div className="preco_da_vaga">
                     <strong>20.00</strong>
                 </div>
-                    <a href="mais_info.html" className="saber_mais">+</a>
+                    <Link to="/mais_info"  className="saber_mais">+</Link>
             </div>
             <div className="vaga">
                 <div className="desc_da_vaga">
@@ -111,7 +111,7 @@ function Vagas() {
                 <div className="preco_da_vaga">
                     <strong>20.00</strong>
                 </div>
-                    <a href="mais_info.html" className="saber_mais">+</a>
+                    <Link to="/mais_info"  className="saber_mais">+</Link>
             </div>
             <div className="vaga">
                 <div className="desc_da_vaga">
@@ -123,7 +123,7 @@ function Vagas() {
                 <div className="preco_da_vaga">
                     <strong>20.00</strong>
                 </div>
-                    <a href="mais_info.html" className="saber_mais">+</a>
+                    <Link to="/mais_info"  className="saber_mais">+</Link>
             </div>
             <div className="vaga">
                 <div className="desc_da_vaga">
@@ -135,7 +135,7 @@ function Vagas() {
                 <div className="preco_da_vaga">
                     <strong>20.00</strong>
                 </div>
-                    <a href="mais_info.html" className="saber_mais">+</a>
+                    <Link to="/mais_info"  className="saber_mais">+</Link>
             </div>
             <div className="vaga">
                 <div className="desc_da_vaga">
@@ -147,7 +147,7 @@ function Vagas() {
                 <div className="preco_da_vaga">
                     <strong>20.00</strong>
                 </div>
-                    <a href="mais_info.html" className="saber_mais">+</a>
+                    <Link to="/mais_info"  className="saber_mais">+</Link>
             </div>
             <div className="vaga">
                 <div className="desc_da_vaga">
@@ -159,7 +159,7 @@ function Vagas() {
                 <div className="preco_da_vaga">
                     <strong>20.00</strong>
                 </div>
-                    <a href="mais_info.html" className="saber_mais">+</a>
+                    <Link to = "Mais_info" className="saber_mais">+</Link>
             </div>
         </div>
     </div>

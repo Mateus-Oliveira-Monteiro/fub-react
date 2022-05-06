@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom"
-import "./mais_info";
+import "./mais_info.css";
 import logo from '../../Assets/Images/logo.png';
 import img13 from '../../Assets/Images/13.png';
 

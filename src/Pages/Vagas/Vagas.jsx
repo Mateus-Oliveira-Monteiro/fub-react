@@ -6,16 +6,6 @@ import logo from '../../Assets/Images/logo.png'
 function Vagas() {
     return (
         <>
-        <div className="header">
-                    <Link to="/"><img src={logo} alt="logo" className="logo" /></Link>
-                    <nav>
-                        <ul>
-                            <li><Link to="/vagas">Vagas</Link></li>
-                            <li><Link to="/notificacoes">Notificações</Link></li>
-                            <li><Link to="/perfil">Meu Perfil</Link></li>
-                        </ul>
-                    </nav>
-                </div>
     <div className="bloco1-vagas">
         <strong>BICOS DISPONÍVEIS</strong>
     </div>

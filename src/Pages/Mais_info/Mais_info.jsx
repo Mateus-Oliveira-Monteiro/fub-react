@@ -8,17 +8,7 @@ import img13 from '../../Assets/Images/13.png';
 function Mais_info() {
     return(
         <>
-        <div className="header-mais-info">
-                    <Link to="/"><a><img src={logo} alt="logo" className="logo" /></a></Link>
-                    <nav>
-                        <ul>
-                            <li><Link to="/vagas"><a>Vagas</a></Link></li>
-                            <li><Link to="/notificacoes"><a>Notificações</a></Link></li>
-                            <li><Link to="/perfil"><a>Meu Perfil</a></Link></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="bloco1-mais-info">
+            <div class="bloco1-mais-info">
             <strong>BICOS DISPONÍVEIS</strong>
         </div>
         <div class="bloco2-mais-info">
@@ -40,7 +30,7 @@ function Mais_info() {
                     de mão de obra, pois recentemente quebrei
                     as pernas, e estou morando sozinho</p>
         </div>
-            <a href="/Canditadar" class="botao"><strong>Candidatar-se</strong></a>
+            <Link to="/candidatar" class="botao"><strong>Candidatar-se</strong></Link>
     </div>
     <div class="bloco4-mais-info">
         <div class="contratante">

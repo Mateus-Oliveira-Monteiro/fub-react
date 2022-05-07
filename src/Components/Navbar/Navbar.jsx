@@ -12,7 +12,7 @@ function Navbar() {
                 <ul>
                     <li><Link to="/vagas">Vagas</Link></li>
                     <li><Link to="/notificacoes">Notificações</Link></li>
-                    <li><Link to="/login">Meu Perfil</Link></li>
+                    <li><Link to="/perfil">Meu Perfil</Link></li>
                 </ul>
             </nav>
         </div>

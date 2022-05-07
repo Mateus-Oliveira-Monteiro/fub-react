@@ -8,16 +8,6 @@ import perfil from '../../Assets/Images/perfil.png';
 function Notificacoes() {
     return(
         <>
-        <div classNameName="header">
-                    <Link to="/"><a><img src={logo} alt="logo" className="logo" /></a></Link>
-                    <nav>
-                        <ul>
-                            <li><Link to="/vagas"><a>Vagas</a></Link></li>
-                            <li><Link to="/notificacoes"><a>Notificações</a></Link></li>
-                            <li><Link to="/perfil"><a>Meu Perfil</a></Link></li>
-                        </ul>
-                    </nav>
-        </div>
     <div className="bloco1-notifica">
         <h1>NOTIFICAÇÕES</h1>
     </div>

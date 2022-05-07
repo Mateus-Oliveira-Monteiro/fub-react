@@ -7,16 +7,6 @@ import image14 from '../../Assets/Images/14.png';
 function Perfil() {
     return(
         <>
-        <div className="header-perfil">
-                    <Link to="/"><a><img src={logo} alt="logo" className="logo" /></a></Link>
-                    <nav>
-                        <ul>
-                            <li><Link to="/vagas"><a>Vagas</a></Link></li>
-                            <li><Link to="/notificacoes"><a>Notificações</a></Link></li>
-                            <li><Link to="/perfil"><a>Meu Perfil</a></Link></li>
-                        </ul>
-                    </nav>
-                </div>
                 <div className="fundo-perfil">
         <div className="bloco1-perfil">
             <div className="perfil">

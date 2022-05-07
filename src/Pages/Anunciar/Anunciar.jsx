@@ -9,16 +9,6 @@ import img10 from '../../Assets/Images/10.png';
 function Anunciar (){
     return (
         <>
-        <div className="header">
-                    <Link to="/"><a><img src={logo} alt="logo" className="logo" /></a></Link>
-                    <nav>
-                        <ul>
-                            <li><Link to="/vagas"><a>Vagas</a></Link></li>
-                            <li><Link to="/notificacoes"><a>Notificações</a></Link></li>
-                            <li><Link to="/perfil"><a>Meu Perfil</a></Link></li>
-                        </ul>
-                    </nav>
-                </div>
         <div className="bloco1-anunciar">
         <strong>BICOS DISPONÍVEIS</strong>
     </div>

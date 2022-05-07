@@ -1,0 +1,1140 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header-contratado{
+    background-color: white;
+    height: 80px;
+    float: left;
+    width: 100%;
+}
+.logo{
+    float: left;
+    width: 150px;
+    margin-left: 17px;
+    margin-top: 15px;
+}
+nav{
+    float: right;
+    text-align: center;
+    width: 50%;
+    margin-bottom: 5px;
+    text-decoration: none;
+    height: 100%;
+}
+nav li {
+    display: inline;
+}
+nav ul li a{
+    margin-left: 3%;
+}
+nav a:link, :visited{
+    color: rgba(147, 85, 218, 0.924);
+    font-size: 32px;
+    display: inline-block;
+    text-decoration: none;
+}
+nav a:hover{
+    color: rgb(240, 169, 38);
+    background-color: white;
+}
+li{
+    margin-left: 5%;
+    color: rgba(147, 85, 218, 0.924);
+    background-color: white;
+}
+.bloco1-contratado{
+    height: auto;
+    float: left;
+    width: 97%;
+    margin-left: 1.5%;
+    background-color: rgba(198, 158, 245, 0.924);
+    text-align: center;
+    border-radius: 20px;
+}
+.bloco1-contratado strong{
+    font-size: 32px;
+    color: rgba(147, 85, 218, 0.924);
+}
+.bloco2-contratado{
+    width: 97%;
+    float: left;
+    margin-left: 1.5%;
+    height: auto;
+    background-color: rgb(253, 253, 226);
+    margin-top: 25px;
+}
+.esquerda{
+    width: 50%;
+    height: auto;
+    float: left;
+}
+.vaga-contratado{
+    float: left;
+    margin-left: 5%;
+    height: auto;
+    width: 50%;
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.vaga-contratado strong{
+    font-size: 30px;
+    color: rgba(147, 85, 218, 0.924);
+}
+.salario-contratado{
+    width: 35%;
+    margin-left: 12%;
+    text-align: center;
+    color: rgba(147, 85, 218, 0.924);
+    font-size: 20px;
+    float: left;
+    margin-bottom: 20px;
+    margin-top: 100px;
+}
+.salario-contratado strong{
+    font-size: 30px;
+    color: rgba(147, 85, 218, 0.924);
+}
+.direita{
+    width: 49%;
+    height: auto;
+    float: right;
+}
+.direita_bloco{
+    float: right;
+    width: 80%;
+    height: auto;
+}
+.perfil{
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+    height: auto;
+}
+.perfil img{
+    float: left;
+    height: 115px;
+    width: 115px;
+    border-radius: 50%;
+}
+.nome-contratado{
+    float: left;
+    width: 40%;
+    height: auto;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+.direita_bloco strong{
+    font-size: 22px;
+    color: rgba(147, 85, 218, 0.924)
+}
+.classificacao{
+    float: left;
+    width: 40%;
+    height: 30px;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+.local{
+    float: left;
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+}
+.local img{
+    height: 55px;
+    width: 55px;
+    float: left;
+}
+.localizacao-contratado{
+    float: left;
+    width: 60%;
+    height: auto;
+    margin-left: 20px;
+}
+.telefone{
+    width: 100%;
+    float: left;
+    height: auto;
+    margin-top: 15px;
+}
+.numero{
+    float: left;
+    width: 60%;
+    height: auto;
+    margin-top: 22px;
+    margin-left: 20px;
+}
+.telefone img{
+    height: 55px;
+    width: 55px;
+    float: left;
+}
+.whatsapp{
+    width: 100%;
+    height: auto;
+    float: left;
+    margin-top: 15px;
+}
+.whatsapp img{
+    height: 55px;
+    width: 55px;
+    float: left;
+}
+.entre_em_contato{
+    width: 60%;
+    height: auto;
+    float: left;
+    margin-left: 20px;
+}
+.bloco3-contratado{
+    float: left;
+    width: 50%;
+    margin-left: 25%;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.bloco3-contratado img{
+    float: left;
+    height: 220px;
+    width: 200px;
+    margin-left: 70px;
+}
+.recado{
+    float: right;
+    width: 60%;
+    height: auto;
+}
+.titulo-contratado{
+    float: left;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+.titulo-contratado strong{
+    color: rgba(147, 85, 218, 0.924);
+    font-size: 35px;
+}
+.texto-contratado{
+    float: left;
+    color: rgba(147, 85, 218, 0.924);
+    font-size: 22px;
+    margin-top: 15px;
+}
+@media (max-width:1800px){
+    ul{
+        padding-top: 4px;
+    }
+}
+@media (max-width:1750px){
+    
+}
+@media (max-width:1700px){
+
+}
+@media (max-width:1650px){
+    
+}
+@media (max-width:1600px){
+    nav a:link, :visited{
+        font-size: 30px;
+    }
+    .logo{
+        width: 135px;
+    }
+    ul{
+        padding-top: 5px;
+    }
+}
+@media (max-width:1550px){
+    
+}
+@media (max-width:1500px){
+    .logo{
+        width: 150px;
+    }
+    .bloco3-contratado img{
+        margin-left: 50px;
+    }
+    .titulo-contratado strong{
+        font-size: 33px;
+    }
+    .texto-contratado{
+        font-size: 20px;
+    }
+}
+@media (max-width:1450px){
+    .titulo-contratado strong{
+        font-size: 32px;
+    }
+}
+@media (max-width:1400px){
+    .bloco3-contratado img{
+        margin-left: 30px;
+    }
+    .titulo-contratado strong{
+        font-size: 31px;
+    }
+    .texto-contratado{
+        font-size: 19px;
+    }
+    .salario-contratado{
+        font-size:18px
+    }
+    .salario-contratado strong{
+        font-size: 28px;
+    }
+    .direita_bloco strong{
+        font-size: 20px;
+    }
+}
+@media (max-width:1350px){
+    .bloco3-contratado img{
+        margin-left: 30px;
+    }
+    .titulo-contratado strong{
+        font-size: 30px;
+    }
+    .texto-contratado{
+        font-size: 19px;
+    }
+    .salario-contratado{
+        font-size:18px
+    }
+    .salario-contratado strong{
+        font-size: 28px;
+    }
+    .direita_bloco strong{
+        font-size: 19px;
+    }
+    .bloco3-contratado img{
+        width: 180px;
+        height: 200px;
+    }
+    .local{
+        margin-top: 20px;
+    }
+    .local img, .telefone img, .whatsapp img{
+        width: 50px;
+        height: 50px;
+    }
+    .numero{
+        margin-top: 18px;
+    }
+}
+@media (max-width:1300px){
+    .logo{
+        width: 125px;
+    }
+    nav a:link, :visited{
+        font-size: 28px;
+    }
+    .bloco3-contratado img{
+        margin-left: 30px;
+    }
+    .titulo-contratado strong{
+        font-size: 28px;
+    }
+    .texto-contratado{
+        font-size: 18px;
+    }
+    .salario-contratado{
+        font-size:18px;
+        margin-top: 60px;
+    }
+    .salario-contratado strong{
+        font-size: 28px;
+    }
+    .direita_bloco strong{
+        font-size: 18px;
+    }
+    .bloco3-contratado img{
+        width: 170px;
+        height: 190px;
+    }
+    .local{
+        margin-top: 18px;
+    }
+    .local img, .telefone img, .whatsapp img{
+        width: 50px;
+        height: 50px;
+    }
+    .numero{
+        margin-top: 15px;
+    }
+    .perfil img{
+        width: 105px;
+        height: 105px;
+    }
+    .classificacao{
+        height: 25px;
+    }
+}
+@media (max-width:1250px){
+    .bloco3-contratado img{
+        margin-left: 30px;
+    }
+    .titulo-contratado strong{
+        font-size: 26px;
+    }
+    .texto-contratado{
+        font-size: 18px;
+    }
+    .salario-contratado{
+        font-size:18px;
+        margin-top: 60px;
+    }
+    .salario-contratado strong{
+        font-size: 26px;
+    }
+    .direita_bloco strong{
+        font-size: 18px;
+    }
+    .bloco3-contratado img{
+        width: 170px;
+        height: 190px;
+    }
+    .local{
+        margin-top: 18px;
+    }
+    .local img, .telefone img, .whatsapp img{
+        width: 50px;
+        height: 50px;
+    }
+    .numero{
+        margin-top: 15px;
+    }
+    .perfil img{
+        width: 105px;
+        height: 105px;
+    }
+    .classificacao{
+        height: 25px;
+    }
+}
+@media (max-width:1200px){
+    .bloco3-contratado img{
+        margin-left: 30px;
+    }
+    .titulo-contratado strong{
+        font-size: 26px;
+    }
+    .texto-contratado{
+        font-size: 18px;
+    }
+    .salario-contratado{
+        font-size:18px;
+        margin-top: 60px;
+    }
+    .salario-contratado strong{
+        font-size: 26px;
+    }
+    .direita_bloco strong{
+        font-size: 18px;
+    }
+    .bloco3-contratado img{
+        width: 170px;
+        height: 190px;
+    }
+    .local{
+        margin-top: 18px;
+    }
+    .local img, .telefone img, .whatsapp img{
+        width: 50px;
+        height: 50px;
+    }
+    .numero{
+        margin-top: 15px;
+    }
+    .perfil img{
+        width: 105px;
+        height: 105px;
+    }
+    .classificacao{
+        height: 25px;
+    }
+}
+@media (max-width:1150px){
+    .bloco3-contratado img{
+        margin-left: 30px;
+    }
+    .titulo-contratado strong{
+        font-size: 25px;
+    }
+    .texto-contratado{
+        font-size: 17px;
+    }
+    .salario-contratado{
+        font-size: 18px;
+        margin-top: 70px;
+    }
+    .salario-contratado strong{
+        font-size: 26px;
+    }
+    .direita_bloco strong{
+        font-size: 18px;
+    }
+    .bloco3-contratado img{
+        width: 170px;
+        height: 190px;
+    }
+    .local{
+        margin-top: 18px;
+    }
+    .local img, .telefone img, .whatsapp img{
+        width: 50px;
+        height: 50px;
+    }
+    .numero{
+        margin-top: 15px;
+    }
+    .perfil img{
+        width: 105px;
+        height: 105px;
+    }
+    .classificacao{
+        height: 25px;
+    }
+    .bloco3-contratado{
+        width: 540px;
+        margin-left: 250px;
+    }
+    .vaga-contratado{
+        font-size: 16px;
+    }
+    .vaga-contratado strong{
+        font-size: 28px;
+    }
+}
+
+@media (max-width:1100px){
+    nav a:link, :visited{
+        font-size: 25px;
+    }
+    .logo{
+        width: 120px;
+    }
+    ul{
+        padding-top: 8px;
+    }
+    .bloco3-contratado img{
+        margin-left: 25px;
+    }
+    .titulo-contratado strong{
+        font-size: 25px;
+    }
+    .texto-contratado{
+        font-size: 17px;
+    }
+    .salario-contratado{
+        font-size: 18px;
+        margin-top: 70px;
+    }
+    .salario-contratado strong{
+        font-size: 26px;
+    }
+    .direita_bloco strong{
+        font-size: 17px;
+    }
+    .bloco3-contratado img{
+        width: 170px;
+        height: 190px;
+    }
+    .local{
+        margin-top: 18px;
+    }
+    .local img, .telefone img, .whatsapp img{
+        width: 50px;
+        height: 50px;
+    }
+    .numero{
+        margin-top: 15px;
+    }
+    .perfil img{
+        width: 95px;
+        height: 95px;
+    }
+    .classificacao{
+        height: 25px;
+    }
+    .bloco3-contratado{
+        width: 540px;
+        margin-left: 250px;
+    }
+    .vaga-contratado{
+        font-size: 16px;
+        width: 60%;
+    }
+    .vaga-contratado strong{
+        font-size: 28px;
+    }
+}
+@media (max-width:1050px){
+    .bloco3-contratado img{
+        margin-left: 25px;
+    }
+    .titulo-contratado strong{
+        font-size: 25px;
+    }
+    .texto-contratado{
+        font-size: 17px;
+    }
+    .salario-contratado{
+        font-size: 18px;
+        margin-top: 65px;
+    }
+    .salario-contratado strong{
+        font-size: 24px;
+    }
+    .direita_bloco strong{
+        font-size: 17px;
+    }
+    .bloco3-contratado img{
+        width: 170px;
+        height: 190px;
+    }
+    .local{
+        margin-top: 15px;
+    }
+    .local img, .telefone img, .whatsapp img{
+        width: 50px;
+        height: 50px;
+    }
+    .numero{
+        margin-top: 15px;
+    }
+    .perfil img{
+        width: 95px;
+        height: 95px;
+    }
+    .telefone{
+        margin-top: 10px;
+    }
+    .classificacao{
+        height: 25px;
+        margin-top: 10px;
+    }
+    .bloco3-contratado{
+        width: 540px;
+        margin-left: 235px;
+    }
+    .vaga-contratado{
+        font-size: 16px;
+        width: 60%;
+    }
+    .vaga-contratado strong{
+        font-size: 28px;
+    }
+}
+@media (max-width:1000px){
+    nav a:link, :visited{
+        font-size: 23px;
+    }
+    .logo{
+        width: 120px;
+    }
+    ul{
+        padding-top: 8px;
+        padding-right: 6px;
+    }
+    nav{
+        width: 55%;
+        text-align: right;
+    }
+    .bloco3-contratado img{
+        margin-left: 25px;
+    }
+    .titulo-contratado strong{
+        font-size: 25px;
+    }
+    .texto-contratado{
+        font-size: 17px;
+    }
+    .salario-contratado{
+        font-size: 16px;
+        margin-top: 50px;
+        width: auto;
+    }
+    .salario-contratado strong{
+        font-size: 22px;
+    }
+    .direita_bloco{
+        width: 85%;
+    }
+    .direita_bloco strong{
+        font-size: 17px;
+    }
+    .bloco3-contratado img{
+        width: 170px;
+        height: 190px;
+    }
+    .local{
+        margin-top: 15px;
+    }
+    .local img, .telefone img, .whatsapp img{
+        width: 45px;
+        height: 45px;
+    }
+    .numero{
+        margin-top: 15px;
+    }
+    .perfil img{
+        width: 90px;
+        height: 90px;
+    }
+    .telefone{
+        margin-top: 10px;
+    }
+    .classificacao{
+        height: 25px;
+        margin-top: 10px;
+    }
+    .bloco3-contratado{
+        width: 540px;
+        margin-left: 205px;
+    }
+    .vaga-contratado{
+        font-size: 16px;
+        width: 60%;
+    }
+    .vaga-contratado strong{
+        font-size: 28px;
+    }
+}
+@media (max-width:950px){
+    
+}
+@media (max-width:900px){
+    nav a:link, :visited{
+        font-size: 23px;
+    }
+    ul{
+        padding-top: 8px;
+        padding-right: 10px;
+    }
+    nav{
+        width: 60%;
+        text-align: right;
+    }
+    .bloco3-contratado img{
+        margin-left: 25px;
+    }
+    .titulo-contratado strong{
+        font-size: 25px;
+    }
+    .texto-contratado{
+        font-size: 17px;
+    }
+    .salario-contratado{
+        font-size: 15px;
+        margin-top: 40px;
+        width: auto;
+    }
+    .salario-contratado strong{
+        font-size: 21px;
+    }
+    .direita_bloco{
+        width: 85%;
+    }
+    .direita_bloco strong{
+        font-size: 16px;
+    }
+    .bloco3-contratado img{
+        width: 170px;
+        height: 190px;
+    }
+    .local{
+        margin-top: 15px;
+    }
+    .local img, .telefone img, .whatsapp img{
+        width: 40px;
+        height: 40px;
+    }
+    .numero{
+        margin-top: 15px;
+    }
+    .perfil img{
+        width: 90px;
+        height: 90px;
+    }
+    .telefone{
+        margin-top: 10px;
+    }
+    .classificacao{
+        height: 25px;
+        margin-top: 10px;
+    }
+    .bloco3-contratado{
+        width: 540px;
+        margin-left: 120px;
+    }
+    .vaga-contratado{
+        font-size: 15px;
+        width: 65%;
+    }
+    .vaga-contratado strong{
+        font-size: 26px;
+    }
+    .entre_em_contato{
+        width: 70%;
+    }
+    .entre_em_contato, .numero, .localizacao-contratado{
+        margin-left: 15px;
+    }
+}
+@media (max-width:850px){
+    
+}
+@media (max-width:800px){
+    nav a:link, :visited{
+        font-size: 20px;
+    }
+    .logo{
+        width: 120px;
+    }
+    ul{
+        padding-top: 10px;
+        padding-right: 10px;
+    }
+    nav{
+        width: 60%;
+        text-align: right;
+    }
+    .header-contratado{
+        height: 70px;
+    }
+    .bloco3-contratado img{
+        margin-left: 25px;
+    }
+    .titulo-contratado strong{
+        font-size: 25px;
+    }
+    .texto-contratado{
+        font-size: 16px;
+    }
+    .salario-contratado{
+        font-size: 15px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        width: auto;
+    }
+    .salario-contratado strong{
+        font-size: 21px;
+    }
+    .direita_bloco{
+        width: 95%;
+    }
+    .direita_bloco strong{
+        font-size: 15px;
+    }
+    .bloco3-contratado img{
+        width: 160px;
+        height: 180px;
+    }
+    .local{
+        margin-top: 15px;
+    }
+    .local img, .telefone img, .whatsapp img{
+        width: 40px;
+        height: 40px;
+    }
+    .numero{
+        margin-top: 15px;
+    }
+    .perfil img{
+        width: 90px;
+        height: 90px;
+    }
+    .telefone{
+        margin-top: 10px;
+    }
+    .classificacao{
+        height: 25px;
+        margin-top: 10px;
+    }
+    .bloco3-contratado{
+        width: 540px;
+        margin-left: 60px;
+    }
+    .vaga-contratado{
+        font-size: 15px;
+        width: 65%;
+    }
+    .vaga-contratado strong{
+        font-size: 26px;
+    }
+    .entre_em_contato{
+        width: 70%;
+    }
+    .entre_em_contato, .numero, .localizacao-contratado{
+        margin-left: 15px;
+    }
+}
+@media (max-width:750px){
+    
+}
+@media (max-width:700px){
+    nav a:link, :visited{
+        font-size: 18px;
+    }
+    .logo{
+        width: 115px;
+    }
+    ul{
+        padding-top: 10px;
+        padding-right: 20px;
+    }
+    nav{
+        width: 70%;
+        text-align: right;
+    }
+    .header-contratado{
+        height: 70px;
+    }
+    .bloco3-contratado img{
+        margin-left: 25px;
+    }
+    .titulo-contratado strong{
+        font-size: 22px;
+    }
+    .texto-contratado{
+        font-size: 16px;
+    }
+    .salario-contratado{
+        font-size: 15px;
+        margin-top: 30px;
+        width: auto;
+        margin-bottom: 10px;
+    }
+    .salario-contratado strong{
+        font-size: 21px;
+    }
+    .direita_bloco{
+        width: 95%;
+    }
+    .direita_bloco strong{
+        font-size: 14px;
+    }
+    .bloco3-contratado img{
+        width: 150px;
+        height: 170px;
+    }
+    .local{
+        margin-top: 15px;
+    }
+    .local img, .telefone img, .whatsapp img{
+        width: 40px;
+        height: 40px;
+    }
+    .numero{
+        margin-top: 15px;
+    }
+    .perfil img{
+        width: 90px;
+        height: 90px;
+    }
+    .telefone{
+        margin-top: 10px;
+    }
+    .classificacao{
+        height: 25px;
+        margin-top: 10px;
+    }
+    .bloco3-contratado{
+        width: 540px;
+        margin-left: 25px;
+    }
+    .vaga-contratado{
+        font-size: 15px;
+        width: 80%;
+        margin-top: 20px;
+    }
+    .vaga-contratado strong{
+        font-size: 26px;
+    }
+    .entre_em_contato{
+        width: 70%;
+    }
+    .entre_em_contato, .numero, .localizacao-contratado{
+        margin-left: 15px;
+    }
+}
+@media (max-width:650px){
+
+}
+@media (max-width:600px){
+    nav a:link, :visited{
+        font-size: 15px;
+    }
+    .logo{
+        width: 105px;
+    }
+    ul{
+        padding-top: 10px;
+    }
+    nav{
+        width: 70%;
+        text-align: center;
+    }
+    .header-contratado{
+        height: 70px;
+    }
+    .bloco3-contratado img{
+        margin-left: 25px;
+    }
+    .titulo-contratado strong{
+        font-size: 22px;
+    }
+    .texto-contratado{
+        font-size: 16px;
+    }
+    .salario-contratado{
+        font-size: 15px;
+        margin-top: 10px;
+        width: auto;
+        margin-bottom: 10px;
+    }
+    .salario-contratado strong{
+        font-size: 21px;
+    }
+    .direita_bloco{
+        width: 95%;
+    }
+    .direita_bloco strong{
+        font-size: 12px;
+    }
+    .bloco3-contratado img{
+        width: 150px;
+        height: 170px;
+    }
+    .local{
+        margin-top: 15px;
+    }
+    .local img, .telefone img, .whatsapp img{
+        width: 35px;
+        height: 35px;
+    }
+    .numero{
+        margin-top: 15px;
+    }
+    .perfil img{
+        width: 85px;
+        height: 85px;
+    }
+    .telefone{
+        margin-top: 10px;
+    }
+    .classificacao{
+        height: 25px;
+        margin-top: 10px;
+    }
+    .bloco3-contratado{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .vaga-contratado{
+        font-size: 14px;
+        width: 80%;
+        margin-top: 20px;
+    }
+    .vaga-contratado strong{
+        font-size: 24px;
+    }
+    .entre_em_contato{
+        width: 70%;
+    }
+    .entre_em_contato, .numero, .localizacao-contratado{
+        margin-left: 15px;
+    }
+}
+@media (max-width:550px){
+    nav a:link, :visited{
+        font-size: 15px;
+    }
+}
+@media (max-width:500px){
+    nav a:link, :visited{
+        font-size: 15px;
+    }
+    .logo{
+        width: 105px;
+    }
+    ul{
+        padding-top: 10px;
+    }
+    nav{
+        width: 70%;
+        text-align: center;
+    }
+    .header-contratado{
+        height: 70px;
+    }
+    .bloco3-contratado img{
+        margin-left: 25px;
+    }
+    .titulo-contratado strong{
+        font-size: 22px;
+    }
+    .texto-contratado{
+        font-size: 16px;
+    }
+    .salario-contratado{
+        font-size: 15px;
+        margin-top: 10px;
+        width: auto;
+        margin-bottom: 10px;
+    }
+    .salario-contratado strong{
+        font-size: 21px;
+    }
+    .direita_bloco{
+        width: 95%;
+    }
+    .direita_bloco strong{
+        font-size: 12px;
+    }
+    .bloco3-contratado img{
+        width: 150px;
+        height: 170px;
+    }
+    .local{
+        margin-top: 15px;
+    }
+    .local img, .telefone img, .whatsapp img{
+        width: 35px;
+        height: 35px;
+    }
+    .numero{
+        margin-top: 15px;
+    }
+    .perfil img{
+        width: 85px;
+        height: 85px;
+    }
+    .telefone{
+        margin-top: 10px;
+    }
+    .classificacao{
+        height: 25px;
+        margin-top: 10px;
+    }
+    .bloco3-contratado{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .vaga-contratado{
+        font-size: 14px;
+        width: 80%;
+        margin-top: 20px;
+    }
+    .vaga-contratado strong{
+        font-size: 24px;
+    }
+    .entre_em_contato{
+        width: 70%;
+    }
+    .entre_em_contato, .numero, .localizacao-contratado{
+        margin-left: 15px;
+    }
+}

@@ -49,7 +49,7 @@ li{
 .carrossel .imagens-home{
     width: 500%;
     animation-name: animacao;
-    animation-duration: 12s;
+    animation-duration: 15s;
     animation-iteration-count: infinite;
     margin-top: 10px;
 }

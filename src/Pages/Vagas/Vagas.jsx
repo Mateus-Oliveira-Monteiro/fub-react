@@ -24,9 +24,9 @@ function Vagas() {
     </div>
 
     <div className="fundo">
-        <a href="anunciar.html" className="anunciar">
+        <Link to ="/anunciar"><a className="anunciar">
             <strong>ANUNCIAR VAGA</strong>
-        </a>
+        </a></Link>
 
         <div className="vagas">
             <div className="informações">

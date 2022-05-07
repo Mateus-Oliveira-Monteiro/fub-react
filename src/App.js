@@ -10,11 +10,13 @@ import Candidatos from './Pages/Candidatos/Candidatos';
 import Contratado from './Pages/Contratado/Contratado';
 import BicosSolicitados from './Pages/BicosSolicitados/BicosSolicitados';
 import Candidatar from './Pages/Candidatar/Candidatar';
+import Navbar from './Components/Navbar/Navbar';
 
 
 function App() {
     return (
       <BrowserRouter>
+        <Navbar />
             <Routes>
                 <Route index element={<Home />}/>
                 <Route path="/vagas" element={<Vagas />}/>

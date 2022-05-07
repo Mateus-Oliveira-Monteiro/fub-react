@@ -8,6 +8,7 @@ import Mais_info from './Pages/Mais_info/Mais_info';
 import Anunciar from './Pages/Anunciar/Anunciar';
 import Candidatos from './Pages/Candidatos/Candidatos';
 import Contratado from './Pages/Contratado/Contratado';
+import BicosSolicitados from './Pages/BicosSolicitados/BicosSolicitados';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
                 <Route path="/anunciar" element={<Anunciar />}/>
                 <Route path="/candidatos" element={<Candidatos />}/>
                 <Route path="/contratado" element={<Contratado />}/>
+                <Route path="/bicos_solicitados" element={<BicosSolicitados />}/>
             </Routes>
       </BrowserRouter>
     );

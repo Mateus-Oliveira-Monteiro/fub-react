@@ -1,0 +1,537 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header{
+    background-color: white;
+    height: 80px;
+    float: left;
+    width: 100%;
+}
+.logo{
+    float: left;
+    width: 150px;
+    margin-left: 17px;
+    margin-top: 15px;
+}
+nav{
+    float: right;
+    text-align: center;
+    width: 50%;
+    margin-bottom: 5px;
+    text-decoration: none;
+    height: 100%;
+}
+nav li {
+    display: inline;
+}
+nav ul li a{
+    margin-left: 3%;
+}
+nav a:link, :visited{
+    color: rgba(147, 85, 218, 0.924);
+    font-size: 32px;
+    display: inline-block;
+    text-decoration: none;
+}
+nav a:hover{
+    color: rgb(240, 169, 38);
+}
+li{
+    margin-left: 5%;
+    color: rgba(147, 85, 218, 0.924);
+}
+.bloco1{
+    width: 98%;
+    margin-left: 1%;
+    float: left;
+    text-align: center;
+    height: auto;
+    background-color: rgba(198, 158, 245, 0.924);
+    color: rgba(147, 85, 218, 0.924);
+    border-radius: 25px;
+    margin-top: 20px;
+}
+.bloco1 strong{
+    font-size: 40px;
+}
+.bloco2{
+    width: 90%;
+    height: 100px;
+    float: left;
+    margin-top: 30px;
+    font-size: 33px;
+    margin-left: 5%;
+}
+.bloco3{
+    width: 80%;
+    float: left;
+    margin-left: 10%;
+    height: auto;
+    background-color: rgb(253, 253, 226);
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+.questionario{
+    float: left;
+    width: 65%;
+    height: 100%;
+}
+.titulo{
+    float: left;
+    width: 70%;
+    height: auto;
+    margin-top: 25px;
+    margin-left: 30px;
+}
+.titulo strong{
+    color: rgb(23, 161, 138);
+    font-size: 35px;
+}
+.pergunta{
+    width: 100%;
+    float: left;
+    height: auto;
+}
+.enunciado{
+    float: left;
+    width: 80%;
+    height: auto;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.enunciado strong{
+    font-size: 28px;
+}
+.alternativas{
+    height: auto;
+    float: left;
+    width: 50%;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    margin-left: 45px;
+}
+.alternativa{
+    float: left;
+    height: auto;
+    width: 51%;
+    font-size: 25px;
+    margin-top: 10px;
+}
+.enviar{
+    float: left;
+    width: 25%;
+    height: 70px;
+    background-color: rgba(147, 85, 218, 0.924);
+    color: white;
+    font-size: 33px;
+    padding-top: 30px;
+    margin-left: 5%;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 280px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+}
+.enviar:hover{
+    background-color: rgb(255, 215, 104);
+}
+@media (max-width:1800px){
+    ul{
+        padding-top: 4px;
+    }
+}
+@media (max-width:1750px){
+    
+}
+@media (max-width:1700px){
+    
+}
+@media (max-width:1650px){
+    
+}
+@media (max-width:1600px){
+    nav a:link, :visited{
+        font-size: 30px;
+    }
+    .logo{
+        width: 135px;
+    }
+    ul{
+        padding-top: 5px;
+    }
+    .enviar{
+        font-size: 30px;
+    }
+    .enunciado strong{
+        font-size: 26px;
+    }
+}
+@media (max-width:1550px){
+
+}
+@media (max-width:1500px){
+    .logo{
+        width: 130px;
+    }
+    .bloco1 strong{
+        font-size: 32px;
+    }
+    .bloco2{
+        font-size: 31px;
+    }
+    .bloco3{
+        margin-bottom: 20px;
+    }
+    .enviar{
+        font-size: 28px;
+    }
+    .enunciado strong{
+        font-size: 24px;
+    }
+}
+@media (max-width:1450px){
+    
+}
+@media (max-width:1400px){
+    nav a:link, :visited{
+        font-size: 28px;
+    }
+    .bloco1 strong{
+        font-size: 32px;
+    }
+    .bloco2{
+        font-size: 29px;
+    }
+    .bloco3{
+        margin-bottom: 20px;
+    }
+    .enviar{
+        font-size: 26px;
+        padding-top: 35px;
+        height: 65px;
+    }
+    .enunciado strong{
+        font-size: 22px;
+    }
+}
+@media (max-width:1350px){
+    
+}
+@media (max-width:1300px){
+    .logo{
+        width: 125px;
+    }
+    nav a:link, :visited{
+        font-size: 28px;
+    }
+    .bloco1 strong{
+        font-size: 32px;
+    }
+    .bloco2{
+        font-size: 27px;
+    }
+    .bloco3{
+        margin-bottom: 20px;
+    }
+    .enviar{
+        font-size: 24px;
+        padding-top: 35px;
+        height: 65px;
+    }
+    .enunciado strong{
+        font-size: 20px;
+    }
+    .alternativa{
+        font-size: 20px;
+    }
+}
+@media (max-width:1250px){
+    
+}
+@media (max-width:1200px){
+    .bloco1 strong{
+        font-size: 32px;
+    }
+    .bloco2{
+        font-size: 25px;
+        height: auto;
+    }
+    .bloco3{
+        margin-bottom: 20px;
+    }
+    .enviar{
+        font-size: 22px;
+        padding-top: 35px;
+        height: 62px;
+    }
+    .enunciado{
+        width: auto;
+    }
+    .enunciado strong{
+        font-size: 20px;
+    }
+    .alternativa{
+        font-size: 20px;
+    }
+}
+@media (max-width:1150px){
+    
+}
+@media (max-width:1100px){
+    nav a:link, :visited{
+        font-size: 25px;
+    }
+    .logo{
+        width: 120px;
+    }
+    ul{
+        padding-top: 8px;
+    }
+    .bloco1 strong{
+        font-size: 32px;
+    }
+    .bloco2{
+        font-size: 23px;
+        height: auto;
+    }
+    .bloco3{
+        margin-bottom: 20px;
+    }
+    .enviar{
+        font-size: 20px;
+        padding-top: 35px;
+        height: 62px;
+    }
+    .enunciado strong{
+        font-size: 20px;
+    }
+    .alternativa{
+        font-size: 20px;
+    }
+}
+@media (max-width:1050px){
+    
+}
+@media (max-width:1000px){
+    nav a:link, :visited{
+        font-size: 23px;
+    }
+    .logo{
+        width: 120px;
+    }
+    ul{
+        padding-top: 8px;
+        padding-right: 6px;
+    }
+    nav{
+        width: 55%;
+        text-align: right;
+    }
+    .bloco1 strong{
+        font-size: 29px;
+    }
+    .bloco2{
+        font-size: 21px;
+        height: auto;
+    }
+    .bloco3{
+        margin-bottom: 20px;
+    }
+    .enviar{
+        font-size: 18px;
+        padding-top: 30px;
+        height: 56px;
+    }
+    .enunciado strong{
+        font-size: 18px;
+    }
+}
+@media (max-width:950px){
+    
+}
+@media (max-width:900px){
+    nav a:link, :visited{
+        font-size: 23px;
+    }
+    ul{
+        padding-top: 8px;
+        padding-right: 10px;
+    }
+    nav{
+        width: 60%;
+        text-align: right;
+    }
+    .bloco1 strong{
+        font-size: 32px;
+    }
+    .bloco2{
+        font-size: 23px;
+        height: auto;
+        width: 85%;
+    }
+    .bloco3{
+        margin-bottom: 20px;
+    }
+    .questionario{
+        width: 75%;
+        margin-left: 12.5%;
+    }
+    .enviar{
+        font-size: 26px;
+        padding-top: 35px;
+        height: 62px;
+        margin-left: 30%;
+        margin-top: 25px;
+        width: 40%;
+    }
+}
+@media (max-width:850px){
+    .enviar{
+        font-size: 25px;
+    }
+    .titulo strong{
+        font-size: 30px;
+    }
+    .alternativas{
+        margin-bottom: 15px;
+    }
+}
+@media (max-width:800px){
+    nav a:link, :visited{
+        font-size: 20px;
+    }
+    .logo{
+        width: 120px;
+    }
+    ul{
+        padding-top: 10px;
+        padding-right: 10px;
+    }
+    nav{
+        width: 60%;
+        text-align: right;
+    }
+    .header{
+        height: 70px;
+    }
+    .bloco2{
+        font-size: 21px;
+    }
+    .enviar{
+        font-size: 24px
+    }
+    .enunciado{
+        margin-left: 0;
+    }
+    .alternativas{
+        margin-left: 15px;
+    }
+}
+@media (max-width:750px){
+    .bloco2{
+        font-size: 20px;
+    }
+    .enviar{
+        font-size: 22px;
+        height: 50px;
+    }
+    .enunciado{
+        font-size: 16px;
+        margin-left: 0;
+    }
+}
+@media (max-width:700px){
+    nav a:link, :visited{
+        font-size: 18px;
+    }
+    .logo{
+        width: 115px;
+    }
+    ul{
+        padding-top: 10px;
+        padding-right: 20px;
+    }
+    nav{
+        width: 70%;
+        text-align: right;
+    }
+    .header{
+        height: 70px;
+    }
+    .bloco2{
+        font-size: 18px;
+    }
+    .enviar{
+        font-size: 22px;
+        width: 50%;
+        margin-left: 25%;
+        height: 50px;
+        padding-top: 25px;
+    }
+    .enunciado{
+        font-size: 16px;
+        margin-left: 0;
+    }
+}
+@media (max-width:650px){
+    .bloco2{
+        font-size: 17px;
+    }
+    .enviar{
+        font-size: 20px
+    }
+}
+@media (max-width:600px){
+    nav a:link, :visited{
+        font-size: 15px;
+    }
+    .logo{
+        width: 105px;
+    }
+    ul{
+        padding-top: 10px;
+    }
+    nav{
+        width: 70%;
+        text-align: center;
+    }
+    .header{
+        height: 70px;
+    }
+    .bloco2{
+        font-size: 15px;
+    }
+    .enviar{
+        font-size: 20px;
+        height: 45px;
+    }
+}
+@media (max-width:550px){
+    nav a:link, :visited{
+        font-size: 15px;
+    }
+    .bloco2{
+        font-size: 14px;
+    }
+    .enviar{
+        font-size: 18px
+    }
+}
+@media (max-width:500){
+    .logo{
+        width: 105px;
+    }
+    ul{
+        padding-top: 10px;
+    }
+    nav{
+        width: 70%;
+        text-align: center;
+    }
+    .bloco2{
+        font-size: 15px;
+    }
+    .enviar{
+        font-size: 17px
+    }
+}

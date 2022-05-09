@@ -9,16 +9,6 @@ import image9 from '../../Assets/Images/9.1.png'
 function Home() {  
     return (
             <>
-                <div className="header">
-                    <Link to="/"><a><img src={logo} alt="logo" className="logo" /></a></Link>
-                    <nav>
-                        <ul>
-                            <li><Link to="/vagas"><a>Vagas</a></Link></li>
-                            <li><Link to="/notificacoes"><a>Notificações</a></Link></li>
-                            <li><Link to="/perfil"><a>Meu Perfil</a></Link></li>
-                        </ul>
-                    </nav>
-                </div>
                 <section className="carrossel">
                     <div className="imagens-home">
                         <img src={image} alt="imagem1" />

@@ -1,0 +1,298 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header-candidatos{
+    background-color: white;
+    height: 80px;
+    float: left;
+    width: 100%;
+}
+.logo{
+    float: left;
+    width: 150px;
+    margin-left: 17px;
+    margin-top: 15px;
+}
+nav{
+    float: right;
+    text-align: center;
+    width: 50%;
+    margin-bottom: 5px;
+    text-decoration: none;
+    height: 100%;
+}
+nav li {
+    display: inline;
+}
+nav ul li a{
+    margin-left: 3%;
+}
+nav a:link, :visited{
+    color: rgba(147, 85, 218, 0.924);
+    font-size: 32px;
+    display: inline-block;
+    text-decoration: none;
+}
+nav a:hover{
+    color: rgb(240, 169, 38);
+}
+li{
+    margin-left: 5%;
+    color: rgba(147, 85, 218, 0.924);
+}
+.bloco1-candidatos{
+    height: 50px;
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    color: white;
+    background-color: rgba(198, 158, 245, 0.924);
+    padding-top: 15px;
+}
+.bloco2-candidatos{
+    width: 100%;
+    height: auto;
+    float: left;
+    border: 1px solid black;
+}
+.bico-candidatos{
+    width: 40%;
+    float: left;
+    height: auto;
+    margin-left: 2%;
+    margin-top: 25px;
+    border: 1px solid black;
+}
+.titulo-candidatos{
+    float: left;
+    height: auto;
+    width: 80%;
+    margin-left: 10%;
+    font-size: 25px;
+    color: rgba(147, 85, 218, 0.924);
+    margin-top: 20px;
+    border: 1px solid black;
+}
+.desc-candidatos{
+    width: 65%;
+    margin-left: 10%;
+    float: left;
+    height: auto;
+    color: black;
+    font-size: 16px;
+    border: 1px solid black;
+    text-align: justify;
+    margin-top: 15px;
+}
+.pagamento-candidatos{
+    float: left;
+    width: 50%;
+    margin-left: 10%;
+    height: auto;
+    border: 1px solid black;
+    margin-top: 25px;
+}
+.salario-candidatos{
+    font-size: 17px;
+    color: rgba(198, 158, 245, 0.924);
+    float: left;
+    width: 40%;
+    border: 1px solid black;
+}
+.valor-candidatos{
+    color: black;
+    font-size: 25px;
+    float: left;
+    height: auto;
+    width: 50%;
+}
+@media (max-width:1800px){
+    ul{
+        padding-top: 4px;
+    }
+}
+@media (max-width: 1750px) {
+}
+@media (max-width: 1700px) {
+}
+@media (max-width: 1650px) {
+    
+}
+@media (max-width:1600px){
+    nav a:link, :visited{
+        font-size: 30px;
+    }
+    .logo{
+        width: 135px;
+    }
+    ul{
+        padding-top: 5px;
+    }
+}
+@media (max-width: 1550px) {
+    
+}
+@media (max-width: 1500px) {
+    .logo{
+        width: 130px;
+    }
+}
+@media (max-width: 1450px) {
+    
+}
+@media (max-width:1400px){
+    nav a:link, :visited{
+        font-size: 28px;
+    }
+}
+@media (max-width: 1350px) {
+    
+}
+@media (max-width: 1300px) {
+    .logo{
+        width: 125px;
+    }
+}
+@media (max-width: 1250px) {
+    
+}
+@media (max-width:1200px){
+    
+}
+@media (max-width: 1150px) {
+    
+}
+@media (max-width: 1100px) {
+    nav a:link, :visited{
+        font-size: 25px;
+    }
+    .logo{
+        width: 120px;
+    }
+    ul{
+        padding-top: 8px;
+    }
+}
+@media (max-width: 1050px) {
+    
+}
+@media (max-width:1000px){
+    nav a:link, :visited{
+        font-size: 23px;
+    }
+    .logo{
+        width: 120px;
+    }
+    ul{
+        padding-top: 8px;
+        padding-right: 6px;
+    }
+    nav{
+        width: 55%;
+        text-align: right;
+    }
+}
+@media (max-width: 950px) {
+    
+}
+@media (max-width: 900px) {
+    nav a:link, :visited{
+        font-size: 23px;
+    }
+    ul{
+        padding-top: 8px;
+        padding-right: 10px;
+    }
+    nav{
+        width: 60%;
+        text-align: right;
+    }
+}
+@media (max-width: 850px) {
+    
+}
+@media (max-width:800px){
+    nav a:link, :visited{
+        font-size: 20px;
+    }
+    .logo{
+        width: 120px;
+    }
+    ul{
+        padding-top: 10px;
+        padding-right: 10px;
+    }
+    nav{
+        width: 60%;
+        text-align: right;
+    }
+    .header-candidatos{
+        height: 70px;
+    }
+}
+@media (max-width: 750px) {
+
+}
+@media (max-width: 700px) {
+    nav a:link, :visited{
+        font-size: 18px;
+    }
+    .logo{
+        width: 115px;
+    }
+    ul{
+        padding-top: 10px;
+        padding-right: 20px;
+    }
+    nav{
+        width: 70%;
+        text-align: right;
+    }
+    .header-candidatos{
+        height: 70px;
+    }
+}
+@media (max-width: 650px) {
+}
+@media (max-width:600px){
+    nav a:link, :visited{
+        font-size: 15px;
+    }
+    .logo{
+        width: 105px;
+    }
+    ul{
+        padding-top: 10px;
+    }
+    nav{
+        width: 70%;
+        text-align: center;
+    }
+    .header-candidatos{
+        height: 70px;
+    }
+}
+@media (max-width: 550px) {
+    nav a:link, :visited{
+        font-size: 15px;
+    }
+}
+@media (max-width: 500px) {
+    nav a:link, :visited{
+        font-size: 15px;
+    }
+    .logo{
+        width: 105px;
+    }
+    ul{
+        padding-top: 10px;
+    }
+    nav{
+        width: 70%;
+        text-align: center;
+    }
+    .header-candidatos{
+        height: 70px;
+    }
+}

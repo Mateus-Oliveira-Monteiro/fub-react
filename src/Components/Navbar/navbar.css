@@ -3,9 +3,10 @@ body{
 }
 .header{
     background-color: white;
-    height: 80px;
+    height: 67px;
     float: left;
     width: 100%;
+    border: 0;
 }
 .logo{
     float: left;

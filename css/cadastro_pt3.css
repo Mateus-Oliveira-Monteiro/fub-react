@@ -70,7 +70,6 @@ li{
     float: left;
     margin-left: 6%;
     height: auto;
-    border: 1px solid black;
 }
 .formulario{
     float: left;
@@ -85,19 +84,8 @@ li{
     margin-left: 5%;
     margin-top: 20px;
     float: left;
-    font-size: 25px;
+    font-size: 28px;
     color: rgba(147, 85, 218, 0.924)
-}
-.formulario input{
-    height: 50px;
-    font-size: 22px;
-    width: 80%;
-    border-radius: 10px;
-    border: white;
-    margin-top: 10px;
-    float: left;
-    padding-left: 10px;
-    margin-left: 5%;
 }
 .bloco1 a{
     height: 40px;
@@ -128,7 +116,7 @@ li{
     padding-left: 15px;
 }
 .formulario textarea{
-    height: 200px;
+    height: 500px;
     font-size: 22px;
     margin-left: 5%;
     width: 80%;
@@ -194,7 +182,9 @@ li{
     }
 }
 @media (max-width: 1250px) {
-    
+    .bloco1 a{
+        margin-top: 50px;
+    }
 }
 @media (max-width:1200px){
 }
@@ -213,7 +203,9 @@ li{
     }
 }
 @media (max-width: 1050px) {
-    
+    .bloco1 a{
+        margin-top: 80px;
+    }
 }
 @media (max-width:1000px){
     nav a:link, :visited{
@@ -230,6 +222,7 @@ li{
         width: 55%;
         text-align: right;
     }
+    
 }
 @media (max-width: 950px) {
     
@@ -246,9 +239,21 @@ li{
         width: 60%;
         text-align: right;
     }
+    .bloco1 a{
+        margin-top: 100px;
+    }
+    
 }
 @media (max-width: 850px) {
-    
+    .bloco1{
+        width: 75%;
+        margin-left: 12.5%;
+    }
+    .bloco2{
+        width: 75%;
+        margin-left: 12.5%;
+        margin-bottom: 25px;
+    }
 }
 @media (max-width:800px){
     nav a:link, :visited{
@@ -268,6 +273,7 @@ li{
     .header{
         height: 70px;
     }
+    
 }
 @media (max-width: 750px) {
     
@@ -289,6 +295,15 @@ li{
     }
     .header{
         height: 70px;
+    }
+    .bloco1{
+        width: 100%;
+        margin-left: 0%;
+    }
+    .bloco2{
+        width: 100%;
+        margin-left: 0%;
+        margin-bottom: 25px;
     }
 }
 @media (max-width: 650px) {

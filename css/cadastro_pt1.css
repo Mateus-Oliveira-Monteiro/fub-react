@@ -119,9 +119,24 @@ li{
     color: rgba(147, 85, 218, 0.924);
     height: auto;
     margin-top: 35px;
-    width: 25%;
-    margin-left: 37.5%;
-    border: 1px solid black;
+    width: 100%;
+}
+@media(max-height:800px){
+    @media(max-width: 1000px){
+        .fundo{
+            height: 700px;
+        }
+    }
+}
+@media(min-height:900px){
+    .fundo{
+        height: 800px;
+    }
+}
+@media(min-height:1000px){
+    .fundo{
+        height: 900px;
+    }
 }
 @media (max-width:1800px){
     ul{

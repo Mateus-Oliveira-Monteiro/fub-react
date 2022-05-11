@@ -242,6 +242,7 @@ li{
     }
     .logo{
         width: 135px;
+        margin-top: 15px;
     }
     ul{
         padding-top: 5px;
@@ -252,7 +253,9 @@ li{
 }
 @media (max-width:1500px){
     .logo{
-        width: 150px;
+        
+        width: 130px;
+        margin-top: 15px;
     }
     .bloco3 img{
         margin-left: 50px;
@@ -270,6 +273,9 @@ li{
     }
 }
 @media (max-width:1400px){
+    nav a:link, :visited{
+        font-size: 28px;
+    }
     .bloco3 img{
         margin-left: 30px;
     }
@@ -326,9 +332,7 @@ li{
 @media (max-width:1300px){
     .logo{
         width: 125px;
-    }
-    nav a:link, :visited{
-        font-size: 28px;
+        margin-top: 15px;
     }
     .bloco3 img{
         margin-left: 30px;
@@ -514,6 +518,7 @@ li{
     }
     .logo{
         width: 120px;
+        margin-top: 15px;
     }
     ul{
         padding-top: 8px;
@@ -632,7 +637,9 @@ li{
         font-size: 23px;
     }
     .logo{
+        
         width: 120px;
+        margin-top: 15px;
     }
     ul{
         padding-top: 8px;
@@ -790,8 +797,9 @@ li{
     nav a:link, :visited{
         font-size: 20px;
     }
-    .logo{
+    .logo{ 
         width: 120px;
+        margin-top: 15px;
     }
     ul{
         padding-top: 10px;
@@ -880,6 +888,7 @@ li{
     }
     .logo{
         width: 115px;
+        margin-top: 15px;
     }
     ul{
         padding-top: 10px;
@@ -969,6 +978,7 @@ li{
     }
     .logo{
         width: 105px;
+        margin-top: 15px;
     }
     ul{
         padding-top: 10px;
@@ -1059,6 +1069,7 @@ li{
     }
     .logo{
         width: 105px;
+        margin-top: 15px;
     }
     ul{
         padding-top: 10px;

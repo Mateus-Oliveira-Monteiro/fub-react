@@ -46,110 +46,86 @@ li{
     height: auto;
     width: 100%;
 }
-.bloco1{
-    width: 41%;
-    float: left;
-    margin-left: 6%;
-    height: auto;
-    margin-bottom: 100px;
+.meio-circulo {
+    width: 40%;
+    margin-left: 30%;
+    border-bottom-left-radius: 15000px;
+    border-bottom-right-radius: 15000px;
+    background-color: rgba(204, 167, 247, 0.924);
 }
-.preencha{
-    text-align: center;
-    font-size: 25px;
-    color: rgba(147, 85, 218, 0.924);
-    width: 100%;
-    float: left;
-    height: auto;
-    margin-top: 15px;
+.imagem {
+    width: 50%;
+    padding-bottom: 50%;
+    margin-left: 25%;
 }
-.bloco1 img{
-    width: 100%;
-    }
-.bloco2{
-    width: 41%;
+.imagem img{
+    margin-top: 50%;
+    width: 80%;
     float: left;
-    margin-left: 6%;
-    height: auto;
-    margin-bottom: 80px;
+    margin-left: 10%;
 }
 .formulario{
     float: left;
-    width: 90%;
-    margin-left: 5%;
+    
+    width: 35%;
+    margin-left: 32.5%;
     height: auto;
     margin-top: 30px;
-    }
+    margin-bottom: 50px;
+}
 .titulo{
     height: auto;
     width: 100%;
+    text-align: center;
     margin-top: 20px;
     float: left;
-    font-size: 22px;
-    color: rgba(147, 85, 218, 0.924)
+}
+.titulo strong{
+    font-size: 30px;
+    color: rgba(198, 158, 245, 0.924);
 }
 .formulario input{
-    height: 40px;
-    font-size: 22px;
+    height: 50px;
+    font-size: 25px;
     width: 80%;
-    border-radius: 10px;
+    border-radius: 25px;
     border: white;
-    margin-top: 10px;
-    float: left;
-    padding-left: 10px;
-}
-.local{
-    width: 100%;
-    height: auto;
-    float: left;
-}
-.estado{
-    width: 20%;
-    height: auto;
-    float: left;
-}
-.local select{
-    height: 40px;
-    font-size: 20px;
-    border-radius: 10px;
-    border: white;
+    margin-left: 10%;
     margin-top: 10px;
     float: left;
     padding-left: 15px;
-    width: 90%;
-    margin-left: 5%;
 }
-.cidade{
-    width: 77%;
-    height: auto;
+.entrar a{
     float: left;
-    margin-left: 3%;
-}
-.cidade input{
-    height: 40px;
-    font-size: 22px;
-    width: 75%;
-    border-radius: 10px;
-    border: white;
-    margin-top: 10px;
-    float: left;
-    padding-left: 10px;
-}
-.bloco1 a{
-    height: 40px;
-    width: 35%;
-    float: right;
-    text-align: center;
-    font-size: 25px;
-    padding-top: 15px;
-    background-color: rgba(147, 85, 218, 0.924);
-    text-decoration: none;
-    color: white;
+    background-color: white;
+    height: 42px;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 55px;
     border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 12px;
+    font-size: 30px;
+    color: rgba(147, 85, 218, 0.924);
 }
-.bloco1 a:hover{
-    background-color: rgb(240, 169, 38);
+.entrar a:hover{
+    color: white;
+    background-color: rgb(255, 215, 104);
 }
-
+.cadastrar{
+    margin-top: 40px;
+    float: left;
+    width: 100%;
+    
+    height: auto;
+    font-size: 20px;
+    text-align: center;
+    color: rgba(147, 85, 218, 0.924);
+}
+.cadastrar a{
+    text-decoration: none;
+}
 @media (max-width:1800px){
     ul{
         padding-top: 4px;
@@ -198,11 +174,18 @@ li{
     }
 }
 @media (max-width: 1250px) {
-    nav a:link, :visited{
-        font-size: 27.5px;
-    }
+    
 }
 @media (max-width:1200px){
+    .formulario{
+        width: 40%;
+    }
+    .formulario input{
+        height: 40px;
+    }
+    .titulo strong{
+        font-size: 28px;
+    }
 }
 @media (max-width: 1150px) {
     
@@ -219,7 +202,7 @@ li{
     }
 }
 @media (max-width: 1050px) {
-
+    
 }
 @media (max-width:1000px){
     nav a:link, :visited{
@@ -235,6 +218,20 @@ li{
     nav{
         width: 55%;
         text-align: right;
+    }
+    .formulario{
+        width: 40%;
+    }
+    .formulario input{
+        height: 40px;
+        width: 90%;
+        margin-left: 5%;
+    }
+    .titulo strong{
+        font-size: 27px;
+    }
+    .cadastrar{
+        font-size: 17px;
     }
 }
 @media (max-width: 950px) {
@@ -252,17 +249,20 @@ li{
         width: 60%;
         text-align: right;
     }
-    .bloco1{
-        width: 70%;
-        margin-left: 15%;
-    }
-    .bloco2{
-        width: 70%;
-        margin-left: 15%;
+    .formulario{
+        width: 450px;
+        margin-left: 200px;
     }
 }
 @media (max-width: 850px) {
-    
+    .formulario{
+        width: 450px;
+        margin-left: 175px;
+    }
+    .meio-circulo{
+        width: 60%;
+        margin-left: 20%;
+    }
 }
 @media (max-width:800px){
     nav a:link, :visited{
@@ -282,17 +282,15 @@ li{
     .header{
         height: 70px;
     }
-    .bloco1{
-        width: 75%;
-        margin-left: 12.5%;
-    }
-    .bloco2{
-        width: 75%;
-        margin-left: 12.5%;
+    .formulario{
+        width: 450px;
+        margin-left: 150px;
     }
 }
 @media (max-width: 750px) {
-    
+    .formulario{
+        margin-left: 125px;
+    }
 }
 @media (max-width: 700px) {
     nav a:link, :visited{
@@ -312,15 +310,17 @@ li{
     .header{
         height: 70px;
     }
+    .formulario{
+        margin-left: 100px
+    }
+    .meio-circulo{
+        width: 70%;
+        margin-left: 15%;
+    }
 }
 @media (max-width: 650px) {
-    .bloco1{
-        width: 85%;
-        margin-left: 7.5%;
-    }
-    .bloco2{
-        width: 85%;
-        margin-left: 7.5%;
+    .formulario{
+        margin-left: 75px;
     }
 }
 @media (max-width:600px){
@@ -340,18 +340,16 @@ li{
     .header{
         height: 70px;
     }
-    .bloco1{
-        width: 100%;
-        margin-left: 0%;
-    }
-    .bloco2{
-        width: 100%;
-        margin-left: 0%;
+    .formulario{
+        margin-left: 50px;
     }
 }
 @media (max-width: 550px) {
     nav a:link, :visited{
         font-size: 15px;
+    }
+    .formulario{
+        margin-left: 25px;
     }
 }
 @media (max-width: 500px) {
@@ -370,5 +368,8 @@ li{
     }
     .header{
         height: 70px;
+    }
+    .formulario{
+        margin-left: 0;
     }
 }

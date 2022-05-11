@@ -11,6 +11,7 @@ import Contratado from './Pages/Contratado/Contratado';
 import BicosSolicitados from './Pages/BicosSolicitados/BicosSolicitados';
 import Candidatar from './Pages/Candidatar/Candidatar';
 import Navbar from './Components/Navbar/Navbar';
+import Login from './Pages/Login/Login';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
                 <Route path="/contratado" element={<Contratado />}/>
                 <Route path="/bicos_solicitados" element={<BicosSolicitados />}/>
                 <Route path="/candidatar" element={<Candidatar />}/>
+                <Route path="/login" element={<Login />}/>
             </Routes>
       </BrowserRouter>
     );

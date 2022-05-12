@@ -132,7 +132,6 @@ h3{
         margin-top: 25px;
         margin-bottom: 25px;
     }
-    
 }
 @media (max-width:1700px){
     .bloco1{
@@ -150,7 +149,6 @@ h3{
         margin-top: 25px;
         margin-bottom: 25px;
     }
-    
 }
 @media (max-width:1650px){
     .bloco1{
@@ -168,7 +166,6 @@ h3{
         margin-top: 25px;
         margin-bottom: 25px;
     }
-    
 }
 @media (max-width:1600px){
     .bloco1{
@@ -189,7 +186,6 @@ h3{
         margin-top: 25px;
         margin-bottom: 25px;
     }
-    
     .logo{
         width: 135px;
         margin-top: 15px;
@@ -214,7 +210,6 @@ h3{
         margin-top: 25px;
         margin-bottom: 25px;
     }
-    
 }
 @media (max-width:1500px){
     .bloco1{
@@ -232,7 +227,6 @@ h3{
         margin-top: 25px;
         margin-bottom: 25px;
     }
-    
     .logo{
         width: 130px;
         margin-top: 15px;
@@ -254,7 +248,6 @@ h3{
         margin-top: 25px;
         margin-bottom: 25px;
     }
-    
 }
 @media (max-width:1400px){
     .bloco1{
@@ -275,7 +268,6 @@ h3{
         margin-top: 25px;
         margin-bottom: 25px;
     }
-    
 }
 @media (max-width:1350px){
     .bloco1{
@@ -293,7 +285,6 @@ h3{
         margin-top: 25px;
         margin-bottom: 25px;
     }
-    
 }
 @media (max-width:1300px){
     .bloco1{
@@ -311,7 +302,6 @@ h3{
         margin-top: 25px;
         margin-bottom: 25px;
     }
-    
     .logo{
         width: 125px;
         margin-top: 15px;
@@ -333,7 +323,6 @@ h3{
         margin-top: 25px;
         margin-bottom: 25px;
     }
-    
 }
 @media (max-width:1200px){
     .bloco1{
@@ -351,7 +340,6 @@ h3{
         margin-top: 25px;
         margin-bottom: 25px;
     }
-    
 }
 @media (max-width:1150px){
     .bloco1{
@@ -389,7 +377,6 @@ h3{
         margin-top: 25px;
         margin-bottom: 25px;
     }
-    
     .logo{
         width: 120px;
         margin-top: 15px;
@@ -414,7 +401,6 @@ h3{
         margin-top: 25px;
         margin-bottom: 20px;
     }
-    
 }
 @media (max-width:1000px){
     .bloco1{
@@ -435,7 +421,6 @@ h3{
         margin-top: 25px;
         margin-bottom: 20px;
     }
-    
     ul{
         padding-top: 8px;
         padding-right: 6px;
@@ -461,7 +446,6 @@ h3{
         margin-top: 25px;
         margin-bottom: 20px;
     }
-    
 }
 @media (max-width:900px){
     .bloco1{
@@ -479,7 +463,6 @@ h3{
         margin-top: 25px;
         margin-bottom: 20px;
     }
-    
     nav a:link, :visited{
         font-size: 23px;
     }
@@ -507,7 +490,6 @@ h3{
         margin-top: 25px;
         margin-bottom: 20px;
     }
-    
 }
 @media (max-width:800px){
     .bloco1{
@@ -525,7 +507,6 @@ h3{
         margin-top: 25px;
         margin-bottom: 20px;
     }
-    
     nav a:link, :visited{
         font-size: 20px;
     }
@@ -560,11 +541,9 @@ h3{
         margin-top: 25px;
         margin-bottom: 20px;
     }
-    
     .carrossel .imagens img{
         width: 19.89%;
     }
-
 }
 @media (max-width:700px){
     .bloco1{
@@ -582,7 +561,6 @@ h3{
         margin-top: 25px;
         margin-bottom: 20px;
     }
-    
     .carrossel .imagens img{
         width: 19.88%;
     }

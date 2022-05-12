@@ -16,7 +16,7 @@ body{
 nav{
     float: right;
     text-align: center;
-    width: 50%;
+    width: 70%;
     margin-bottom: 5px;
     text-decoration: none;
     height: 100%;
@@ -168,6 +168,7 @@ li{
     }
     .logo{
         width: 135px;
+        margin-top: 15px;
     }
     ul{
         padding-top: 5px;
@@ -179,8 +180,8 @@ li{
 @media (max-width: 1500px) {
     .logo{
         width: 130px;
+        margin-top: 15px;
     }
-    
     .nome{
         font-size: 27px;
     }
@@ -224,13 +225,13 @@ li{
 @media (max-width: 1300px) {
     .logo{
         width: 125px;
+        margin-top: 15px;
     }
 }
 @media (max-width: 1250px) {
     .foto_perfil{
         height: 200px;
     }
-    
     .nome{
         font-size: 25px;
         height: 35px;
@@ -273,7 +274,6 @@ li{
     .foto_perfil{
         height: 200px;
     }
-    
     .nome{
         font-size: 22px;
         height: 35px;
@@ -315,6 +315,7 @@ li{
     }
     .logo{
         width: 120px;
+        margin-top: 15px;
     }
     ul{
         padding-top: 8px;
@@ -325,7 +326,6 @@ li{
         height: 175px;
         margin-top: 28px;
     }
-    
     .nome{
         font-size: 20px;
         height: 30px;
@@ -364,14 +364,22 @@ li{
 }
 @media (max-width:1000px){
     nav a:link, :visited{
-        font-size: 23px;
+        font-size: 22px;
     }
-    .logo{
-        width: 120px;
+    .bloco2{
+        float: left;
+        margin-left: 20px;
+        width: 436px;
+        margin-top: 25px;
+        margin-bottom: 20px;
     }
     ul{
         padding-top: 8px;
         padding-right: 6px;
+    }
+    .logo{
+        width: 120px;
+        margin-top: 15px;
     }
 }
 @media (max-width: 950px) {
@@ -379,7 +387,6 @@ li{
         height: 175px;
         margin-top: 28px;
     }
-    
     .nome{
         font-size: 18px;
         height: 30px;
@@ -415,30 +422,24 @@ li{
     .prestados{
         font-size: 21px;
     }
-    nav a:link, :visited{
-        font-size: 22px;
-    }
 }
 @media (max-width: 900px) {
     nav a:link, :visited{
-        font-size: 22px;
+        font-size: 23px;
     }
     ul{
         padding-top: 8px;
         padding-right: 10px;
     }
     nav{
-        width: 60%;
         text-align: right;
     }
-    
 }
 @media (max-width: 850px) {
     .foto_perfil{
         height: 155px;
         margin-top: 22px;
     }
-    
     .nome{
         font-size: 16px;
         height: 30px;
@@ -477,9 +478,6 @@ li{
     .prestados{
         font-size: 21px;
     }
-    nav a:link, :visited{
-        font-size: 22px;
-    }
 }
 @media (max-width:800px){
     nav a:link, :visited{
@@ -487,19 +485,18 @@ li{
     }
     .logo{
         width: 120px;
+        margin-top: 15px;
     }
     ul{
         padding-top: 10px;
         padding-right: 10px;
     }
     nav{
-        width: 60%;
         text-align: right;
     }
     .header{
         height: 70px;
     }
-    
 }
 @media (max-width: 750px) {
     .bloco1{
@@ -555,24 +552,24 @@ li{
     }
 }
 @media (max-width: 700px) {
-    nav a:link, :visited{
+    nnav a:link, :visited{
         font-size: 20px;
     }
     .logo{
         width: 115px;
+        margin-top: 15px;
     }
     ul{
         padding-top: 10px;
         padding-right: 20px;
     }
     nav{
-        width: 70%;
         text-align: right;
+        margin-right: 2%;
     }
     .header{
         height: 70px;
     }
-    
 }
 @media (max-width: 650px) {
     .perfil{
@@ -590,7 +587,7 @@ li{
         height: 155px;
         margin-top: 22px;
     }
-    
+
     .nome{
         font-size: 16px;
         height: 30px;
@@ -639,13 +636,14 @@ li{
     }
     .logo{
         width: 105px;
+        margin-top: 15px;
     }
     ul{
         padding-top: 10px;
     }
     nav{
-        width: 70%;
         text-align: center;
+        margin-right: 0%;
     }
     .header{
         height: 70px;
@@ -653,23 +651,24 @@ li{
 }
 @media (max-width: 550px) {
     nav a:link, :visited{
-        font-size: 15px;
+        font-size: 14px;
     }
     
 }
 @media (max-width: 500px) {
     nav a:link, :visited{
-        font-size: 15px;
+        font-size: 14px;
     }
     .logo{
         width: 105px;
+        margin-top: 15px;
     }
     ul{
         padding-top: 10px;
     }
     nav{
-        width: 70%;
         text-align: center;
+        width: 72%;
     }
     .header{
         height: 70px;

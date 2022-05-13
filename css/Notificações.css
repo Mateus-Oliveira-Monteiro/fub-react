@@ -19,13 +19,14 @@ body{
 nav{
     float: right;
     text-align: center;
-    width: 50%;
+    width: 70%;
     margin-bottom: 5px;
     text-decoration: none;
     height: 100%;
 }
 nav li {
     display: inline;
+    color: rgba(147, 85, 218, 0.924);
 }
 nav ul li a{
     margin-left: 3%;
@@ -39,11 +40,10 @@ nav a:link, :visited{
 nav a:hover{
     color: rgb(240, 169, 38);
 }
-li{
+.nav ul li{
     margin-left: 5%;
     color: rgba(147, 85, 218, 0.924);
 }
-
 .bloco1{
     background-color: rgb(253, 241, 218);
     color: rgba(255, 215, 106, 0.993);
@@ -97,7 +97,7 @@ li{
     padding-top: 10px;
     text-decoration: none;
 }
-strong{
+.notificacao strong{
     font-size: 28px;
     color: rgba(255, 217, 94, 0.993);
     margin-top: 5%;
@@ -152,6 +152,7 @@ strong{
 @media (max-width:1300px){
     .logo{
         width: 125px;
+        margin-top: 15px;
     }
 }
 @media (max-width:1200px){
@@ -179,8 +180,16 @@ strong{
     nav a:link, :visited{
         font-size: 25px;
     }
+    .bloco2{
+        float: left;
+        margin-left: 26px;
+        width: 500px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
     .logo{
         width: 120px;
+        margin-top: 15px;
     }
     ul{
         padding-top: 8px;
@@ -206,12 +215,13 @@ strong{
     nav a:link, :visited{
         font-size: 22px;
     }
-    .logo{
-        width: 120px;
-    }
     ul{
         padding-top: 8px;
         padding-right: 6px;
+    }
+    .logo{
+        width: 120px;
+        margin-top: 15px;
     }
 }
 @media (max-width:900px){
@@ -239,7 +249,6 @@ strong{
         padding-right: 10px;
     }
     nav{
-        width: 60%;
         text-align: right;
     }
 }
@@ -269,13 +278,13 @@ strong{
     }
     .logo{
         width: 120px;
+        margin-top: 15px;
     }
     ul{
         padding-top: 10px;
         padding-right: 10px;
     }
     nav{
-        width: 60%;
         text-align: right;
     }
     .header{
@@ -300,18 +309,19 @@ strong{
         height: 75px;
     }
     nav a:link, :visited{
-        font-size: 19px;
+        font-size: 20px;
     }
     .logo{
         width: 115px;
+        margin-top: 15px;
     }
     ul{
         padding-top: 10px;
         padding-right: 20px;
     }
     nav{
-        width: 70%;
         text-align: right;
+        margin-right: 2%;
     }
     .header{
         height: 70px;
@@ -343,13 +353,14 @@ strong{
     }
     .logo{
         width: 105px;
+        margin-top: 15px;
     }
     ul{
         padding-top: 10px;
     }
     nav{
-        width: 70%;
         text-align: center;
+        margin-right: 0%;
     }
     .header{
         height: 70px;
@@ -357,7 +368,7 @@ strong{
 }
 @media (max-width:550px){
     nav a:link, :visited{
-        font-size: 15px;
+        font-size: 14px;
     }
     .perfil img{
         margin-top: 18%;
@@ -408,17 +419,18 @@ strong{
         margin-left: 10%;
     }
     nav a:link, :visited{
-        font-size: 15px;
+        font-size: 14px;
     }
     .logo{
         width: 105px;
+        margin-top: 15px;
     }
     ul{
         padding-top: 10px;
     }
     nav{
-        width: 70%;
         text-align: center;
+        width: 72%;
     }
     .header{
         height: 70px;

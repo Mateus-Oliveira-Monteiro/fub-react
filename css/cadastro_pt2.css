@@ -16,7 +16,7 @@ body{
 nav{
     float: right;
     text-align: center;
-    width: 50%;
+    width: 70%;
     margin-bottom: 5px;
     text-decoration: none;
     height: 100%;
@@ -168,6 +168,7 @@ li{
     }
     .logo{
         width: 135px;
+        margin-top: 15px;
     }
     ul{
         padding-top: 5px;
@@ -179,6 +180,7 @@ li{
 @media (max-width: 1500px) {
     .logo{
         width: 130px;
+        margin-top: 15px;
     }
 }
 @media (max-width: 1450px) {
@@ -195,6 +197,7 @@ li{
 @media (max-width: 1300px) {
     .logo{
         width: 125px;
+        margin-top: 15px;
     }
 }
 @media (max-width: 1250px) {
@@ -213,6 +216,7 @@ li{
     }
     .logo{
         width: 120px;
+        margin-top: 15px;
     }
     ul{
         padding-top: 8px;
@@ -223,18 +227,15 @@ li{
 }
 @media (max-width:1000px){
     nav a:link, :visited{
-        font-size: 23px;
-    }
-    .logo{
-        width: 120px;
+        font-size: 22px;
     }
     ul{
         padding-top: 8px;
         padding-right: 6px;
     }
-    nav{
-        width: 55%;
-        text-align: right;
+    .logo{
+        width: 120px;
+        margin-top: 15px;
     }
 }
 @media (max-width: 950px) {
@@ -249,7 +250,6 @@ li{
         padding-right: 10px;
     }
     nav{
-        width: 60%;
         text-align: right;
     }
     .bloco1{
@@ -270,13 +270,13 @@ li{
     }
     .logo{
         width: 120px;
+        margin-top: 15px;
     }
     ul{
         padding-top: 10px;
         padding-right: 10px;
     }
     nav{
-        width: 60%;
         text-align: right;
     }
     .header{
@@ -296,18 +296,19 @@ li{
 }
 @media (max-width: 700px) {
     nav a:link, :visited{
-        font-size: 18px;
+        font-size: 20px;
     }
     .logo{
         width: 115px;
+        margin-top: 15px;
     }
     ul{
         padding-top: 10px;
         padding-right: 20px;
     }
     nav{
-        width: 70%;
         text-align: right;
+        margin-right: 2%;
     }
     .header{
         height: 70px;
@@ -322,20 +323,24 @@ li{
         width: 85%;
         margin-left: 7.5%;
     }
+    nav a:link, :visited{
+        font-size: 16px;
+    }
 }
 @media (max-width:600px){
     nav a:link, :visited{
-        font-size: 15px;
+        font-size: 16px;
     }
     .logo{
         width: 105px;
+        margin-top: 15px;
     }
     ul{
         padding-top: 10px;
     }
     nav{
-        width: 70%;
         text-align: center;
+        margin-right: 0%;
     }
     .header{
         height: 70px;
@@ -351,22 +356,23 @@ li{
 }
 @media (max-width: 550px) {
     nav a:link, :visited{
-        font-size: 15px;
+        font-size: 14px;
     }
 }
 @media (max-width: 500px) {
     nav a:link, :visited{
-        font-size: 15px;
+        font-size: 14px;
     }
     .logo{
         width: 105px;
+        margin-top: 15px;
     }
     ul{
         padding-top: 10px;
     }
     nav{
-        width: 70%;
         text-align: center;
+        width: 72%;
     }
     .header{
         height: 70px;

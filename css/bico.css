@@ -207,7 +207,6 @@ li{
     
 }
 @media (max-width:1600px){
-    
     nav a:link, :visited{
         font-size: 30px;
     }
@@ -222,8 +221,7 @@ li{
 @media (max-width:1550px){
     
 }
-@media (max-width:1500px){
-    
+@media (max-width:1500px){s
     .bico-logo{
         width: 130px;
         margin-top: 15px;
@@ -282,7 +280,6 @@ li{
         width: 120px;
         margin-top: 15px;
     }
-    
 }
 @media (max-width:950px){
 

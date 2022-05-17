@@ -1,0 +1,156 @@
+$purple: #8b54dc;
+$light-purple: #c9a4ff;
+
+
+#auth-login {
+
+    padding-top: 15rem;
+
+    padding-top: 14rem;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin-bottom: 3rem;
+
+        div.auth-input {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 7px;
+
+            label {
+                color: $purple;
+                font: 500 1.1rem 'Roboto';
+            }
+
+            input {
+                border-radius: 2rem;
+                border: 1px solid #ccc;
+                width: 20%;
+                min-width: 20rem;
+                height: 2.5rem;
+                padding: 0 1.3rem;
+                font: 400 1rem 'Roboto';
+                color: $purple;
+
+                transition: .2s;
+
+                &:focus {
+                    outline: none;
+                    background-color: rgba(201, 164, 255, 0.2);
+                    border: 1px solid $purple;
+                }
+            }
+        }
+
+        button {
+            background-color: white;
+            margin-top: 3rem;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            width: 14%;
+            height: 3rem;
+            font: bold 1.1rem 'Roboto';
+            color: $purple;
+
+            &:hover {
+                opacity: .85;
+            }
+        }
+
+        div:not(:first-child) {
+            margin-top: 1rem;
+        }
+    }
+
+    small {
+        a {
+            color: $purple;
+            font-size: .9rem;
+
+            &:hover {
+                color: $purple;
+            }
+        }
+    }
+
+    label {
+        color: $purple;
+        font: 500 1.1rem 'Roboto';
+    }
+
+    input, textarea {
+        border-radius: 2rem;
+        border: 1px solid #ccc;
+        width: 20%;
+        height: 2.5rem;
+        padding: 0 1.3rem;
+        font: 400 1rem 'Roboto';
+        color: $purple;
+
+        transition: .2s;
+
+        &:focus {
+            outline: none;
+            background-color: rgba(159, 96, 252, 0.3);
+            border: 1px solid $purple;
+        }
+    }
+
+    div.auth-input {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 7px;
+
+        label {
+            color: $purple;
+            font: 500 1.1rem 'Roboto';
+        }
+
+        input {
+            border-radius: 2rem;
+            border: 1px solid #ccc;
+            width: 20%;
+            height: 2.5rem;
+            padding: 0 1.3rem;
+            font: 400 1rem 'Roboto';
+            color: $purple;
+
+            transition: .2s;
+
+            &:focus {
+                outline: none;
+                background-color: rgba(201, 164, 255, 0.2);
+                border: 1px solid $purple;
+            }
+        }
+    }
+
+    button {
+        background-color: white;
+        margin-top: 3rem;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        width: 14%;
+        height: 3rem;
+        font: bold 1.1rem 'Roboto';
+        color: $purple;
+
+        &:hover {
+            opacity: .85;
+        }
+    }
+
+    div:not(:first-child) {
+        margin-top: 1rem;
+    }
+
+    #content {
+        position: relative;
+    }
+}

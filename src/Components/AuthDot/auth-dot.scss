@@ -1,0 +1,54 @@
+$purple: #ae78fd;
+
+#auth-dot {
+
+  width: 100vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+
+  * {
+    position: absolute;
+  }
+
+  canvas {
+    width: 35rem;
+    height: 25rem;
+    background-color: $purple;
+    border-radius: 100%;
+  }
+
+  img {
+    top: 2rem;
+    width: 15rem;
+  }
+
+  //background: black;
+  //position: relative;
+  //display: flex;
+  //width: 100rem;
+  //align-items: center;
+  //
+  //* {
+  //  position: absolute;
+  //  left: 50%;
+  //  transform: translate(-50%, -50%);
+  //}
+  //
+  //canvas {
+  //  top: -16rem;
+  //  background: $purple;
+  //  width: 40rem;
+  //  height: 30rem;
+  //  border-radius: 60%;
+  //}
+  //
+  //img {
+  //  border: 1px solid rgba(90, 90, 90, .5);
+  //  top: -9rem;
+  //  width: 12rem;
+  //}
+
+}

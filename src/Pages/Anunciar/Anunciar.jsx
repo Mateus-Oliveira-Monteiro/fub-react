@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom"
-import "./anunciar.css";
+import "./anunciar.scss";
 import logo from '../../Assets/Images/logo.png';
 import perfil from '../../Assets/Images/perfil.png';
 import img10 from '../../Assets/Images/10.png';
@@ -8,7 +8,7 @@ import img10 from '../../Assets/Images/10.png';
  
 function Anunciar (){
     return (
-        <>
+        <div id="anunciar">
         <div className="bloco1-anunciar">
         <strong>BICOS DISPONÍVEIS</strong>
     </div>
@@ -80,7 +80,7 @@ function Anunciar (){
         </div>
         <img className="imagem"src={img10} />
     </div>
-        </>
+        </div>
     )
 }
 

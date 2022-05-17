@@ -5,8 +5,8 @@ import './navbar.css'
 
 function Navbar() {
   return (
-    <div>
-        <div class="header">
+    <header>
+        <div className="header">
             <Link to="/"><img src={logo} alt="logo" class="logo" /></Link>
             <nav>
                 <ul>
@@ -16,7 +16,7 @@ function Navbar() {
                 </ul>
             </nav>
         </div>
-    </div>
+    </header>
   )
 }
 

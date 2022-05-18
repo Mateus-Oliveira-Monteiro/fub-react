@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-const myaxios = axios.create({
+const apiAxios = axios.create({
     baseURL: "http://localhost:3000/v1/fub"
 })
 
-myaxios.interceptors.request.use((config) => {
+apiAxios.interceptors.request.use((config) => {
     const token = localStorage.getItem("token");
     if(token){
         config.headers['authorization'] = "Bearer " + token;
@@ -15,4 +15,4 @@ myaxios.interceptors.request.use((config) => {
 })
 
 
-export default myaxios;
+export default apiAxios;

@@ -1,30 +1,14 @@
 import React, {FormEvent, useEffect, useReducer} from 'react';
+import { useNavigate } from 'react-router-dom';
 import Image from "react-bootstrap/Image";
 import Img11 from "../../Assets/Images/11.png";
-import AuthDot from "../../Components/AuthDot";
 
 import './registrar.scss';
+import loginAxios from "../../Services/loginAxios";
 
 export default function Register() {
 
-    type RegisterAction = {
-        type: string;
-        name: string;
-        value: string;
-    }
-
-    type RegisterState = {
-        email: string;
-        password: string;
-        fullname: string;
-        cellphone: string;
-        country: string;
-        _state: string;
-        city: string;
-        address: string;
-        district: string;
-        about: string;
-    }
+    const navigate = useNavigate();
 
     const INITIAL_STATE = {
         email: '',
@@ -32,14 +16,16 @@ export default function Register() {
         fullname: '',
         cellphone: '',
         country: '',
-        _state: '',
+        state: '',
         city: '',
         address: '',
         district: '',
-        about: ''
+        about: '',
+        occupation: '',
+        birthDate: ''
     }
 
-    const registerReducer = (state: RegisterState, action: RegisterAction) => {
+    const registerReducer = (state, action) => {
 
         switch (action.type) {
             case 'ATUALIZA':
@@ -55,7 +41,7 @@ export default function Register() {
 
     const [ registerState, dispatch ] = useReducer(registerReducer, INITIAL_STATE);
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const handleChange = (e) => {
         dispatch({
             type: 'ATUALIZA',
             name: e.target.name,
@@ -63,19 +49,31 @@ export default function Register() {
         });
     }
 
-    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e) => {
 
         e.preventDefault()
-        await fetch('https://pure-springs-17927.herokuapp.com/v1/fub/user', {
-            method: 'POST',
-            mode: 'cors',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
 
+        const { fullname: name, email, password, cellphone: phone, occupation, birthDate, address: street, district, city, state } = registerState;
+
+        await loginAxios.post('/user', {
+            name,
+            email,
+            password,
+            phone,
+            occupation,
+            birthDate,
+            street,
+            district,
+            city,
+            state
+        })
+            .then(response => {
+                alert('Registrado com sucesso')
+                navigate('/')
             })
-        }).then(response => console.log(response))
+            .catch(() => {
+                alert('Some field is missing')
+            })
 
     }
 
@@ -85,135 +83,97 @@ export default function Register() {
 
     return(
         <div id={'auth-register'}>
-            <AuthDot />
 
-            <form onSubmit={ (e) => handleSubmit(e) }>
-                <div id="page1">
+            <form onSubmit={ (e) => handleSubmit(e) } className={'row w-100 h-100 m-0 px-3'}>
 
-                    <div className="auth-input d-flex flex-column align-items-center gap-2">
-                        <label htmlFor="email">E-mail</label>
-                        <input onChange={handleChange} value={ registerState.email } id="email" name="email" type="text" />
+                <div className={'col-4'}>
+
+                    <div className={'title'}>Preencha os dados abaixo:</div>
+
+                    <div className={'input'}>
+                        <label for="fullname">Nome Completo:</label>
+                        <input onChange={ e => handleChange(e) } value={ registerState.fullname } placeholder={'Nome'} id={'fullname'} name={'fullname'} />
                     </div>
 
-                    <div className="auth-input d-flex flex-column align-items-center gap-2">
-                        <label htmlFor="senha">Senha</label>
-                        <input onChange={handleChange} value={ registerState.password } id="senha" name="password" type="password" />
+                    <div className={'input'}>
+                        <label htmlFor="cellphone">Telefone:</label>
+                        <input onChange={ e => handleChange(e) } placeholder={'Telefone'} id={'cellphone'} name={'cellphone'} />
+                    </div>
+
+                    <div className={'input'}>
+                        <label htmlFor="country">País:</label>
+                        <input onChange={ e => handleChange(e) } placeholder={'País'} id={'country'} name={'country'} />
+                    </div>
+
+                    <div className={'input row d-flex flex-row align-content-around gap-0'}>
+
+                        <span className={'d-flex flex-column col-3'}>
+                            <label htmlFor="state">Estado:</label>
+                            <input onChange={ e => handleChange(e) } placeholder={'Estado'} id={'state'} name={'state'} />
+                        </span>
+
+                        <span className={'d-flex flex-column col-9'}>
+
+                            <label htmlFor="city">Cidade:</label>
+                            <input onChange={ e => handleChange(e) } placeholder={'Cidade'} id={'city'} name={'city'} />
+
+                        </span>
+
+                    </div>
+
+                    <div className={'input'}>
+                        <label htmlFor="district">Bairro:</label>
+                        <input onChange={ e => handleChange(e) } placeholder={'Endereço'} id={'district'} name={'district'} />
+                    </div>
+
+                    <div className={'input'}>
+                        <label htmlFor="occupation">Ocupação:</label>
+                        <input onChange={ e => handleChange(e) } placeholder={'Ocupação'} id={'occupation'} name={'occupation'} />
                     </div>
 
                 </div>
 
-                {/* ------------------------------------------------------------------------------------------ */}
+                <div className={'col-4 d-flex flex-column'}>
 
-                <div id={'page2'}>
-                    <div className="fundo pb-4">
-
-                        <div className="preencha">
-                            <strong>Preencha os dados abaixo:</strong>
-                        </div>
-
-                        <div className="bloco1">
-                            <Image src={Img11} />
-                        </div>
-
-                        <div className="bloco2">
-                            <div className="formulario">
-
-                                <label className="titulo">
-                                    Nome completo:
-                                </label>
-                                <input onChange={handleChange} value={ registerState.fullname } name="fullname" />
-                                <label className="titulo">
-                                    Telefone:
-                                </label>
-                                <input onChange={handleChange} value={ registerState.cellphone } name="cellphone" type="number" />
-                                <label className="titulo">
-                                    País:
-                                </label>
-                                <input onChange={handleChange} value={ registerState.country } name="country" />
-
-                                <div className="local">
-                                    <div className="estado">
-
-                                        <label className="titulo">
-                                            Estado:
-                                        </label>
-                                        <select onChange={handleChange} name="_state">
-                                            <option value={'AC'}>AC</option>
-                                            <option value={'AL'}>AL</option>
-                                            <option value={'AP'}>AP</option>
-                                            <option value={'AM'}>AM</option>
-                                            <option value={'BA'}>BA</option>
-                                            <option value={'CE'}>CE</option>
-                                            <option value={'ES'}>ES</option>
-                                            <option value={'GO'}>GO</option>
-                                            <option value={'MA'}>MA</option>
-                                            <option value={'MT'}>MT</option>
-                                            <option value={'MS'}>MS</option>
-                                            <option value={'MG'}>MG</option>
-                                            <option value={'PA'}>PA</option>
-                                            <option value={'PB'}>PB</option>
-                                            <option value={'PR'}>PR</option>
-                                            <option value={'PE'}>PE</option>
-                                            <option value={'PI'}>PI</option>
-                                            <option value={'RJ'}>RJ</option>
-                                            <option value={'RN'}>RN</option>
-                                            <option value={'RS'}>RS</option>
-                                            <option value={'RO'}>RO</option>
-                                            <option value={'RR'}>RR</option>
-                                            <option value={'SC'}>SC</option>
-                                            <option value={'SP'}>SP</option>
-                                            <option value={'SE'}>SE</option>
-                                            <option value={'TO'}>TO</option>
-                                            <option value={'DF'}>DF</option>
-                                        </select>
-                                    </div>
-
-                                    <div className="cidade">
-                                        <label className="titulo">
-                                            Cidade:
-                                        </label>
-                                        <input onChange={handleChange} value={ registerState.city } name="city" />
-                                    </div>
-                                </div>
-
-                                <label className="titulo">
-                                    Endereço:
-                                </label>
-                                <input onChange={handleChange} value={ registerState.address } name="address" />
-
-                                <label className="titulo">
-                                    Bairro:
-                                </label>
-                                <input onChange={handleChange} value={ registerState.district } name="district" />
-                            </div>
-                        </div>
+                    <div className={'input mt-0'}>
+                        <label htmlFor="address">Endereço:</label>
+                        <input onChange={ e => handleChange(e) } placeholder={'Endereço'} id={'address'} name={'address'} />
                     </div>
+
+                    <div className={'input'}>
+                        <label htmlFor="birthDate">Data de nascimento:</label>
+                        <input onChange={ e => handleChange(e) } id={'birthDate'} name={'birthDate'} type={'date'} />
+                    </div>
+
+                    <label htmlFor={'about'} className={'title my-2'}>Nos conte um pouco a mais sobre você:</label>
+
+                    <div className={'input mt-0'}>
+                        <textarea onChange={ e => handleChange(e) } placeholder={'Sobre'} id={'about'} name={'about'} />
+                    </div>
+
+                    <small>Escreva um pequeno texto sobre você, contando seus hobbies e seus objetivos no mercado de trabalho com intuito de destacar o perfil.</small>
+
                 </div>
 
-                {/* ------------------------------------------------------------------------------------------ */}
+                <div className={'col-4'}>
 
-                <div id="page3">
-
-                    <div className="fundo pb-5">
-                        <div className="bloco1">
-
-                            <div className="formulario">
-                                <label className="titulo">
-                                    Sobre:
-                                </label>
-                                <textarea onChange={handleChange} value={ registerState.about } className={'p-3'} name="about" />
-                                <span className="dica px-5">
-                                    Escreva um pequeno texto sobre você, contando seus
-                                    hobbies e seu objetivos no mercado de trabalho com
-                                    intuito de destacar o seu perfil.
-                                </span>
-                            </div>
-                            <div className={'w-100'}>
-                                <button className={'w-50'}>Enviar</button>
-                            </div>
-                        </div>
+                    <div className={'input mt-0'}>
+                        <label htmlFor="email">E-mail:</label>
+                        <input onChange={ e => handleChange(e) } placeholder={'E-mail'} id={'email'} name={'email'} />
                     </div>
+
+                    <div className={'input mt-3'}>
+                        <label htmlFor="password">Senha:</label>
+                        <input onChange={ e => handleChange(e) } placeholder={'Senha'} id={'password'} name={'password'} />
+                    </div>
+
+                    <Image src={ Img11 } width={'90%'} />
+                    <div className={'d-flex justify-content-end px-5'}>
+                        <button type={'submit'}>Próximo</button>
+                    </div>
+
                 </div>
+
             </form>
         </div>
     )

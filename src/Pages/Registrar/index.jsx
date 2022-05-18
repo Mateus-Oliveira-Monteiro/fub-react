@@ -1,4 +1,5 @@
 import React, {FormEvent, useEffect, useReducer} from 'react';
+import { useNavigate } from 'react-router-dom';
 import Image from "react-bootstrap/Image";
 import Img11 from "../../Assets/Images/11.png";
 
@@ -6,6 +7,8 @@ import './registrar.scss';
 import loginAxios from "../../Services/loginAxios";
 
 export default function Register() {
+
+    const navigate = useNavigate();
 
     const INITIAL_STATE = {
         email: '',
@@ -17,7 +20,9 @@ export default function Register() {
         city: '',
         address: '',
         district: '',
-        about: ''
+        about: '',
+        occupation: '',
+        birthDate: ''
     }
 
     const registerReducer = (state, action) => {
@@ -47,10 +52,28 @@ export default function Register() {
     const handleSubmit = async (e) => {
 
         e.preventDefault()
-        await loginAxios.get(
-            '/04187310/json/'
-        )
-            .then(response => alert(response))
+
+        const { fullname: name, email, password, cellphone: phone, occupation, birthDate, address: street, district, city, state } = registerState;
+
+        await loginAxios.post('/user', {
+            name,
+            email,
+            password,
+            phone,
+            occupation,
+            birthDate,
+            street,
+            district,
+            city,
+            state
+        })
+            .then(response => {
+                alert('Registrado com sucesso')
+                navigate('/')
+            })
+            .catch(() => {
+                alert('Some field is missing')
+            })
 
     }
 
@@ -99,20 +122,30 @@ export default function Register() {
                     </div>
 
                     <div className={'input'}>
-                        <label htmlFor="address">Endereço:</label>
-                        <input onChange={ e => handleChange(e) } placeholder={'Endereço'} id={'address'} name={'address'} />
+                        <label htmlFor="district">Bairro:</label>
+                        <input onChange={ e => handleChange(e) } placeholder={'Endereço'} id={'district'} name={'district'} />
+                    </div>
+
+                    <div className={'input'}>
+                        <label htmlFor="occupation">Ocupação:</label>
+                        <input onChange={ e => handleChange(e) } placeholder={'Ocupação'} id={'occupation'} name={'occupation'} />
                     </div>
 
                 </div>
 
-                <div className={'col-4 d-flex flex-column gap-3'}>
+                <div className={'col-4 d-flex flex-column'}>
 
                     <div className={'input mt-0'}>
-                        <label htmlFor="district">Bairro:</label>
-                        <input onChange={ e => handleChange(e) } placeholder={'Bairro'} id={'district'} name={'district'} />
+                        <label htmlFor="address">Endereço:</label>
+                        <input onChange={ e => handleChange(e) } placeholder={'Endereço'} id={'address'} name={'address'} />
                     </div>
 
-                    <label htmlFor={'about'} className={'title'}>Nos conte um pouco a mais sobre você:</label>
+                    <div className={'input'}>
+                        <label htmlFor="birthDate">Data de nascimento:</label>
+                        <input onChange={ e => handleChange(e) } id={'birthDate'} name={'birthDate'} type={'date'} />
+                    </div>
+
+                    <label htmlFor={'about'} className={'title my-2'}>Nos conte um pouco a mais sobre você:</label>
 
                     <div className={'input mt-0'}>
                         <textarea onChange={ e => handleChange(e) } placeholder={'Sobre'} id={'about'} name={'about'} />

@@ -1,28 +1,20 @@
 import React, {useEffect, useReducer} from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import "./login.scss";
 import AuthDot from "../../Components/AuthDot";
+import loginAxios from "../../Services/loginAxios";
 
 function Index() {
 
-    type LoginAction = {
-        type: string;
-        name: string;
-        value: string;
-    }
-
-    type LoginState = {
-        email: string;
-        password: string;
-    }
+    const navigate = useNavigate();
 
     const INITIAL_STATE = {
         email: '',
         password: ''
     }
 
-    const loginReducer = (state: LoginState, action: LoginAction) => {
+    const loginReducer = (state, action) => {
 
         switch (action.type) {
             case 'ATUALIZA':
@@ -38,7 +30,7 @@ function Index() {
 
     const [ loginState, dispatch ] = useReducer(loginReducer, INITIAL_STATE);
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const handleChange = (e) => {
         dispatch({
             type: 'ATUALIZA',
             name: e.target.name,
@@ -46,12 +38,20 @@ function Index() {
         });
     };
 
-    const handleLogin = (e: React.FormEvent<HTMLButtonElement>): void => {
+    const handleLogin = async (e) => {
         e.preventDefault()
 
-        const token = 'dlksamgkajsiom3trjmdioj'
+        const { email, password } = loginState;
 
-        localStorage.setItem('token', token)
+        await loginAxios.post('/user/login', {
+            email,
+            password
+        })
+            .then(response => {
+                localStorage.setItem('token', response.data.token)
+                navigate('/home')
+            })
+            .catch(() => alert('Email ou Senha incorretos'))
     }
 
     useEffect(() => {
@@ -62,7 +62,7 @@ function Index() {
         <>
             <AuthDot />
             <div id="auth-login">
-                <form>
+                <form action={'POST'} onSubmit={handleLogin}>
                     <div className="auth-input">
                         <label htmlFor="email">Login</label>
                         <input onChange={handleChange} id="email" name="email" type="text" required />

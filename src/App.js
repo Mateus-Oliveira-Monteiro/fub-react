@@ -14,6 +14,8 @@ import Navbar from './Components/Navbar/Navbar';
 import Login from './Pages/Login';
 import Registrar from './Pages/Registrar';
 import {Avaliacao} from "./Pages/Avaliacao/Avaliacao";
+import Register from './Pages/Registrar';
+import Cupom from './Pages/Cupom';
 
 
 function App() {
@@ -34,6 +36,7 @@ function App() {
                 <Route path="/bicos_solicitados" element={<BicosSolicitados />}/>
                 <Route path="/candidatar" element={<Candidatar />}/>
                 <Route path="/avaliacao" element={<Avaliacao />}/>
+                <Route path="/cupom" element={<Cupom />}/>
             </Routes>
       </BrowserRouter>
     );

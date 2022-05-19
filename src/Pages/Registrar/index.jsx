@@ -66,14 +66,15 @@ export default function Register() {
             district,
             city,
             state,
-            description
+            description: description ? description : undefined
         })
             .then(response => {
                 alert('Registrado com sucesso')
                 navigate('/')
             })
-            .catch(() => {
+            .catch((e) => {
                 alert('Some field is missing')
+                console.log(e)
             })
 
     }
@@ -193,7 +194,7 @@ export default function Register() {
 
                     <div className={'input mt-3'}>
                         <label htmlFor="password">Senha: *</label>
-                        <input required onChange={ e => handleChange(e) } placeholder={'Senha'} id={'password'} name={'password'} minLength={'8'} />
+                        <input type="password" required onChange={ e => handleChange(e) } placeholder={'Senha'} id={'password'} name={'password'} minLength={'8'} />
                         <small>Min: 8</small>
                     </div>
 

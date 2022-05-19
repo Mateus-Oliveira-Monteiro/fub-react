@@ -55,6 +55,12 @@ function Index() {
     }
 
     useEffect(() => {
+        if (localStorage.getItem('token')) {
+            navigate('/home')
+        }
+    }, [])
+
+    useEffect(() => {
         console.table(loginState)
     }, [loginState])
 
@@ -76,7 +82,7 @@ function Index() {
                     <button type="submit">ENTRAR</button>
                     <small className="mt-3">
                         <span>Ainda não é cadastrado? </span>
-                        <Link to="/register">Cadastre-se aqui </Link>!
+                        <Link to="/registrar">Cadastre-se aqui </Link>!
                     </small>
                 </form>
 

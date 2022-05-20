@@ -24,7 +24,7 @@ function Vagas() {
 
             <div id={'content'} className={'bg-dark p-5'}>
 
-                <div id={'list-vagas'} className={'row d-flex flex-column gap-2 bg-light align-items-center'}>
+                <div id={'list-vagas'} className={'row d-flex flex-column gap-2 bg-light align-items-center pb-5'}>
 
                     <div className={'row pt-4 pb-2'}>
                         <span className={'col-3'}>

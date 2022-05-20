@@ -2,6 +2,8 @@ import React from 'react';
 import "./notificacoes.scss";
 import {NotificationItem} from "../../Components/NotificationItem";
 
+import adriano from '../../Assets/Images/Adrian_de_cria.png';
+
 
 function Notificacoes() {
     return(
@@ -23,6 +25,13 @@ function Notificacoes() {
                     }} />
                     <NotificationItem notification={{
                         image: 'https://upload.wikimedia.org/wikipedia/pt/b/b1/Patrick_Estrela.png',
+                        title: 'Titulo muito criativo hahahaha mt engrazado rs ri d+ lol',
+                        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lobortis, ex sed congue blandit, ipsum ligula convallis dui, eget euismod sapien felis ac sem. Duis aliquam erat vitae tortor convallis, ',
+                        created_at: '2022-05-20T14:05:39.020Z',
+
+                    }} />
+                    <NotificationItem notification={{
+                        image: adriano,
                         title: 'Titulo muito criativo hahahaha mt engrazado rs ri d+ lol',
                         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lobortis, ex sed congue blandit, ipsum ligula convallis dui, eget euismod sapien felis ac sem. Duis aliquam erat vitae tortor convallis, ',
                         created_at: '2022-05-20T14:05:39.020Z',

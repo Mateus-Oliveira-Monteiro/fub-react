@@ -1,159 +1,63 @@
 import React from "react";
 import {Link} from "react-router-dom"
-import "./vagas.css";
+import "./vagas.scss";
 import logo from '../../Assets/Images/logo.png'
+import {Container} from "react-bootstrap";
+import {VacancyItem} from "../../Components/VacancyItem";
 
 function Vagas() {
     return (
-        <>
-    <div className="bloco1-vagas">
-        <strong>BICOS DISPONÍVEIS</strong>
-    </div>
-    <div className="bloco2-vagas">
-        
-    </div>
 
-    <div className="fundo">
-        <Link to ="/anunciar"><a className="anunciar">
-            <strong>ANUNCIAR VAGA</strong>
-        </a></Link>
+        <div id={'vagas'}>
 
-        <div className="vagas">
-            <div className="informações">
-                <div className="info">
-                    <strong>SERVIÇO</strong>
+            <div id={'header-main'}>
+
+                <div id={'header-bicos'} className={'w-100 d-flex justify-content-center p-2 text-light'}>
+                    BICOS DISPONÍVEIS
                 </div>
-                <div className="info">
-                    <strong>LOCALIZAÇÃO</strong>
+
+                <div id={'search'} className={'d-flex p-2 row'} >
+                    <input className={'mx-5 col-3 border-0 px-4 text-secondary'} placeholder={'Busque por Bicos'} />
                 </div>
-                <div className="info">
-                    <strong>SALÁRIO</strong>
-                </div>
-                <div className="vazio">
-                </div>
+
             </div>
-            <div className="vaga">
-                <div className="desc_da_vaga">
-                    <strong>Cortar grama</strong>
+
+            <div id={'content'} className={'bg-dark p-5'}>
+
+                <div id={'list-vagas'} className={'row d-flex flex-column gap-2 bg-light align-items-center'}>
+
+                    <div className={'row pt-4 pb-2'}>
+                        <span className={'col-3'}>
+                            SERVIÇOS
+                        </span>
+
+                        <span className={'col-3'}>
+                            LOCALIZAÇÃO
+                        </span>
+
+                        <span className={'col-3'}>
+                            SALÁRIO
+                        </span>
+                    </div>
+
+                    <VacancyItem vacancy={{
+                        service: 'Liver',
+                        location: 'Itaperacininga da Serra',
+                        budget: 1_500
+                    }} />
+
+                    <VacancyItem vacancy={{
+                        service: 'Serviço2',
+                        location: 'Araçapuca da Terra',
+                        budget: 3_000
+                    }} />
+
                 </div>
-                <div className="local_da_vaga">
-                    <strong>Indaitatuba-SP</strong>
-                </div>
-                <div className="preco_da_vaga">
-                    <strong>20.00</strong>
-                </div>
-                    <Link to="/mais_info"  className="saber_mais">+</Link></div>
-            <div className="vaga">
-                <div className="desc_da_vaga">
-                    <strong>Cortar grama</strong>
-                </div>
-                <div className="local_da_vaga">
-                    <strong>Indaitatuba-SP</strong>
-                </div>
-                <div className="preco_da_vaga">
-                    <strong>20.00</strong>
-                </div>
-                    <Link to="/mais_info"  className="saber_mais">+</Link>
+
             </div>
-            <div className="vaga">
-                <div className="desc_da_vaga">
-                    <strong>Cortar grama</strong>
-                </div>
-                <div className="local_da_vaga">
-                    <strong>Indaitatuba-SP</strong>
-                </div>
-                <div className="preco_da_vaga">
-                    <strong>20.00</strong>
-                </div>
-                    <Link to="/mais_info"  className="saber_mais">+</Link>
-            </div>
-            <div className="vaga">
-                <div className="desc_da_vaga">
-                    <strong>Cortar grama</strong>
-                </div>
-                <div className="local_da_vaga">
-                    <strong>Indaitatuba-SP</strong>
-                </div>
-                <div className="preco_da_vaga">
-                    <strong>20.00</strong>
-                </div>
-                    <Link to="/mais_info"  className="saber_mais">+</Link>
-            </div>
-            <div className="vaga">
-                <div className="desc_da_vaga">
-                    <strong>Cortar grama</strong>
-                </div>
-                <div className="local_da_vaga">
-                    <strong>Indaitatuba-SP</strong>
-                </div>
-                <div className="preco_da_vaga">
-                    <strong>20.00</strong>
-                </div>
-                    <Link to="/mais_info"  className="saber_mais">+</Link>
-            </div>
-            <div className="vaga">
-                <div className="desc_da_vaga">
-                    <strong>Cortar grama</strong>
-                </div>
-                <div className="local_da_vaga">
-                    <strong>Indaitatuba-SP</strong>
-                </div>
-                <div className="preco_da_vaga">
-                    <strong>20.00</strong>
-                </div>
-                    <Link to="/mais_info"  className="saber_mais">+</Link>
-            </div>
-            <div className="vaga">
-                <div className="desc_da_vaga">
-                    <strong>Cortar grama</strong>
-                </div>
-                <div className="local_da_vaga">
-                    <strong>Indaitatuba-SP</strong>
-                </div>
-                <div className="preco_da_vaga">
-                    <strong>20.00</strong>
-                </div>
-                    <Link to="/mais_info"  className="saber_mais">+</Link>
-            </div>
-            <div className="vaga">
-                <div className="desc_da_vaga">
-                    <strong>Cortar grama</strong>
-                </div>
-                <div className="local_da_vaga">
-                    <strong>Indaitatuba-SP</strong>
-                </div>
-                <div className="preco_da_vaga">
-                    <strong>20.00</strong>
-                </div>
-                    <Link to="/mais_info"  className="saber_mais">+</Link>
-            </div>
-            <div className="vaga">
-                <div className="desc_da_vaga">
-                    <strong>Cortar grama</strong>
-                </div>
-                <div className="local_da_vaga">
-                    <strong>Indaitatuba-SP</strong>
-                </div>
-                <div className="preco_da_vaga">
-                    <strong>20.00</strong>
-                </div>
-                    <Link to="/mais_info"  className="saber_mais">+</Link>
-            </div>
-            <div className="vaga">
-                <div className="desc_da_vaga">
-                    <strong>Cortar grama</strong>
-                </div>
-                <div className="local_da_vaga">
-                    <strong>Indaitatuba-SP</strong>
-                </div>
-                <div className="preco_da_vaga">
-                    <strong>20.00</strong>
-                </div>
-                    <Link to = "Mais_info" className="saber_mais">+</Link>
-            </div>
+
         </div>
-    </div>
-    </>
+
     )
 }
 

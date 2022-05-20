@@ -16,12 +16,13 @@ import Registrar from './Pages/Registrar';
 import {Avaliacao} from "./Pages/Avaliacao/Avaliacao";
 import Register from './Pages/Registrar';
 import Cupom from './Pages/Cupom';
-
+import {UserContext} from "./Contexts/UserContext";
 
 function App() {
     return (
       <BrowserRouter>
-        <Navbar />
+        <UserContext>
+            <Navbar />
             <Routes>
                 <Route index element={<Login />}/>
                 <Route path="/registrar" element={<Registrar />} />
@@ -38,6 +39,7 @@ function App() {
                 <Route path="/avaliacao" element={<Avaliacao />}/>
                 <Route path="/cupom" element={<Cupom />}/>
             </Routes>
+        </UserContext>
       </BrowserRouter>
     );
 }

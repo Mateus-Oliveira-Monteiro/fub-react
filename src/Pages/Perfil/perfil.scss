@@ -1,0 +1,51 @@
+$purple: #8b54dc;
+$light-purple: #a574ee;
+
+#perfil {
+  background-color: #F1E9E9;
+  min-height: 88.9vh;
+  font-family: 'Roboto', 'sans-serif';
+
+  .stars {
+    font-size: 3rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    span {
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+  }
+
+  #perfil-container {
+    border-radius: 1rem;
+    min-height: 20rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+
+    #perfil-name {
+      color: $purple;
+      font-weight: 500;
+      font-size: 2rem;
+    }
+
+    #perfil-details {
+
+    }
+
+    #perfil-location {
+
+    }
+
+    #about {
+      letter-spacing: 0;
+      font-size: 2rem;
+      font-weight: 500;
+    }
+
+  }
+}

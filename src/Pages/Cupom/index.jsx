@@ -1,57 +1,83 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import myaxios from "../../Services/axios";
 import './cupom.css'
 
 const Cupom = () => {
+    const { id } = useParams();
+    const [ coupon, setCoupon ] = useState('');
+    const [contract, setContract] = useState(null)
+
+    const getCoupon = () => {
+        myaxios.get(`/coupon/${id}`)
+            .then(res => setCoupon(res.data))
+            .catch((error) => alert(error))
+    }
+
+    
+    useEffect(() => {
+        getCoupon();
+    }, [])
+    
+    const contractId = coupon.contract.id
+
+    const getContract = () => {
+        myaxios.get(`/contract/${contractId}`)
+            .then(res => setContract(res.data))
+            .catch((error) => alert(error))
+    }
+
+    useEffect(() => {
+        getContract();
+    }, [])
+
+    const deadlineDate = new Date(coupon.deadline);
+    const format = deadlineDate.toLocaleDateString("pt-br", {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+    })
+
     return (
         <div>
-                <div class="header">
-        <a href="home.html"><img src="logo.png" alt="logo" class="logo" /></a>
-        <nav>
-            <ul>
-                <li><a href="vagas.html"><strong>Vagas</strong></a></li>
-                <li><a href="notificações.html"><strong>Notificações</strong></a></li>
-                <li><a href="login.html"><strong>Meu Perfil</strong></a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="cupom-fundo">
-        <div class="cupom-dica">
+    <div className="cupom-fundo">
+        <div className="cupom-dica">
             O cupom abaixo são os dados oficiais dos andamento do seu bico, 
             use-o como comprovante para apresentá-lo
             ao seu contratado:
         </div>
-        <div class="cupom-cupom">
-            <div class="cupom-titulo">
+        <div className="cupom-cupom">
+            <div className="cupom-titulo">
                 <strong>Cupom FUB</strong>
             </div>
-            <div class="cupom-status">
-                Status: Pendente
+            <div className="cupom-status">
+                Status: {coupon.isFinished ? "Finalizado" : "Pendente"}
             </div>
-            <div class="cupom-sobre">
-                <div class="cupom-detalhes">
-                    Bico: Reforço de Português
+            <div className="cupom-sobre">
+                <div className="cupom-detalhes">
+                    Bico: {coupon.contract.title}
                 </div>
-                <div class="cupom-detalhes">
-                    Contratante: Luís Oliveira
+                <div className="cupom-detalhes">
+                    Contratante: {contract.employer.name}
                 </div>
-                <div class="cupom-detalhes">
-                    Contratado: Maria Siqueira
+                <div className="cupom-detalhes">
+                    Contratado: {contract.employer.name}
                 </div>
-                <div class="cupom-detalhes">
-                    Preço: R$ 30,00
+                <div className="cupom-detalhes">
+                    Preço: {coupon.value}
                 </div>
-                <div class="cupom-detalhes">
-                    Prazo: 1 dia
+                <div className="cupom-detalhes">
+                    Prazo: { format }
                 </div>
             </div>
         </div>
-        <div class="cupom-espaco">
+        <div className="cupom-espaco">
             
         </div>
-        <a href="" class="cupom-botao">
+        <a href="" className="cupom-botao">
             <strong>EXCLUIR CUPOM</strong>
         </a>
-        <a href="" class="cupom-botao">
+        <a href="" className="cupom-botao">
             <strong>FINALIZAR CUPOM</strong>
         </a>
     </div>

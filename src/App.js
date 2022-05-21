@@ -37,7 +37,7 @@ function App() {
                 <Route path="/bicos_solicitados" element={<BicosSolicitados />}/>
                 <Route path="/candidatar" element={<Candidatar />}/>
                 <Route path="/avaliacao" element={<Avaliacao />}/>
-                <Route path="/cupom" element={<Cupom />}/>
+                <Route path="/cupom/:id" element={<Cupom />}/>
             </Routes>
         </UserContext>
       </BrowserRouter>

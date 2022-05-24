@@ -1,13 +1,10 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEye} from "@fortawesome/free-regular-svg-icons/faEye";
-import './vacancyItem.scss';
-import { Link } from "react-router-dom";
+import './contractItem.scss';
 
-export const VacancyItem = props => {
+export const contractItem = props => {
 
-    const { service, location, budget, id } = props.vacancy;
-
-    const contractLink = `mais_info/${id}`
+    const { service, location, budget } = props.vacancy;
 
     return (
         <div className={'row d-flex align-items-center vacancy px-0'}>
@@ -24,7 +21,7 @@ export const VacancyItem = props => {
             </span>
 
             <button className={'offset-1 col-2 py-2 border-0 bg-opacity-50'}>
-                <Link to={ contractLink }><FontAwesomeIcon icon={faEye} size={'2x'} color={'white'} /></Link>
+                <FontAwesomeIcon icon={faEye} size={'2x'} color={'white'} />
             </button>
         </div>
     )

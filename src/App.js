@@ -30,7 +30,7 @@ function App() {
                 <Route path="/vagas" element={<Vagas />}/>
                 <Route path="/notificacoes" element={<Notificacoes />}/>
                 <Route path="/perfil" element={<Perfil />}/>
-                <Route path="/mais_info" element={<Mais_info />}/>
+                <Route path="vagas/mais_info/:id" element={<Mais_info />}/>
                 <Route path="/anunciar" element={<Anunciar />}/>
                 <Route path="/candidatos" element={<Candidatos />}/>
                 <Route path="/contratado" element={<Contratado />}/>

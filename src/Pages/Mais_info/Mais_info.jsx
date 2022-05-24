@@ -1,11 +1,27 @@
-import React from "react";
-import {Link} from "react-router-dom"
+import React, { useState, useEffect } from "react";
+import {Link, useParams} from "react-router-dom"
 import "./mais_info.css";
 import logo from '../../Assets/Images/logo.png';
 import img13 from '../../Assets/Images/13.png';
+import myaxios from "../../Services/axios";
+import { contractItem } from "../../Components/ContractItem";
 
 
 function Mais_info() {
+
+    const { id } = useParams();
+    const [contract, setContract] = useState(null);
+
+    const getContract = () => {
+        myaxios.get(`/contract/${id}`)
+        .then(res => setContract(res.data))
+        .catch((err) => alert(err))
+    }
+
+    useEffect(() => {
+        getContract()
+    }, [])
+
     return(
         <>
             <div class="bloco1-mais-info">
@@ -23,12 +39,8 @@ function Mais_info() {
     <div class="vaga">
     <div class="bloco3-mais-info">
         <div class="descricao">
-            <strong>Cortar a grama</strong>
-            <p>Procuro alguém com experiência para
-                    cortar a grama do meu jardim. Já possuo as
-                    ferramentas, sendo que necessito somente
-                    de mão de obra, pois recentemente quebrei
-                    as pernas, e estou morando sozinho</p>
+            <strong>ghgfhf</strong>
+            <p>dfsfd}</p>
         </div>
             <Link to="/candidatar" class="botao"><strong>Candidatar-se</strong></Link>
     </div>

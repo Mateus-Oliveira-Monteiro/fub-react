@@ -29,17 +29,17 @@ nav ul li a{
     margin-left: 3%;
 }
 nav a:link, :visited{
-    color: rgba(147, 85, 218, 0.924);
+    color: #1d2cb9;
     font-size: 32px;
     display: inline-block;
     text-decoration: none;
 }
 nav a:hover{
-    color: rgb(240, 169, 38);
+    color: #EDAA98;
 }
 li{
     margin-left: 5%;
-    color: rgba(147, 85, 218, 0.924);
+    color: #1d2cb9;;
 }
 
 @media (max-width:800px){

@@ -1,11 +1,22 @@
-import React from "react";
-import {Link} from "react-router-dom"
+import React, { useContext, useState, useEffect } from "react";
 import "./vagas.scss";
-import logo from '../../Assets/Images/logo.png'
-import {Container} from "react-bootstrap";
+import myaxios from "../../Services/axios";
 import {VacancyItem} from "../../Components/VacancyItem";
 
 function Vagas() {
+
+    const [contracts, setContracts] = useState(null);
+
+    const getContracts = () => {
+        myaxios.get(`/contract`)
+        .then(res => setContracts(res.data))
+        .catch((err) => alert(err))
+    }
+
+    useEffect(() => {
+        getContracts()
+    }, [])
+    
     return (
 
         <div id={'vagas'}>
@@ -40,17 +51,13 @@ function Vagas() {
                         </span>
                     </div>
 
-                    <VacancyItem vacancy={{
-                        service: 'Liver',
-                        location: 'Itaperacininga da Serra',
-                        budget: 1_500
-                    }} />
-
-                    <VacancyItem vacancy={{
-                        service: 'Serviço2',
-                        location: 'Araçapuca da Terra',
-                        budget: 3_000
-                    }} />
+                    {contracts ? contracts.map(contract => 
+                        <VacancyItem vacancy={{
+                            service: contract.title ,
+                            location: contract.city,
+                            budget: contract.proposedValue
+                        }} />)
+                     : "Nenhuma vaga encontrada."}
 
                 </div>
 

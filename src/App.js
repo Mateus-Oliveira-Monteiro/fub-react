@@ -14,12 +14,15 @@ import Navbar from './Components/Navbar/Navbar';
 import Login from './Pages/Login';
 import Registrar from './Pages/Registrar';
 import {Avaliacao} from "./Pages/Avaliacao/Avaliacao";
-
+import Register from './Pages/Registrar';
+import Cupom from './Pages/Cupom';
+import {UserContext} from "./Contexts/UserContext";
 
 function App() {
     return (
       <BrowserRouter>
-        <Navbar />
+        <UserContext>
+            <Navbar />
             <Routes>
                 <Route index element={<Login />}/>
                 <Route path="/registrar" element={<Registrar />} />
@@ -34,7 +37,9 @@ function App() {
                 <Route path="/bicos_solicitados" element={<BicosSolicitados />}/>
                 <Route path="/candidatar" element={<Candidatar />}/>
                 <Route path="/avaliacao" element={<Avaliacao />}/>
+                <Route path="/cupom/:id" element={<Cupom />}/>
             </Routes>
+        </UserContext>
       </BrowserRouter>
     );
 }

@@ -1,0 +1,22 @@
+#notifications {
+
+  min-width: 70rem;
+
+  #notification-header {
+    background-color: #F1E9E9;
+    color: #D2775F;
+    font: bold 1.8rem 'Roboto';
+    letter-spacing: 1px;
+  }
+
+  #notification-main {
+    background-color: #070C3B;
+    min-height: 79.8vh;
+
+    #list-notifications {
+      border-radius: 1rem;
+    }
+
+  }
+
+}

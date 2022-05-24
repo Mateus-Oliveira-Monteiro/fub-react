@@ -1,58 +1,79 @@
-import React from "react";
-import {Link} from "react-router-dom"
-import "./perfil.css";
-import logo from '../../Assets/Images/logo.png';
-import image14 from '../../Assets/Images/14.png';
+import React, {useContext, useEffect} from "react";
+import {Link, useNavigate} from "react-router-dom"
+import "./perfil.scss";
+import {Container} from "react-bootstrap";
+import Image from "react-bootstrap/Image";
+import adriano from '../../Assets/Images/Adrian_de_cria.png'
+import {UserContext, UsuarioContext} from "../../Contexts/UserContext";
+import { faAward } from '@fortawesome/free-solid-svg-icons'
+import StarRatingComponent from "react-star-rating-component";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 function Perfil() {
+
+    const navigate = useNavigate();
+    const { UserState } = useContext(UsuarioContext);
+
+    useEffect(() => {
+        if(!UserState) {
+            navigate('/home')
+        }
+    }, [])
+
+    const { name, ratings, birthDate, occupation, city, state, district, description, imagePath } = UserState;
+    const years = Math.floor((Date.now() - new Date(birthDate).getTime()) / 1000 / 60 / 60 / 24 / 365)
+    let ratingStars
+    if(ratings.length !== 0) {
+        ratingStars = ratings.reduce((a, b) => a+b) / ratings.length
+    } else {
+        ratingStars = 0
+    }
+    ratingStars = 3.3
+
     return(
-        <>
-                <div className="fundo-perfil">
-        <div className="bloco1-perfil">
-            <div className="perfil">
-                <div className="foto_perfil">
-                    <img src={image14} alt="foto_perfil" />
+        <div id={'perfil'} className={'p-5 d-flex justify-content-center'}>
+
+            <Container id={'perfil-container'} className={'bg-white px-5 py-4 h-100 gap-5 d-flex flex-column'}>
+
+                <div className={'row'}>
+                    <span className={'col-2'}>
+                        <Image src={ imagePath ?? adriano } roundedCircle className={'w-100 border'} />
+                    </span>
+
+                    <span className={'col-10 d-flex flex-column justify-content-between text-secondary'}>
+
+                        <div id={'perfil-name'} className={''}>
+                            { name }
+                        </div>
+
+                        { ratingStars !== 0 ?
+                            <div className={'stars'}>
+                                <StarRatingComponent starColor={'red'} editing={false} value={ratingStars} emptyStarColor={'transparent'} renderStarIcon={() => <FontAwesomeIcon className={'px-1'} icon={faAward} />} />
+                                <span className={'text-warning'}>{ ratingStars }</span>
+                            </div>
+                            :
+                            null
+                        }
+
+                        <div id={'perfil-details'}>
+                            { years } anos - { occupation }
+                        </div>
+
+                        <div id={'perfil-location'}>
+                            { state }, { city }, { district }
+                        </div>
+
+                    </span>
                 </div>
-                <div className="nome">
-                    <strong>Nome Sobrenome</strong>
+
+                <div className={'row px-4'}>
+                    <div id={'about'} className={'text-secondary'}>Sobre</div>
+                    <div>{ description }</div>
                 </div>
-                <div className="classificacao">
-                    Classificacao
-                </div>
-                <div className="caracteristicas">
-                    17 anos - Estudante
-                </div>
-                <div className="localizacao">
-                    Indaiatuba, São Paulo, Brasil
-                </div>
-            </div>
-            <div className="sobre">
-                <strong>Sobre</strong>
-                <p>Meu nome é Luís, tenho 17 anos, e estou buscando trabalhos temporários
-para buscar ter experiências e oportunidades para ingressar no mercado de
-trabalho. Estou no terceiro ano do ensino médio, sou excelente em
-matemática, assim posso oferecer reforço na matéria, além disso sou fluente
-e espanhol, sei tocar piano e já tive experiência com jardinagem.</p>
-            </div>
+
+            </Container>
+
         </div>
-        <div className="bloco2-perfil">
-            <div className="prestados">
-                <strong>BICOS PRESTADOS</strong>
-            </div>
-            <div className="lista">
-                <ul>
-                    <li><strong>Organizar Sótao</strong></li>
-                    <li><strong>Cortar grama</strong></li>
-                    <li><strong>Interprete em Espanhol</strong></li>
-                    <li><strong>Reforço de Matemática</strong></li>
-                    <li><strong>Entregar panfletos</strong></li>
-                    <li><strong>Passear com o cachorro</strong></li>
-                    <li><strong>Ajudante em mercearia</strong></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    </>
     )
 }
 

@@ -1,7 +1,7 @@
 import React, {useContext, useEffect} from "react";
 import {Link} from "react-router-dom"
 import "./home.css";
-import image from '../../Assets/Images/imagem.png'
+import image from '../../Assets/Images/imagem.jpg'
 import logo from '../../Assets/Images/logo.png'
 import image9 from '../../Assets/Images/9.1.png'
 import jwtDecode from "jwt-decode";

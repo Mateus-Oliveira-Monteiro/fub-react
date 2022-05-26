@@ -5,11 +5,12 @@ body{
 
 nav{
     width: 70%;
+    float: right;
 }
 .nav{
-    list-style:none;
-    float: left;
-    width: 100%;
+    list-style: none;
+    float: right;
+    width: 90%;
     font-size: 10px;
 }
 .logo{
@@ -148,6 +149,15 @@ nav{
         width: 120px;
         margin-top: 15px;
     }
+    .minimenu li{
+        width: 300px;
+    }
+    .minimenu{
+        margin-top: 5px;
+    }
+    .minimenu li:hover{
+        height: 50px;
+    }
 }
 @media (max-width:900px){
     nav a:link, :visited{
@@ -160,6 +170,7 @@ nav{
     nav{
         text-align: right;
     }
+    
 }
 @media (max-width:800px){
     nav a:link, :visited{
@@ -178,6 +189,12 @@ nav{
     }
     .header{
         height: 70px;
+    }
+    .minimenu li{
+        width: 250px;
+    }
+    .nav{
+        background-color: white;
     }
 }
 @media (max-width:700px){
@@ -204,6 +221,9 @@ nav{
     nav a:link, :visited{
         font-size: 16px;
     }
+    .minimenu li{
+        width: 200px;
+    }
 }
 @media (max-width:600px){
     nav a:link, :visited{
@@ -227,6 +247,9 @@ nav{
 @media (max-width:550px){
     nav a:link, :visited{
         font-size: 14px;
+    }
+    .minimenu li{
+        width: 180px;
     }
 }
 @media (max-width:500px){

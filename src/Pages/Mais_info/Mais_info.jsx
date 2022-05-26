@@ -24,50 +24,47 @@ function Mais_info() {
 
     return(
         <>
-            <div class="bloco1-mais-info">
-            <strong>BICOS DISPONÍVEIS</strong>
-        </div>
         <div class="bloco2-mais-info">
-            <div class="campos">
+            <div class="campos-mais-info">
                 <strong>Campos</strong>
             </div>
-            <div class="busque">
+            <div class="busque-mais-info">
                 <strong>Busque por Bicos</strong>
             </div>
         </div>
         <div class="fundo-mais-info">
-    <div class="vaga">
+<div class="vaga-mais-info">
     <div class="bloco3-mais-info">
-        <div class="descricao">
+        <div class="descricao-mais-info">
             <strong>ghgfhf</strong>
             <p>dfsfd}</p>
         </div>
-            <Link to="/candidatar" class="botao"><strong>Candidatar-se</strong></Link>
+            <Link to="/candidatar" class="botao-mais-info"><strong>Candidatar-se</strong></Link>
     </div>
     <div class="bloco4-mais-info">
-        <div class="contratante">
+        <div class="contratante-mais-info">
             <img src={img13}/>
-            <div class="nome">
+            <div class="nome-mais-info">
                 <strong>Nome Sobrenome</strong>
             </div>
-            <div class="classificacao">
+            <div class="classificacao-mais-info">
                 classificacao
             </div>
-            <div class="localizacao">
-                <div class="local_img">
+            <div class="localizacao-mais-info">
+                <div class="local_img-mais-info">
                 </div>
-                <div class="local">
+                <div class="local-mais-info">
                 <strong>Colinas de Indaiatuba<br />
                 Indaiatuba-SP</strong>
                 </div>
             </div>
-            <div class="preco">
+            <div class="preco-mais-info">
                 <strong>40,00</strong>
             </div>
         </div>
     </div>
 </div>
-<Link to="/Vagas"><a class="saber_menos">-</a></Link>
+<Link to="/Vagas"><a class="saber_menos-mais-info">-</a></Link>
 </div>
 </>
 )

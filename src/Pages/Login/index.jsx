@@ -82,7 +82,7 @@ function Index() {
                     <button type="submit">ENTRAR</button>
                     <small className="mt-3">
                         <span>Ainda não é cadastrado? </span>
-                        <Link to="/registrar">Cadastre-se aqui </Link>!
+                        <Link to="/registrar" className="cadastre-se">Cadastre-se aqui </Link>!
                     </small>
                 </form>
 

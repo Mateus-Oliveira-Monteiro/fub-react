@@ -1,104 +1,52 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
 }
-.header{
-    background-color: white;
-    height: 80px;
-    float: left;
-    width: 100%;
-}
-.logo{
-    float: left;
-    width: 150px;
-    margin-left: 17px;
-    margin-top: 15px;
-}
-nav{
-    float: right;
-    text-align: center;
-    width: 50%;
-    margin-bottom: 5px;
-    text-decoration: none;
-    height: 100%;
-}
-nav li {
-    display: inline;
-}
-nav ul li a{
-    margin-left: 3%;
-}
-nav a:link, :visited{
-    color: rgba(147, 85, 218, 0.924);
-    font-size: 32px;
-    display: inline-block;
-    text-decoration: none;
-}
-nav a:hover{
-    color: rgb(240, 169, 38);
-    background-color: white;
-}
-li{
-    margin-left: 5%;
-    color: rgba(147, 85, 218, 0.924);
-    background-color: white;
-}
-.bloco1-mais-info{
-    background-color: rgba(253, 230, 252, 0.924);
-    color: rgba(147, 85, 218, 0.924);
-    text-align: center;
-    width: 100%;
-    height: 52px;
-    float: left;
-    margin-top: 15px;
-    font-size: 30px;
-    padding-top: 15px;
-}
 .bloco2-mais-info{
-    background-color: rgba(147, 85, 218, 0.924);
+    background-color: #070C3B;
     width: 100%;
     height: 80px;
     float: left;
+    
 }
-.campos{
+.campos-mais-info{
     float: left;
     width: 27%;
     margin-left: 7%;
     height: 30px;
     margin-top: 17px;
     background-color: white;
-    padding-top: 10px;
+    padding-top: 0px;
     text-align: center;
     font-size: 20px;
-    color: rgba(198, 158, 245, 0.924);
+    color: #070C3B;
     border-radius: 30px;
 }
-.busque{
+.busque-mais-info{
     float: left;
     width: 27%;
     margin-left: 4%;
     height: 30px;
     margin-top: 17px;
     background-color: white;
-    padding-top: 10px;
+    padding-top: 0px;
     text-align: center;
     font-size: 20px;
-    color: rgba(198, 158, 245, 0.924);
+    color: #070C3B;
     border-radius: 30px;
 }
 .fundo-mais-info{
     width: 100%;
     height: 600px;
     float: left;
-    background-color: rgb(253, 253, 226);
+    background-color: #F1E9E9;
 }
-.vaga{
-    background-color: white;
-    width: 77%;
-    margin-left: 5%;
+.vaga-mais-info{
     float: left;
+    width: 77%;
+    margin-left: 3%;
     height: auto;
-    margin-top: 70px;
-    margin-bottom: 50px;
+    margin-top: 25px;
+    background-color: white;
 }
 .bloco3-mais-info{
     width: 47%;
@@ -116,37 +64,38 @@ li{
     margin-top: 35px;
     margin-bottom: 30px;
 }
-.descricao{
+.descricao-mais-info{
     float: left;
     font-size: 20px;
     color: black;
     height: auto;
     width: 90%;
+    border: black 1px solid;
 }
-.descricao strong{
+.descricao-mais-info strong{
     text-align: left;
     color: rgb(23, 161, 138);
     font-size: 30px;
 }
-.botao{
+.botao-mais-info{
     width: 70%;
     margin-left: 13%;
     height: 60px;
     float: left;
-    background-color: rgba(147, 85, 218, 0.924);
+    background-color: #070C3B;
     color: white;
     font-size: 28px;
     text-align: center;
-    padding-top: 25px;
+    padding-top: 8px;
     border-radius: 15px;
     margin-top: 25px;
     margin-bottom: 10px;
     text-decoration: none;
 }
-.botao strong{
+.botao-mais-info strong{
     color: white;
 }
-.contratante img{
+.contratante-mais-info img{
     width: 120px;
     height:120px;
     border-radius: 50%;
@@ -154,7 +103,7 @@ li{
     float: left;
     margin-left: 10px;
 }
-.nome{
+.nome-mais-info{
     float: left;
     width: 50%;
     margin-left: 10px;
@@ -164,7 +113,7 @@ li{
     font-size: 20px;
     color: rgb(15, 146, 124);
 }
-.classificacao{
+.classificacao-mais-info{
     height: 25px;
     width: 50%;
     margin-left: 10px;
@@ -172,14 +121,14 @@ li{
     float: left;
     border: black solid 1px;
 }
-.localizacao{
+.localizacao-mais-info{
     float: left;
     width: 100%;
     height: 80px;
     margin-top: 10px;
     margin-left: 0px;
 }
-.local_img{
+.local-mais-info_img-mais-info{
     float: left;
     height: 50px;
     width: 50px;
@@ -187,7 +136,7 @@ li{
     margin-left: 5px;
     border: black solid 1px;
 }
-.local{
+.local-mais-info{
     float: left;
     margin-left: 0px;
     height: auto;
@@ -197,7 +146,7 @@ li{
     font-size: 22px;
     color: rgb(20, 92, 80);
 }
-.preco{
+.preco-mais-info{
     float: right;
     margin-right: 20px;
     width: 150px;
@@ -206,32 +155,32 @@ li{
     padding-top: 10px;
     margin-top: 25px;
 }
-.preco strong{
+.preco-mais-info strong{
     font-size: 25px;
 }
-.botao:hover{  
+.botao-mais-info:hover{  
     background-color: rgb(255, 215, 104);
     color: white;
 }
-.saber_menos{
+.saber_menos-mais-info{
     height: 52px;
     float: left;
     width: 10%;
-    background-color: rgba(229, 213, 248, 0.924);
+    background-color: #B4A8B7;
     font-size: 35px;
     text-align: center;
-    padding-top: 12px;
-    color: rgba(147, 85, 218, 0.924);
+    padding-top: 0px;
     margin-left: 4%;
     margin-top: 200px;
+    text-decoration: none;
+}
+.saber_menos-mais-info:hover{
+    background-color: #FAC113;
 }
 a{
     text-decoration: none;
 }
-a:hover{
-    background-color: rgb(255, 215, 104);
-    color: white;
-}
+
 @media (max-width:1800px){
     ul{
         padding-top: 4px;
@@ -303,38 +252,38 @@ a:hover{
     .campos{
         font-size: 18px;
     }
-    .busque{
+    .busque-mais-info{
         font-size: 18px;
     }
 }
 @media (max-width:1050px){
-    .saber_menos{
+    .saber_menos-mais-info{
         font-size: 32px;
     }
-    .contratante img{
+    .contratante-mais-info img{
         width: 100px;
         height: 100px;
     }
     .bloco4-mais-info strong{
         font-size: 18px;
     }
-    .localizacao{
+    .localizacao-mais-info{
         font-size: 20px;
     }
-    .local_img{
+    .local-mais-info_img-mais-info{
         height: 45px;
         width: 45x;
     }
-    .local{
+    .local-mais-info{
         font-size: 20px;
     }
-    .preco strong{
+    .preco-mais-info strong{
         font-size: 22px;
     }
-    .descricao{
+    .descricao-mais-info{
         font-size: 19px;
     }
-    .descricao strong{
+    .descricao-mais-info strong{
         font-size: 28px;
     }
 }
@@ -355,39 +304,39 @@ a:hover{
     }
 }
 @media (max-width:950px){
-    .saber_menos{
+    .saber_menos-mais-info{
         font-size: 30px;
     }
-    .contratante img{
+    .contratante-mais-info img{
         width: 100px;
         height: 100px;
     }
-    .nome{
+    .nome-mais-info{
         width: 150px;
     }
     .bloco4-mais-info strong{
         font-size: 17px;
     }
-    .classificacao{
+    .classificacao-mais-info{
         width: 150px;
     }
-    .localizacao{
+    .localizacao-mais-info{
         font-size: 19px;
     }
-    .local_img{
+    .local-mais-info_img-mais-info{
         height: 40px;
         width: 40x;
     }
-    .local{
+    .local-mais-info{
         font-size: 19px;
     }
-    .preco strong{
+    .preco-mais-info strong{
         font-size: 21px;
     }
-    .descricao{
+    .descricao-mais-info{
         font-size: 19px;
     }
-    .descricao strong{
+    .descricao-mais-info strong{
         font-size: 26px;
     }
 }
@@ -403,34 +352,34 @@ a:hover{
         width: 60%;
         text-align: right;
     }
-    .saber_menos{
+    .saber_menos-mais-info{
         font-size: 30px;
     }
-    .contratante img{
+    .contratante-mais-info img{
         width: 85px;
         height: 85px;
     }
-    .nome{
+    .nome-mais-info{
         font-size: 18px;
     }
-    .local_img{
+    .local-mais-info_img-mais-info{
         height: 35px;
         width: 35x;
     }
-    .local{
+    .local-mais-info{
         font-size: 17px;
         width: 70%;
     }
-    .preco strong{
+    .preco-mais-info strong{
         font-size: 20px;
     }
-    .descricao{
+    .descricao-mais-info{
         font-size: 17px;
     }
-    .descricao strong{
+    .descricao-mais-info strong{
         font-size: 26px;
     }
-    .botao{
+    .botao-mais-info-mais_info{
         font-size: 25px;
         height: 50px;
         padding-top: 20px;
@@ -457,7 +406,7 @@ a:hover{
     .header{
         height: 70px;
     }
-    .descricao{
+    .descricao-mais-info{
         font-size: 15px;
         height: auto;
     }
@@ -465,7 +414,7 @@ a:hover{
         width: 200px;
         font-size: 16px;
     }
-    .busque{
+    .busque-mais-info{
         width: 200px;
         font-size: 16px;
     }
@@ -482,21 +431,21 @@ a:hover{
         width: 100%;
         margin-left: 0px;
     }
-    .descricao strong{
+    .descricao-mais-info strong{
         font-size: 30px;
     }
-    .descricao{
+    .descricao-mais-info{
         font-size: 20px;  
         padding-left: 15px;
     }
-    .contratante img{
+    .contratante-mais-info img{
         width: 120px;
         height:120px;
     }
-    .nome{
+    .nome-mais-info{
         width: 210px;
     }
-    .classificacao{
+    .classificacao-mais-info{
         width: 200px;
     }
     .bloco4-mais-info strong{
@@ -505,14 +454,14 @@ a:hover{
     .fundo-mais-info{
         height: auto;
     }
-    .saber_menos{
+    .saber_menos-mais-info{
         margin-top: 400px;
     }
-    .local_img{
+    .local-mais-info_img-mais-info{
         height: 50px;
         width: 50px;
     }
-    .botao{
+    .botao-mais-info{
         font-size: 28px;
         height: 60px;
         width: 300px;
@@ -539,7 +488,7 @@ a:hover{
     }
 }
 @media (max-width:650px){
-    .saber_menos{
+    .saber_menos-mais-info{
         height: 45px;
         padding-top: 8px;
     }
@@ -561,7 +510,7 @@ a:hover{
     .header{
         height: 70px;
     }
-    .botao{
+    .botao-mais-info{
         width: 70%;
     }
 }

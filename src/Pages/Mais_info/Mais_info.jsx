@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import {Link, useParams} from "react-router-dom"
-import "./mais_info.css";
-import logo from '../../Assets/Images/logo.png';
+import "./mais_info.scss";
 import img13 from '../../Assets/Images/13.png';
 import myaxios from "../../Services/axios";
-import { contractItem } from "../../Components/ContractItem";
+import {Container} from "react-bootstrap";
 
 
 function Mais_info() {
@@ -23,54 +22,42 @@ function Mais_info() {
     }, [])
 
     return(
-        <>
-            <div class="bloco1-mais-info">
-            <strong>BICOS DISPONÍVEIS</strong>
-        </div>
-        <div class="bloco2-mais-info">
-            <div class="campos">
-                <strong>Campos</strong>
-            </div>
-            <div class="busque">
-                <strong>Busque por Bicos</strong>
-            </div>
-        </div>
-        <div class="fundo-mais-info">
-    <div class="vaga">
-    <div class="bloco3-mais-info">
-        <div class="descricao">
-            <strong>ghgfhf</strong>
-            <p>dfsfd}</p>
-        </div>
-            <Link to="/candidatar" class="botao"><strong>Candidatar-se</strong></Link>
-    </div>
-    <div class="bloco4-mais-info">
-        <div class="contratante">
-            <img src={img13}/>
-            <div class="nome">
-                <strong>Nome Sobrenome</strong>
-            </div>
-            <div class="classificacao">
-                classificacao
-            </div>
-            <div class="localizacao">
-                <div class="local_img">
+        <div id={'mais_info'}>
+
+            <div id={'mais_info_header'} className={'w-100'}>
+
+                <div style={{ backgroundColor: '#B4A8B7' }} className={'text-light'}>
+                    BICOS DISPONÍVEIS
                 </div>
-                <div class="local">
-                <strong>Colinas de Indaiatuba<br />
-                Indaiatuba-SP</strong>
+
+                <div style={{ backgroundColor: '#070C3B' }}></div>
+
+            </div>
+
+            <Container className={'mt-4'}>
+
+                <div className={'px-5 py-4'}>
+
+                    <div id={'left_part'} className={'p-3'}>
+                        <h2>Cortar a grama</h2>
+                        <p>mais info</p>
+                        <button className={'mx-auto'}>Candidatar-se</button>
+                    </div>
+
+                    <div>
+
+                    </div>
+
                 </div>
-            </div>
-            <div class="preco">
-                <strong>40,00</strong>
-            </div>
+
+                <div>
+f
+                </div>
+
+            </Container>
+
         </div>
-    </div>
-</div>
-<Link to="/Vagas"><a class="saber_menos">-</a></Link>
-</div>
-</>
-)
+    )
 }
 
 export default Mais_info;

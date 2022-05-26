@@ -28,27 +28,17 @@ nav ul li a{
     margin-left: 3%;
 }
 nav a:link, :visited{
-    color: rgba(147, 85, 218, 0.924);
+    color: #070C3B;
     font-size: 32px;
     display: inline-block;
     text-decoration: none;
 }
 nav a:hover{
-    color: rgb(240, 169, 38);
+    color: #D57961;
 }
 li{
     margin-left: 5%;
-    color: rgba(147, 85, 218, 0.924);
-}
-.bloco1{
-    height: 50px;
-    float: left;
-    width: 100%;
-    text-align: center;
-    font-size: 28px;
-    color: white;
-    background-color: rgba(198, 158, 245, 0.924);
-    padding-top: 15px;
+    color: #070C3B;
 }
 .bloco2{
     width: 98%;
@@ -56,7 +46,7 @@ li{
     float: left;
     margin-top: 10px;
     margin-left: 1%;
-    background-color: rgb(253, 253, 226);
+    background-color: #F1E9E9;
 }
 .bico{
     width: 40%;
@@ -71,7 +61,7 @@ li{
     width: 80%;
     margin-left: 10%;
     font-size: 28px;
-    color: rgba(147, 85, 218, 0.924);
+    color: #070C3B;
 }
 .desc{
     width: 65%;
@@ -91,7 +81,7 @@ li{
 }
 .salario{
     font-size: 20px;
-    color: rgba(147, 85, 218, 0.924);
+    color: #070C3B;
     float: left;
     width: auto;
     margin-top: 3px;
@@ -138,7 +128,7 @@ li{
 .nome{
     width: 100%;
     height: auto;
-    color: rgba(147, 85, 218, 0.924);
+    color: #070C3B;
     font-size: 18px;
 }
 .classificacao{
@@ -152,7 +142,7 @@ li{
     float: right;
     text-align: center;
     height: 40px;
-    background-color: rgba(147, 85, 218, 0.924);
+    background-color: #070C3B;
     color: white;
     font-size: 25px;
     width: 30%;
@@ -162,7 +152,7 @@ li{
     padding-top: 10px;
 }
 .ver_perfil:hover{
-    background-color: rgb(255, 215, 104);
+    background-color: #FAC113;
 }
 @media (max-width:1800px){
     ul{

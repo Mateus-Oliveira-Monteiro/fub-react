@@ -28,23 +28,23 @@ nav ul li a{
     margin-left: 3%;
 }
 nav a:link, :visited{
-    color: rgba(147, 85, 218, 0.924);
+    color: #070C3B;
     font-size: 32px;
     display: inline-block;
     text-decoration: none;
 }
 nav a:hover{
-    color: rgb(240, 169, 38);
+    color: #D57961;
     background-color: white;
 }
 li{
     margin-left: 5%;
-    color: rgba(147, 85, 218, 0.924);
+    color: #070C3B;
     background-color: white;
 }
 .bloco1{
-    background-color: rgba(253, 230, 252, 0.924);
-    color: rgba(147, 85, 218, 0.924);
+    background-color: #F1E9E9;
+    color: #070C3B;
     text-align: center;
     width: 100%;
     height: 52px;
@@ -54,7 +54,7 @@ li{
     padding-top: 15px;
 }
 .bloco2{
-    background-color: rgba(147, 85, 218, 0.924);
+    background-color: #070C3B;
     width: 100%;
     height: 80px;
     float: left;
@@ -69,7 +69,7 @@ li{
     padding-top: 10px;
     text-align: center;
     font-size: 20px;
-    color: rgba(198, 158, 245, 0.924);
+    color: #B4A8B7;
     border-radius: 30px;
 }
 .busque{
@@ -82,14 +82,14 @@ li{
     padding-top: 10px;
     text-align: center;
     font-size: 20px;
-    color: rgba(198, 158, 245, 0.924);
+    color: #B4A8B7;
     border-radius: 30px;
 }
 .fundo{
     width: 100%;
     height: 600px;
     float: left;
-    background-color: rgb(253, 253, 226);
+    background-color: #F1E9E9;
 }
 .vaga{
     background-color: white;
@@ -125,7 +125,7 @@ li{
 }
 .descricao strong{
     text-align: left;
-    color: rgb(23, 161, 138);
+    color: #D57961;
     font-size: 30px;
 }
 .botao{
@@ -133,7 +133,7 @@ li{
     margin-left: 13%;
     height: 60px;
     float: left;
-    background-color: rgba(147, 85, 218, 0.924);
+    background-color: #070C3B;
     color: white;
     font-size: 28px;
     text-align: center;
@@ -143,6 +143,7 @@ li{
     margin-bottom: 10px;
     text-decoration: none;
 }
+
 .botao strong{
     color: white;
 }
@@ -162,7 +163,7 @@ li{
 }
 .bloco4 strong{
     font-size: 20px;
-    color: rgb(15, 146, 124);
+    color: #D57961;
 }
 .classificacao{
     height: 25px;
@@ -185,7 +186,13 @@ li{
     width: 50px;
     margin-top: 15px;
     margin-left: 5px;
-    border: black solid 1px;
+}
+.local_img img{
+    float: left;
+    width: 100%;
+    height: 50px;
+    margin-top: 0px;
+    margin-left: 0px;
 }
 .local{
     float: left;
@@ -195,12 +202,12 @@ li{
     margin-top: 15px;
     margin-left: 12px;
     font-size: 22px;
-    color: rgb(20, 92, 80);
+    color: #D57961;
 }
 .preco{
     float: right;
     margin-right: 20px;
-    width: 150px;
+    width: 100%;
     height: 35px;
     text-align: center;
     padding-top: 10px;
@@ -210,18 +217,18 @@ li{
     font-size: 25px;
 }
 .botao:hover{  
-    background-color: rgb(255, 215, 104);
+    background-color: #FAC113;
     color: white;
 }
 .saber_menos{
     height: 52px;
     float: left;
     width: 10%;
-    background-color: rgba(229, 213, 248, 0.924);
+    background-color: #B4A8B7;
     font-size: 35px;
     text-align: center;
     padding-top: 12px;
-    color: rgba(147, 85, 218, 0.924);
+    color: #070C3B;
     margin-left: 4%;
     margin-top: 200px;
 }
@@ -229,8 +236,25 @@ a{
     text-decoration: none;
 }
 a:hover{
-    background-color: rgb(255, 215, 104);
+    background-color: #FAC113;
     color: white;
+}
+@media(max-height:800px){
+    @media(max-width: 1000px){
+        .fundo{
+            height: 700px;
+        }
+    }
+}
+@media(min-height:900px){
+    .fundo{
+        height: 800px;
+    }
+}
+@media(min-height:1000px){
+    .fundo{
+        height: 900px;
+    }
 }
 @media (max-width:1800px){
     ul{
@@ -326,7 +350,13 @@ a:hover{
     }
     .local_img{
         height: 45px;
-        width: 45x;
+        width: 45px;
+    }
+    .local_img img{
+        margin-left: 0px;
+        margin-top: 0px;
+        width: 100%;
+        height: 45px;
     }
     .local{
         font-size: 20px;
@@ -376,7 +406,13 @@ a:hover{
     }
     .local_img{
         height: 40px;
-        width: 40x;
+        width: 40px;
+    }
+    .local_img img{
+        margin-left: 0px;
+        margin-top: 0px;
+        width: 100%;
+        height: 40px;
     }
     .local{
         font-size: 19px;
@@ -414,7 +450,13 @@ a:hover{
     }
     .local_img{
         height: 35px;
-        width: 35x;
+        width: 35px;
+    }
+    .local_img img{
+        margin-left: 0px;
+        margin-top: 0px;
+        width: 100%;
+        height: 35px;
     }
     .local{
         font-size: 17px;
@@ -507,6 +549,12 @@ a:hover{
     .local_img{
         height: 50px;
         width: 50px;
+    }
+    .local_img img{
+        margin-left: 0px;
+        margin-top: 0px;
+        width: 100%;
+        height: 50px;
     }
     .botao{
         font-size: 28px;

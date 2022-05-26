@@ -28,22 +28,22 @@ nav ul li a{
     margin-left: 3%;
 }
 nav a:link, :visited{
-    color: rgba(147, 85, 218, 0.924);
+    color: #070C3B;
     font-size: 32px;
     display: inline-block;
     text-decoration: none;
 }
 nav a:hover{
-    color: rgb(240, 169, 38);
+    color: #D57961;
     background-color: white;
 }
 li{
     margin-left: 5%;
-    color: rgba(147, 85, 218, 0.924);
+    color: #070C3B;
 }
 .bloco1{
-    background-color: rgba(253, 230, 252, 0.924);
-    color: rgba(147, 85, 218, 0.924);
+    background-color: #B4A8B7;
+    color: white;
     text-align: center;
     width: 100%;
     height: 52px;
@@ -53,7 +53,7 @@ li{
     padding-top: 15px;
 }
 .bloco2{
-    background-color: rgba(147, 85, 218, 0.924);
+    background-color: #070C3B;
     width: 100%;
     height: 80px;
     float: left;
@@ -68,7 +68,7 @@ li{
     padding-top: 10px;
     text-align: center;
     font-size: 20px;
-    color: rgba(198, 158, 245, 0.924);
+    color: #B4A8B7;
     border-radius: 30px;
 }
 .busque{
@@ -81,14 +81,14 @@ li{
     padding-top: 10px;
     text-align: center;
     font-size: 20px;
-    color: rgba(198, 158, 245, 0.924);
+    color: #B4A8B7;
     border-radius: 30px;
 }
 .fundo{
     width: 100%;
     height: auto;
     float: left;
-    background-color: rgb(248, 248, 214);
+    background-color: #F1E9E9;
 }
 .bloco3{
     width: 65%;
@@ -127,12 +127,12 @@ li{
     margin-left: 10px;
     margin-top: 10px;
     float: left;
-    color: rgba(147, 85, 218, 0.924);
+    color: #070C3B;
     font-size: 20px;
 }
 .bloco3 strong{
     font-size: 25px;
-    color: rgba(147, 85, 218, 0.924);
+    color: #070C3B;
 }
 .botoes{
     float: left;
@@ -146,15 +146,15 @@ li{
     height: 65px;
     font-size: 30px;
     text-align: center;
-    background-color: white;
-    color: rgba(147, 85, 218, 0.924);
+    background-color: #070C3B;
+    color: white;
     padding-top: 35px;
     text-decoration: none;
     margin-top: 25px;
     border-radius: 20px;
 }
 .botoes a:hover{
-    background-color: rgb(255, 215, 104);
+    background-color: #FAC113;
     color: white;
 }
 .vaga_form{
@@ -170,7 +170,7 @@ li{
     margin-left: 1%;
 }
 .pt1 strong{
-    color: rgba(198, 158, 245, 0.924);
+    color: #B4A8B7;
 }
 .pt2{
     width: 45%;
@@ -180,7 +180,7 @@ li{
     margin-left: 1%;
 }
 .pt2 strong{
-    color: rgba(198, 158, 245, 0.924);
+    color: #B4A8B7;
 }
 .titulo{
     float: left;
@@ -203,7 +203,7 @@ li{
     float: left;
 }
 .descricao strong{
-    color: rgba(198, 158, 245, 0.924);
+    color: #B4A8B7;
 }
 .desc_preencher{
     width: 97%;
@@ -215,7 +215,7 @@ li{
 }
 .lembrete{
     float: left;
-    color: rgba(147, 85, 218, 0.924);
+    color: #070C3B;
     font-size: 29px;
     width: 100%;
     height: auto;

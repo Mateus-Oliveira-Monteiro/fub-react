@@ -28,20 +28,20 @@ nav ul li a{
     margin-left: 3%;
 }
 nav a:link, :visited{
-    color: rgba(147, 85, 218, 0.924);
+    color: #070C3B;
     font-size: 32px;
     display: inline-block;
     text-decoration: none;
 }
 nav a:hover{
-    color: rgb(240, 169, 38);
+    color: #D57961;
 }
 li{
     margin-left: 5%;
-    color: rgba(147, 85, 218, 0.924);
+    color: #070C3B;
 }
 .fundo{
-    background-color: rgb(252, 252, 215);
+    background-color: #F1E9E9;
     float: left;
     height: auto;
     width: 100%;
@@ -51,7 +51,7 @@ li{
     margin-left: 30%;
     border-bottom-left-radius: 15000px;
     border-bottom-right-radius: 15000px;
-    background-color: rgba(204, 167, 247, 0.924);
+    background-color: #070C3B;
 }
 .imagem {
     width: 50%;
@@ -82,7 +82,7 @@ li{
 }
 .titulo strong{
     font-size: 30px;
-    color: rgba(198, 158, 245, 0.924);
+    color: #070C3B;
 }
 .formulario input{
     height: 50px;
@@ -107,16 +107,16 @@ li{
     text-decoration: none;
     padding-top: 12px;
     font-size: 30px;
-    color: rgba(147, 85, 218, 0.924);
+    color: #070C3B;
 }
 .entrar a:hover{
     color: white;
-    background-color: rgb(255, 215, 104);
+    background-color: #FAC113;
 }
 .nova_conta{
     text-align: center;
     font-size: 27px;
-    color: rgba(147, 85, 218, 0.924);
+    color: #070C3B;
     height: auto;
     margin-top: 35px;
     width: 100%;

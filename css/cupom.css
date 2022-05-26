@@ -15,11 +15,11 @@ body{
 }
 nav{
     float: right;
-    text-align: center;
+    text-align: right;
     width: 70%;
     margin-bottom: 5px;
     text-decoration: none;
-    height: 100%;
+    margin-right: 5%;
 }
 nav li {
     display: inline;
@@ -40,103 +40,107 @@ li{
     margin-left: 5%;
     color: #070C3B;
 }
-.fundo{
+.cupom-fundo{
     background-color: #F1E9E9;
     float: left;
-    height: auto;
+    height: 100%;
     width: 100%;
 }
-.meio-circulo {
-    width: 40%;
-    margin-left: 30%;
-    border-bottom-left-radius: 15000px;
-    border-bottom-right-radius: 15000px;
-    background-color: #070C3B;
-}
-.imagem {
-    width: 50%;
-    padding-bottom: 50%;
-    margin-left: 25%;
-}
-.imagem img{
-    margin-top: 50%;
-    width: 80%;
-    float: left;
-    margin-left: 10%;
-}
-.formulario{
-    float: left;
-    
-    width: 35%;
-    margin-left: 32.5%;
+.cupom-dica{
+    font-size: 17px;
+    width: 60%;
+    margin-left: 20%;
+    text-align: center;
     height: auto;
-    margin-top: 30px;
+    margin-top: 25px;
+}
+.cupom-cupom{
+    width: 50%;
+    margin-left: 25%;
+    float: left;
+    height: auto;
+    background-color: white;
+    margin-top: 40px;
     margin-bottom: 50px;
 }
-.titulo{
-    height: auto;
+.cupom-titulo{
+    font-size: 36px;
     width: 100%;
+    height: auto;
+    margin-top: 65px;
     text-align: center;
-    margin-top: 20px;
     float: left;
 }
-.titulo strong{
-    font-size: 30px;
-    color: #B4A8B7;
+.cupom-status{
+    width: 100%;
+    float: left;
+    height: auto;
+    font-size: 17px;
+    text-align: center;
 }
-.formulario input{
-    height: 50px;
-    font-size: 25px;
+.cupom-sobre{
     width: 80%;
-    border-radius: 25px;
-    border: white;
     margin-left: 10%;
-    margin-top: 10px;
-    float: left;
-    padding-left: 15px;
-}
-.entrar a{
-    float: left;
-    background-color: white;
-    height: 42px;
-    width: 50%;
-    margin-left: 25%;
-    margin-top: 55px;
-    border-radius: 12px;
-    text-align: center;
-    text-decoration: none;
-    padding-top: 12px;
-    font-size: 30px;
-    color: #070C3B;
-}
-.entrar a:hover{
-    color: white;
-    background-color: #FAC113;
-}
-.cadastrar{
-    margin-top: 40px;
-    float: left;
-    width: 100%;
-    
+    margin-top: 35px;
     height: auto;
-    font-size: 20px;
-    text-align: center;
-    color: #070C3B;
+    margin-bottom: 40px;
+    float: left;
 }
-.cadastrar a{
+.cupom-detalhes{
+    font-size: 25px;
+    text-align: left;
+    margin-top: 20px;
+}
+.cupom-espaco{
+    float: left;
+    width: 20%;
+    height: 320px;
+}
+.cupom-botao{
+    float: left;
+    height: 35px;
+    width: 15%;
+    margin-left: 5%;
+    font-size: 17px;
+    text-align: center;
+    background-color: #070C3B;
+    color: white;
+    margin-top: 30px;
+    border-radius: 8px;
+    padding-top: 15px;
     text-decoration: none;
+}
+.cupom-botao:hover{
+    background-color: #D57961;
+}
+@media(max-height:800px){
+    .cupom-fundo{
+        height: 700px;
+    }
+}
+@media(min-height:900px){
+    .cupom-fundo{
+        height: 800px;
+    }
+}
+@media(min-height:1000px){
+    .cupom-fundo{
+        height: 900px;
+    }
 }
 @media (max-width:1800px){
     ul{
         padding-top: 4px;
     }
 }
-@media (max-width: 1750px) {
+@media (max-width:1750px){
+
 }
-@media (max-width: 1700px) {
+@media (max-width:1700px){
+
 }
-@media (max-width: 1650px) {
-    
+@media (max-width:1650px){
+
 }
 @media (max-width:1600px){
     nav a:link, :visited{
@@ -150,52 +154,44 @@ li{
         padding-top: 5px;
     }
 }
-@media (max-width: 1550px) {
+@media (max-width:1550px){
+}
+@media (max-width:1500px){
     .logo{
         width: 130px;
         margin-top: 15px;
     }
 }
-@media (max-width: 1500px) {
-    .logo{
-        width: 130px;
-    }
-}
-@media (max-width: 1450px) {
-    
+@media (max-width:1450px){
 }
 @media (max-width:1400px){
     nav a:link, :visited{
         font-size: 28px;
     }
 }
-@media (max-width: 1350px) {
-    
+@media (max-width:1350px){
+
 }
-@media (max-width: 1300px) {
+@media (max-width:1300px){
     .logo{
         width: 125px;
         margin-top: 15px;
     }
 }
-@media (max-width: 1250px) {
-    
+@media (max-width:1250px){
+    .cupom-botao{
+        font-size: 16px;
+        width: 180px;
+    }
 }
 @media (max-width:1200px){
-    .formulario{
-        width: 40%;
-    }
-    .formulario input{
-        height: 40px;
-    }
-    .titulo strong{
-        font-size: 28px;
+}
+@media (max-width:1150px){
+    .cupom-botao{
+        margin-left: 4%;
     }
 }
-@media (max-width: 1150px) {
-    
-}
-@media (max-width: 1100px) {
+@media (max-width:1100px){
     nav a:link, :visited{
         font-size: 25px;
     }
@@ -207,8 +203,10 @@ li{
         padding-top: 8px;
     }
 }
-@media (max-width: 1050px) {
-    
+@media (max-width:1050px){
+    .cupom-cupom{
+        margin-left: 20%;
+    }
 }
 @media (max-width:1000px){
     nav a:link, :visited{
@@ -222,25 +220,18 @@ li{
         width: 120px;
         margin-top: 15px;
     }
-    .formulario{
-        width: 40%;
+    .cupom-dica{
+        width: 70%;
+        margin-left: 15%;
     }
-    .formulario input{
-        height: 40px;
-        width: 90%;
-        margin-left: 5%;
-    }
-    .titulo strong{
-        font-size: 27px;
-    }
-    .cadastrar{
-        font-size: 17px;
+    .cupom-titulo{
+        font-size: 34px;
     }
 }
-@media (max-width: 950px) {
-    
+@media (max-width:950px){
+
 }
-@media (max-width: 900px) {
+@media (max-width:900px){
     nav a:link, :visited{
         font-size: 23px;
     }
@@ -251,19 +242,22 @@ li{
     nav{
         text-align: right;
     }
-    .formulario{
-        width: 450px;
-        margin-left: 200px;
+    .cupom-cupom{
+        width: 70%;
+        margin-left: 15%;
+        margin-bottom: 15px;
+    }
+    .cupom-espaco{
+        height: 0px;
+        width: 0px
+    }
+    .cupom-botao{
+        margin-top: 15px;
     }
 }
-@media (max-width: 850px) {
-    .formulario{
-        width: 450px;
-        margin-left: 175px;
-    }
-    .meio-circulo{
-        width: 60%;
-        margin-left: 20%;
+@media (max-width:850px){
+    .cupom-botao{
+        margin-left: 3%;
     }
 }
 @media (max-width:800px){
@@ -284,17 +278,11 @@ li{
     .header{
         height: 70px;
     }
-    .formulario{
-        width: 450px;
-        margin-left: 150px;
-    }
 }
-@media (max-width: 750px) {
-    .formulario{
-        margin-left: 125px;
-    }
+@media (max-width:750px){
+    
 }
-@media (max-width: 700px) {
+@media (max-width:700px){
     nav a:link, :visited{
         font-size: 20px;
     }
@@ -313,18 +301,12 @@ li{
     .header{
         height: 70px;
     }
-    .formulario{
-        margin-left: 100px
-    }
-    .meio-circulo{
-        width: 70%;
-        margin-left: 15%;
+    .cupom-cupom{
+        width: 80%;
+        margin-left: 10%;
     }
 }
-@media (max-width: 650px) {
-    .formulario{
-        margin-left: 75px;
-    }
+@media (max-width:650px){
     nav a:link, :visited{
         font-size: 16px;
     }
@@ -347,19 +329,21 @@ li{
     .header{
         height: 70px;
     }
-    .formulario{
-        margin-left: 50px;
+    .cupom-cupom{
+        width: 85%;
+        margin-left: 7.5%;
     }
 }
-@media (max-width: 550px) {
+@media (max-width:550px){
     nav a:link, :visited{
         font-size: 14px;
     }
-    .formulario{
-        margin-left: 25px;
+    .cupom-cupom{
+        width: 100%;
+        margin-left: 0%;
     }
 }
-@media (max-width: 500px) {
+@media (max-width:500px){
     nav a:link, :visited{
         font-size: 14px;
     }
@@ -376,8 +360,5 @@ li{
     }
     .header{
         height: 70px;
-    }
-    .formulario{
-        margin-left: 0;
     }
 }

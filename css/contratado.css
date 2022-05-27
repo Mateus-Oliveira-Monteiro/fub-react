@@ -28,32 +28,23 @@ nav ul li a{
     margin-left: 3%;
 }
 nav a:link, :visited{
-    color: rgba(147, 85, 218, 0.924);
+    color: #070C3B;
     font-size: 32px;
     display: inline-block;
     text-decoration: none;
 }
 nav a:hover{
-    color: rgb(240, 169, 38);
+    color: #D57961;
     background-color: white;
 }
 li{
     margin-left: 5%;
-    color: rgba(147, 85, 218, 0.924);
+    color: #070C3B;
     background-color: white;
-}
-.bloco1{
-    height: auto;
-    float: left;
-    width: 97%;
-    margin-left: 1.5%;
-    background-color: rgba(198, 158, 245, 0.924);
-    text-align: center;
-    border-radius: 20px;
 }
 .bloco1 strong{
     font-size: 32px;
-    color: rgba(147, 85, 218, 0.924);
+    color: #070C3B;
 }
 .bloco2{
     width: 97%;
@@ -79,13 +70,13 @@ li{
 }
 .vaga strong{
     font-size: 30px;
-    color: rgba(147, 85, 218, 0.924);
+    color: #EDAA98;
 }
 .salario{
     width: 35%;
     margin-left: 12%;
     text-align: center;
-    color: rgba(147, 85, 218, 0.924);
+    color: #070C3B;
     font-size: 20px;
     float: left;
     margin-bottom: 20px;
@@ -93,7 +84,7 @@ li{
 }
 .salario strong{
     font-size: 30px;
-    color: rgba(147, 85, 218, 0.924);
+    color: #070C3B;
 }
 .direita{
     width: 49%;
@@ -126,7 +117,7 @@ li{
 }
 .direita_bloco strong{
     font-size: 22px;
-    color: rgba(147, 85, 218, 0.924)
+    color: #070C3B
 }
 .classificacao{
     float: left;
@@ -213,12 +204,12 @@ li{
     margin-top: 10px;
 }
 .titulo strong{
-    color: rgba(147, 85, 218, 0.924);
+    color: #070C3B;
     font-size: 35px;
 }
 .texto{
     float: left;
-    color: rgba(147, 85, 218, 0.924);
+    color: #070C3B;
     font-size: 22px;
     margin-top: 15px;
 }
@@ -518,7 +509,6 @@ li{
     .bloco2{
         float: left;
         margin-left: 26px;
-        width: 500px;
         margin-top: 25px;
         margin-bottom: 25px;
     }
@@ -645,7 +635,6 @@ li{
     .bloco2{
         float: left;
         margin-left: 20px;
-        width: 436px;
         margin-top: 25px;
         margin-bottom: 20px;
     }

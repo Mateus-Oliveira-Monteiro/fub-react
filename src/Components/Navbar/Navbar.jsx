@@ -17,11 +17,19 @@ function Navbar() {
 <div class="header">
         <Link to="/"><img src={logo} alt="logo" class="logo" /></Link>
         <nav>
-            <ul>
-                <li><Link to="/vagas"><strong>Vagas</strong></Link></li>
+            <ul className="nav">
+                <li><Link to="/vagas"><strong>Vagas</strong></Link>
+                <ul className="minimenu">
+	                <li><Link to="/vagas"><strong>BICOS DISPONÍVEIS</strong></Link></li>
+	                <li><Link to="/BicosSolicitados"><strong>BICOS SOLICITADOS</strong></Link></li>
+                  <li><Link to="/Anunciar"><strong>ANUNCIAR VAGA</strong></Link></li>
+                  <li><Link to="/Cupom"><strong>CUPONS</strong></Link></li>
+	       	      </ul>
+                </li>
                 <li><Link to="/notificacoes"><strong>Notificações</strong></Link></li>
-                <li><Link to="/perfil"><strong>Meu Perfil</strong></Link></li>
+                <li><Link to="/perfil" className="meu_perfil-nav"><strong>Meu Perfil</strong></Link></li>
                 <li><Link to="/" onClick={(e) => logOut()}><strong>Sair</strong></Link></li>
+              
             </ul>
         </nav>
     </div>

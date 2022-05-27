@@ -5,7 +5,7 @@ import {Container} from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import adriano from '../../Assets/Images/Adrian_de_cria.png'
 import {UserContext, UsuarioContext} from "../../Contexts/UserContext";
-import { faAward } from '@fortawesome/free-solid-svg-icons'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
 import StarRatingComponent from "react-star-rating-component";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
@@ -48,7 +48,7 @@ function Perfil() {
 
                         { ratingStars !== 0 ?
                             <div className={'stars'}>
-                                <StarRatingComponent starColor={'red'} editing={false} value={ratingStars} emptyStarColor={'transparent'} renderStarIcon={() => <FontAwesomeIcon className={'px-1'} icon={faAward} />} />
+                                <StarRatingComponent starColor={'#FAC113'} editing={false} value={ratingStars} emptyStarColor={'transparent'} renderStarIcon={() => <FontAwesomeIcon className={'px-1'} icon={faStar} />} />
                                 <span className={'text-warning'}>{ ratingStars }</span>
                             </div>
                             :

@@ -68,17 +68,6 @@ function Anunciar (){
 
     return (
         <div id="anunciar">
-        <div className="bloco1-anunciar">
-        <strong>BICOS DISPONÍVEIS</strong>
-    </div>
-    <div className="bloco2-anunciar">
-        <div className="campos">
-            <strong>Campos</strong>
-        </div>
-        <div className="busque">
-            <strong>Busque por Bicos</strong>
-        </div>
-    </div>
     <div className="fundo-anunciar">
         <div className="bloco3-anunciar">
             <div className="contratante">
@@ -130,7 +119,7 @@ function Anunciar (){
             </div>
         </div>
         <div className="botoes-anunciar">
-            <Link to="/vagas" ><a className="botao">
+            <Link to="/vagas" ><a className="botao-anunciar">
                 <strong>VOLTAR</strong>
             </a></Link>
             <button className="botao-anunciar" onClick={handleSubmit}>

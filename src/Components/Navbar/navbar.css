@@ -1,12 +1,17 @@
+*{margin: 0; padding: 0;}
 body{
     font-family: Arial, Helvetica, sans-serif;
 }
-.header{
-    background-color: white;
-    height: 67px;
-    float: left;
-    width: 100%;
-    border: 0;
+
+nav{
+    width: 70%;
+    float: right;
+}
+.nav{
+    list-style: none;
+    float: right;
+    width: 90%;
+    font-size: 10px;
 }
 .logo{
     float: left;
@@ -40,10 +45,160 @@ nav a:hover{
 li{
     margin-left: 5%;
     color: rgba(147, 85, 218, 0.924);
+
+.nav li{
+    position: relative;
+    float: left;
+    margin-left: 7%;
+    width: auto;
+    height: 30px;
 }
 
-@media (max-width:800px){
+.meu_perfil-nav{
+    width: 150px;
+}
+
+.nav li a{
+    color: #070C3B; 
+    text-decoration: none; 
+    display: block;
+    text-align: center;
+    padding: 15px 0px 15px 0px;
+}
+
+.nav li a:hover{
+    background:white;
+    color: #D57961;
+    height: 50px;
+}
+.minimenu li:hover{
+    height: 75px;
+}
+.minimenu{
+    position: absolute;
+    top:50px;
+    left:0;
+    background-color:#fff;
+    display: none;
+    padding: 0px 0px 0px 0px;
+    margin-top: 10px;
+}
+.minimenu a{
+    margin-left: 0px;
+}
+.nav li:hover ul, .nav li.over ul{
+    display: block;
+    }
     
+.minimenu li{
+    display:block;
+    width: 350px;
+    text-align: center;
+    margin-left: 0px;
+    height: auto;
+}
+.minimenu{
+    box-shadow: 0 0 2em black;
+    width: auto;
+}
+@keyframes animacao{
+    0% { margin-left: 0;}
+    20% { margin-left: 0;}
+    25% { margin-left: -100%;}
+    45% { margin-left: -100%;}
+    50% { margin-left: -200%;}
+    70% { margin-left: -200%;}
+    75% { margin-left: -300%;}
+    90% { margin-left: -300%;}
+    100% { margin-left: -400%;}
+}
+@media (max-width:1800px){
+    ul{
+        padding-top: 4px;
+    }
+}
+
+
+@media (max-width:1600px){
+    nav a:link, :visited{
+        font-size: 30px;
+    }
+    .logo{
+        width: 135px;
+        margin-top: 15px;
+    }
+    ul{
+        padding-top: 5px;
+    }
+}
+@media (max-width:1550px){
+}
+@media (max-width:1500px){
+    .logo{
+        width: 130px;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width:1400px){
+    nav a:link, :visited{
+        font-size: 28px;
+    }
+}
+@media (max-width:1300px){
+    .logo{
+        width: 125px;
+        margin-top: 15px;
+    }
+}
+@media (max-width:1100px){
+    nav a:link, :visited{
+        font-size: 25px;
+    }
+    .logo{
+        width: 120px;
+        margin-top: 15px;
+    }
+    ul{
+        padding-top: 8px;
+    }
+}
+@media (max-width:1000px){
+    nav a:link, :visited{
+        font-size: 22px;
+    }
+    ul{
+        padding-top: 8px;
+        padding-right: 6px;
+    }
+    .logo{
+        width: 120px;
+        margin-top: 15px;
+    }
+    .minimenu li{
+        width: 300px;
+    }
+    .minimenu{
+        margin-top: 5px;
+    }
+    .minimenu li:hover{
+        height: 50px;
+    }
+}
+@media (max-width:900px){
+    nav a:link, :visited{
+        font-size: 23px;
+    }
+    ul{
+        padding-top: 8px;
+        padding-right: 10px;
+    }
+    nav{
+        text-align: right;
+    }
+    
+}
+@media (max-width:800px){
     nav a:link, :visited{
         font-size: 20px;
     }
@@ -56,11 +211,16 @@ li{
         padding-right: 10px;
     }
     nav{
-        width: 60%;
         text-align: right;
     }
     .header{
         height: 70px;
+    }
+    .minimenu li{
+        width: 250px;
+    }
+    .nav{
+        background-color: white;
     }
 }
 @media (max-width:700px){
@@ -76,8 +236,8 @@ li{
         padding-right: 20px;
     }
     nav{
-        width: 70%;
         text-align: right;
+        margin-right: 2%;
     }
     .header{
         height: 70px;
@@ -86,6 +246,9 @@ li{
 @media (max-width:650px){
     nav a:link, :visited{
         font-size: 16px;
+    }
+    .minimenu li{
+        width: 200px;
     }
 }
 @media (max-width:600px){
@@ -100,8 +263,8 @@ li{
         padding-top: 10px;
     }
     nav{
-        width: 70%;
         text-align: center;
+        margin-right: 0%;
     }
     .header{
         height: 70px;
@@ -109,7 +272,18 @@ li{
 }
 @media (max-width:550px){
     nav a:link, :visited{
-        font-size: 15px;
+        font-size: 14px;
+    }
+    .minimenu li{
+        width: 180px;
+    }
+}
+@media (max-width:500px){
+    .carrossel .imagens img{
+        width: 19.84%;
+    }
+    nav a:link, :visited{
+        font-size: 14px;
     }
     .logo{
         width: 105px;
@@ -119,10 +293,7 @@ li{
         padding-top: 10px;
     }
     nav{
-        width: 70%;
         text-align: center;
     }
-    .header{
-        height: 70px;
-    }
+    
 }

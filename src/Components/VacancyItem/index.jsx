@@ -1,11 +1,13 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEye} from "@fortawesome/free-regular-svg-icons/faEye";
 import './vacancyItem.scss';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const VacancyItem = props => {
 
     const { service, location, budget, id } = props.vacancy;
+
+    const navigate = useNavigate();
 
     const contractLink = `mais_info/${id}`
 
@@ -20,11 +22,11 @@ export const VacancyItem = props => {
             </span>
 
             <span className={'col-3 py-2'}>
-                R$ { budget }
+                R$ { budget.toFixed(2).toString().replace('.', ",") }
             </span>
 
-            <button className={'offset-1 col-2 py-2 border-0 bg-opacity-50'}>
-                <Link to={ contractLink }><FontAwesomeIcon icon={faEye} size={'2x'} color={'white'} /></Link>
+            <button className={'offset-1 col-2 py-2 border-0 bg-opacity-50'} onClick = {(e) => navigate(contractLink)}>
+                <FontAwesomeIcon icon={faEye} size={'2x'} color={'white'} />
             </button>
         </div>
     )

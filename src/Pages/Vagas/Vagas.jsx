@@ -55,7 +55,7 @@ function Vagas() {
                         <VacancyItem vacancy={{
                             service: contract.title ,
                             location: contract.city,
-                            budget: contract.proposedValue.toString().replace('.', ","),
+                            budget: contract.proposedValue,
                             id: contract.id
                         }} />)
                      : "Nenhuma vaga encontrada."}

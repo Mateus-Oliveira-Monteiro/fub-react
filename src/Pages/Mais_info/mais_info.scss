@@ -1,83 +1,169 @@
 #mais_info {
 
-  background-color: #F1E9E9;
-  height: 100vh;
+    background-color: #F1E9E9;
+    min-height: 100vh;
+    padding-bottom: 15rem;
 
-  #mais_info_header {
-    height: 8rem;
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    #mais_info_header {
+        height: 8rem;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
 
-    div:nth-child(1) {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font: bold 2rem 'Roboto';
-    }
-  }
-
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 15rem;
-
-    div:nth-child(1) {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      background-color: white;
-
-      #left_part {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-
-        h2 {
-          font: 500 1.5rem 'Roboto';
+        div:nth-child(1) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font: bold 2rem 'Roboto';
         }
-
-        p {
-          font: 400 1.3rem 'Roboto';
-        }
-
-        button {
-          background-color: #070C3B;
-          font: 500 2rem 'Roboto';
-          height: 5rem;
-          border-radius: 1rem;
-          width: 80%;
-        }
-
-      }
     }
 
-    div {
+    #backArrow {
+        width: 10rem;
+        background: transparent;
+        border-width: 1px;
+        border-color: white;
+        transition: .2s;
+        opacity: 1;
 
-      div:nth-child(2) {
+        &:hover {
+            opacity: .7;
+        }
+    }
+
+    #candidatar {
+        opacity: 1;
+        transition: .2s;
+
+        &:hover {
+            opacity: .7;
+        }
+    }
+
+    .container {
+        display: grid;
+        grid-template: 1fr / 1fr;
+
+        div:nth-child(1) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            background-color: white;
+
+            #left_part {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                h2 {
+                    font: 500 1.5rem 'Roboto';
+                }
+
+                p {
+                    font: 400 1.3rem 'Roboto';
+                    width: 90%;
+                }
+
+                button {
+                    background-color: #070C3B;
+                    font: 500 2rem 'Roboto';
+                    height: 5rem;
+                    border-radius: 1rem;
+                    width: 80%;
+                }
+
+            }
+        }
 
         div {
 
-          display: grid;
-          grid-template: repeat(3, 1fr) / 1fr;
+            div:nth-child(2) {
 
-          div:nth-child(1) {
-            display: grid;
-            grid-template: 1fr / 8rem 1fr;
+                div {
 
-            h6 {
-              color: #D57961;
-              font: 500 1.1rem 'Roboto';
+                    display: grid;
+                    grid-template: repeat(2, 7rem) 3rem 7rem / 1fr;
+
+                    div:nth-child(1) {
+                        display: grid;
+                        grid-template: 1fr / 8rem 1fr;
+
+                        h6 {
+                            color: #D57961;
+                            font: 500 1.3rem 'Roboto';
+                        }
+
+                        span {
+                            color: #D57961;
+                            font: 400 1rem 'Roboto';
+                        }
+
+                    }
+
+                    #location {
+                        display: grid;
+                        grid-template: 1fr / 5rem 1fr;
+                        max-height: 10rem;
+
+                        div:nth-child(2) {
+                            font: 400 1.3rem 'Roboto';
+                        }
+
+                    }
+
+                    #phone {
+                        div:nth-child(1) {
+                            span {
+                                font: 400 1.3rem 'Roboto';
+                            }
+                        }
+                    }
+
+                    div:nth-child(4) {
+
+                        color: #D57961;
+
+                        span:nth-child(1) {
+                            font: 500 1.5rem 'Roboto';
+                        }
+
+                        span:nth-child(2) {
+                            font: bold 1.6rem 'Roboto';
+                        }
+
+                    }
+
+                }
             }
-
-            span {
-              color: #D57961;
-              font: 400 1rem 'Roboto';
-            }
-
-          }
-
         }
-      }
+
     }
 
-  }
+    #footerContracted {
+
+        div {
+
+            h3 {
+                color: #070C3B;
+                font: bold 1.8rem 'Roboto';
+            }
+
+            p {
+                letter-spacing: 1px;
+                font: 500 1.1rem 'Roboto';
+            }
+
+            strong {
+                font: bold 1.1rem 'Roboto';
+            }
+
+        }
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .invisible {
+        visibility: hidden;
+    }
 
 }

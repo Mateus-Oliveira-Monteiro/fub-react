@@ -1,5 +1,5 @@
 import React, {useContext, useEffect} from "react";
-import {Link, useNavigate} from "react-router-dom"
+import {Link, useNavigate, useParams} from "react-router-dom"
 import "./perfil.scss";
 import {Container} from "react-bootstrap";
 import Image from "react-bootstrap/Image";
@@ -14,9 +14,11 @@ import axios from "../../Services/axios";
 
 function Perfil() {
 
-    const { UserState } = useReloadLogin();
+    const {contract, id} = useParams();
+    console.log(contract, id)
 
-    console.log(UserState)
+    const { UserState } = useContext(UsuarioContext);
+
     const { name, ratings, birthDate, occupation, city, state, district, description, imagePath } = UserState;
     const years = Math.floor((Date.now() - new Date(birthDate).getTime()) / 1000 / 60 / 60 / 24 / 365);
     let ratingStars = '';
@@ -37,7 +39,7 @@ function Perfil() {
                     <span className={'col-10 d-flex flex-column justify-content-between text-secondary'}>
 
                         <div id={'perfil-name'} className={''}>
-                            { name ?? '?' }
+                            { name }
                         </div>
 
                         { ratingStars !== 0 ?
@@ -50,11 +52,11 @@ function Perfil() {
                         }
 
                         <div id={'perfil-details'}>
-                            { years ?? '?' } anos - { occupation ?? '?' }
+                            { years } anos - { occupation }
                         </div>
 
                         <div id={'perfil-location'}>
-                            { state ?? '?' }, { city ?? '?' }, { district ?? '?' }
+                            { state }, { city }, { district }
                         </div>
 
                     </span>
@@ -62,7 +64,7 @@ function Perfil() {
 
                 <div className={'row px-4'}>
                     <div id={'about'} className={'text-secondary'}>Sobre</div>
-                    <div>{ description ?? '?' }</div>
+                    <div>{ description }</div>
                 </div>
 
             </Container>

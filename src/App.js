@@ -15,8 +15,11 @@ import Login from './Pages/Login';
 import Registrar from './Pages/Registrar';
 import {Avaliacao} from "./Pages/Avaliacao/Avaliacao";
 import Cupom from './Pages/Cupom';
+import {useReloadLogin} from "./Hooks/useReloadLogin";
 
 function App() {
+
+    useReloadLogin();
 
     return (
       <BrowserRouter>
@@ -28,9 +31,10 @@ function App() {
                 <Route path="/vagas" element={<Vagas />}/>
                 <Route path="/notificacoes" element={<Notificacoes />}/>
                 <Route path="/perfil" element={<Perfil />}/>
+                <Route path={'/perfil/:id/:contract'} element={<Perfil />} />
                 <Route path="vagas/mais_info/:id" element={<Mais_info />}/>
                 <Route path="/anunciar" element={<Anunciar />}/>
-                <Route path="/candidatos" element={<Candidatos />}/>
+                <Route path="/candidatos/:id" element={<Candidatos />}/>
                 <Route path="/contratado" element={<Contratado />}/>
                 <Route path="/bicos_solicitados" element={<BicosSolicitados />}/>
                 <Route path="/candidatar" element={<Candidatar />}/>

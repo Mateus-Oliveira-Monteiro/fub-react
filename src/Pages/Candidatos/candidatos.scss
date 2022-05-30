@@ -1,0 +1,46 @@
+$purple: #8b54dc;
+$light-purple: #a574ee;
+
+#vagas {
+
+    #header-main {
+
+        #header-bicos {
+            background-color: $light-purple;
+            font: bold 1.5rem 'Roboto';
+            letter-spacing: 2px;
+        }
+
+        #search {
+
+            background-color: $purple;
+            height: 3.5rem;
+
+            input {
+                border-radius: 10rem;
+                font: normal 1.1rem 'Roboto';
+
+                &::placeholder {
+                    text-align: center;
+                    letter-spacing: 2px;
+                    font: 500 1.1rem 'Roboto';
+                }
+            }
+
+        }
+
+    }
+
+    #content {
+        background-color: #F1E9E9;
+        text-align: center;
+    }
+
+    #list-vagas {
+        border-radius: 1rem;
+        font: 600 1.3rem 'Roboto';
+        color: $purple;
+        min-height: 60vh;
+    }
+
+}

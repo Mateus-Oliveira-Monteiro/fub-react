@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom"
-import "./candidatos.css";
+import "./candidatos.scss";
 import logo from '../../Assets/Images/logo.png';
 
 

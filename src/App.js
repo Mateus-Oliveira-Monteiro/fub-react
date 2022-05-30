@@ -31,7 +31,7 @@ function App() {
                 <Route path="/vagas" element={<Vagas />}/>
                 <Route path="/notificacoes" element={<Notificacoes />}/>
                 <Route path="/perfil" element={<Perfil />}/>
-                <Route path={'/perfil/:id/:contract'} element={<Perfil />} />
+                <Route path={'/perfil/:id'} element={<Perfil />} />
                 <Route path="vagas/mais_info/:id" element={<Mais_info />}/>
                 <Route path="/anunciar" element={<Anunciar />}/>
                 <Route path="/candidatos/:id" element={<Candidatos />}/>

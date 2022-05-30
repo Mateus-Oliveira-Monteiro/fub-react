@@ -1,46 +1,37 @@
-$purple: #8b54dc;
-$light-purple: #a574ee;
+#candidatos {
+    height: 100vh;
+    background-color: #F1E9E9;
 
-#vagas {
+    main {
+        display: grid;
+        grid-template: 1fr / repeat(2, 1fr);
+        font-family: 'Roboto';
 
-    #header-main {
+        section:nth-child(1) {
 
-        #header-bicos {
-            background-color: $light-purple;
-            font: bold 1.5rem 'Roboto';
-            letter-spacing: 2px;
-        }
+            div {
 
-        #search {
-
-            background-color: $purple;
-            height: 3.5rem;
-
-            input {
-                border-radius: 10rem;
-                font: normal 1.1rem 'Roboto';
-
-                &::placeholder {
-                    text-align: center;
-                    letter-spacing: 2px;
-                    font: 500 1.1rem 'Roboto';
+                h1 {
+                    font: bold 2.3rem 'Roboto';
                 }
+
+                p {
+                    font: 400 1.1rem 'Roboto';
+                }
+
+                div {
+                    span:nth-child(1) {
+                        font: 500 1.6rem 'Roboto';
+                    }
+
+                    span:nth-child(2) {
+                        font: 400 2rem 'Roboto';
+                    }
+                }
+
             }
 
         }
 
     }
-
-    #content {
-        background-color: #F1E9E9;
-        text-align: center;
-    }
-
-    #list-vagas {
-        border-radius: 1rem;
-        font: 600 1.3rem 'Roboto';
-        color: $purple;
-        min-height: 60vh;
-    }
-
 }

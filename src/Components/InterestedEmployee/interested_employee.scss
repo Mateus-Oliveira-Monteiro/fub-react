@@ -1,0 +1,42 @@
+.interested {
+
+    border-radius: 5px;
+    height: 7rem;
+    display: grid;
+    grid-template: 1fr / 1fr repeat(2, 2fr);
+
+    div:nth-child(1) {
+
+    }
+
+    div:nth-child(2) {
+        div:nth-child(1) {
+            font: 500 1.4rem 'Roboto';
+            color: #070C3B;
+        }
+
+        div:nth-child(2) {
+            span {
+                font: 400 1.3rem 'Roboto';
+                color: #FAC113;
+            }
+        }
+    }
+
+    div:nth-child(3) {
+
+        button {
+            height: 100%;
+            min-height: 2rem;
+            font: 400 1rem 'Roboto';
+            background-color: #070C3B;
+            transition: .2s;
+
+            &:hover {
+                opacity: 90%;
+                font: 500 2rem 'Roboto';
+            }
+        }
+    }
+
+}

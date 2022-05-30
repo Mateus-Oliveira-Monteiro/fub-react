@@ -1,33 +1,29 @@
 import React, {useContext, useEffect} from "react";
-import {Link, useNavigate} from "react-router-dom"
+import {Link, useNavigate, useParams} from "react-router-dom"
 import "./perfil.scss";
 import {Container} from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import adriano from '../../Assets/Images/Adrian_de_cria.png'
-import {UserContext, UsuarioContext} from "../../Contexts/UserContext";
+import {UsuarioContext} from "../../Contexts/UserContext";
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import StarRatingComponent from "react-star-rating-component";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {useReloadLogin} from "../../Hooks/useReloadLogin";
+import jwtDecode from "jwt-decode";
+import axios from "../../Services/axios";
 
 function Perfil() {
 
-    const navigate = useNavigate();
+    const {contract, id} = useParams();
+    console.log(contract, id)
+
     const { UserState } = useContext(UsuarioContext);
 
-    useEffect(() => {
-        if(!UserState) {
-            navigate('/home')
-        }
-    }, [])
-
     const { name, ratings, birthDate, occupation, city, state, district, description, imagePath } = UserState;
-    const years = Math.floor((Date.now() - new Date(birthDate).getTime()) / 1000 / 60 / 60 / 24 / 365)
-    let ratingStars
-    if(ratings.length !== 0) {
-        ratingStars = ratings.reduce((a, b) => a+b) / ratings.length
-    } else {
-        ratingStars = 0
-    }
+    const years = Math.floor((Date.now() - new Date(birthDate).getTime()) / 1000 / 60 / 60 / 24 / 365);
+    let ratingStars = '';
+    if (!!ratings && ratings.length !== 0) ratingStars = ratings.reduce((a, b) => a+b) / ratings.length
+    else ratingStars = 0
     ratingStars = 3.3
 
     return(

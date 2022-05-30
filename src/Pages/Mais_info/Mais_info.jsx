@@ -10,12 +10,30 @@ import StarRatingComponent from "react-star-rating-component";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faStar, faLocationDot, faAnglesLeft, faPhone} from "@fortawesome/free-solid-svg-icons";
 import img12 from '../../Assets/Images/12.png';
+import {useReloadLogin} from "../../Hooks/useReloadLogin";
 
 
 function Mais_info() {
 
     const { id } = useParams();
-    const [contract, setContract] = useState(null);
+    const [contract, setContract] = useState({
+        title: null,
+        description: null,
+        proposedValue: null,
+        district: null,
+        city: null,
+        employer: {
+            imagePath: null,
+            name: null,
+            id: null,
+        }
+    });
+
+    const { UserState } = useReloadLogin();
+
+    const { title, description, district, city, employer } = contract;
+    let proposedValue = contract.proposedValue;
+    proposedValue = parseFloat(proposedValue).toFixed(2);
 
     const navigate = useNavigate();
 
@@ -70,14 +88,22 @@ function Mais_info() {
             <Container className={'mt-4'}>
 
                 <div className={'px-5 py-4'}>
+                            <div id={'left_part'} className={'p-3'}>
+                                <h2>{ title }</h2>
+                                <p>{ description }</p>
 
-                    <div id={'left_part'} className={'p-3'}>
-                        <h2>Cortar a grama</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dignissim augue quam, in facilisis nunc tincidunt et. Sed fringilla accumsan rutrum. Morbi sagittis, sem sit amet dignissim luctus, sapien quam viverra elit, sed feugiat felis purus nec lacus. Fusce dapibus, nulla in convallis suscipit, felis ante pulvinar lorem, volutpat cursus sapien mauris a diam. Integer ut lacinia purus, sed lacinia ante. Mauris eget consectetur turpis. Ut tincidunt, ex id egestas consectetur, magna sapien tristique tellus, at lobortis tortor dolor at ex. Vivamus euismod nunc posuere, gravida lorem nec, ornare erat. Donec convallis est ante, sit amet pellentesque elit rutrum sed. Praesent semper, erat ac finibus laoreet, enim risus malesuada sapien, ac venenatis enim tortor at lectus. Proin convallis, elit non ultrices auctor, mauris nisi pulvinar velit, a commodo tortor ligula sed nisi. Nulla nisi turpis, gravida eget molestie non, bibendum sed lacus.</p>
-                        <div className={'d-flex'}>
-                            <button onClick={handleContract} id={'candidatar'} className={'text-light'}>Candidatar-se</button>
-                        </div>
-                    </div>
+                                {
+                                    UserState.id !== employer.id
+                                        ?
+                                            <div className={'d-flex'}>
+                                                <button onClick={handleContract} id={'candidatar'}
+                                                        className={'text-light'}>Candidatar-se
+                                                </button>
+                                            </div>
+                                        :
+                                            null
+                                }
+                            </div>
 
                     <div>
                         <div className={'h-100 w-100'}>
@@ -85,15 +111,15 @@ function Mais_info() {
                             <div className={''}>
 
                                 <div className={'d-flex justify-content-center align-items-center'}>
-                                    <Image src={adriano} width={100} className={'border border-1'} roundedCircle />
+                                    <Image src={ employer.imagePath ?? adriano } width={100} className={'border border-1'} roundedCircle />
                                 </div>
 
                                 <div className={'px-3 d-flex align-items-center'}>
                                     <div className={'d-flex flex-column'}>
 
-                                        <h6>Conde Dracula</h6>
+                                        <h6>{ employer.name }</h6>
                                         <section className={'d-flex align-items-center'}>
-                                            <StarRatingComponent starColor={'#FAC113'} editing={false} value={3} emptyStarColor={'transparent'} renderStarIcon={() => <FontAwesomeIcon className={'px-1'} icon={faStar} />} />
+                                            <StarRatingComponent starColor={'#FAC113'} editing={false} value={3} emptyStarColor={'transparent'} renderStarIcon={() => <FontAwesomeIcon className={'px-1'} icon={faStar} />} className={'position-static'} />
                                             <span>3</span>
                                         </section>
                                     </div>
@@ -108,8 +134,8 @@ function Mais_info() {
                                 </div>
 
                                 <div className={'d-flex flex-column justify-content-center'}>
-                                    <span>Araçapuca da Terra</span>
-                                    <span>Goias - GO</span>
+                                    <span>{ district }</span>
+                                    <span>{ city }</span>
                                 </div>
 
                             </div>
@@ -127,7 +153,7 @@ function Mais_info() {
                                 </span>
 
                                 <span className={'flex-fill'}>
-                                    40,00
+                                    R$: { proposedValue }
                                 </span>
                             </div>
 

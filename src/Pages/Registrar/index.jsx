@@ -178,7 +178,7 @@ export default function Register() {
                     <label htmlFor={'about'} className={'title my-3'}>Nos conte um pouco a mais sobre você:</label>
 
                     <div className={'input mt-0'}>
-                        <textarea onChange={ e => handleChange(e) } placeholder={'Sobre'} id={'about'} name={'about'} />
+                        <textarea onChange={ handleChange } placeholder={'Sobre'} id={'about'} name={'about'} />
                     </div>
 
                     <small>Escreva um pequeno texto sobre você, contando seus hobbies e seus objetivos no mercado de trabalho com intuito de destacar o perfil.</small>

@@ -54,7 +54,7 @@ function BicosSolicitados() {
                         </span>
                   </div>
 
-                  {contracts ? contracts.map(contract =>
+                  {contracts ? (contracts.filter(contract => contract.employer.id === UserState.id)).map(contract =>
                           <SolicitedBicks vacancy={{
                               service: contract.title ,
                               location: contract.city,

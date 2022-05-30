@@ -37,7 +37,7 @@ export const InterestedEmployee = props => {
     }, [])
 
     return (
-        <div id={id} className={'interested bg-light'}>
+        <div id={ id } className={'interested bg-light'}>
 
             <div className={'d-flex align-items-center justify-content-center'}>
                 <Image src={adriano} roundedCircle width={100} className={'border border-1'} />

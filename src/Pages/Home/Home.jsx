@@ -13,21 +13,6 @@ function Home() {
 
     const { UserState, dispatch } = useContext(UsuarioContext);
 
-    useEffect(() => {
-        if(!UserState) {
-            const token = localStorage.getItem('token')
-            const id = jwtDecode(token).sub.user.id
-            axios.get(`/user/${id}`)
-                .then(response => {
-                    dispatch({
-                        type: 'INICIALIZA',
-                        state: response.data
-                    })
-                })
-                .catch(e => console.log(e))
-        }
-    }, [])
-
     return (
             <>
                 <section className="carrossel">

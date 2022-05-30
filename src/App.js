@@ -14,14 +14,12 @@ import Navbar from './Components/Navbar/Navbar';
 import Login from './Pages/Login';
 import Registrar from './Pages/Registrar';
 import {Avaliacao} from "./Pages/Avaliacao/Avaliacao";
-import Register from './Pages/Registrar';
 import Cupom from './Pages/Cupom';
-import {UserContext} from "./Contexts/UserContext";
 
 function App() {
+
     return (
       <BrowserRouter>
-        <UserContext>
             <Navbar />
             <Routes>
                 <Route index element={<Login />}/>
@@ -39,7 +37,6 @@ function App() {
                 <Route path="/avaliacao" element={<Avaliacao />}/>
                 <Route path="/cupom/:id" element={<Cupom />}/>
             </Routes>
-        </UserContext>
       </BrowserRouter>
     );
 }

@@ -4,30 +4,24 @@ import "./perfil.scss";
 import {Container} from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import adriano from '../../Assets/Images/Adrian_de_cria.png'
-import {UserContext, UsuarioContext} from "../../Contexts/UserContext";
+import {UsuarioContext} from "../../Contexts/UserContext";
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import StarRatingComponent from "react-star-rating-component";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {useReloadLogin} from "../../Hooks/useReloadLogin";
+import jwtDecode from "jwt-decode";
+import axios from "../../Services/axios";
 
 function Perfil() {
 
-    const navigate = useNavigate();
-    const { UserState } = useContext(UsuarioContext);
+    const { UserState } = useReloadLogin();
 
-    useEffect(() => {
-        if(!UserState) {
-            navigate('/home')
-        }
-    }, [])
-
+    console.log(UserState)
     const { name, ratings, birthDate, occupation, city, state, district, description, imagePath } = UserState;
-    const years = Math.floor((Date.now() - new Date(birthDate).getTime()) / 1000 / 60 / 60 / 24 / 365)
-    let ratingStars
-    if(ratings.length !== 0) {
-        ratingStars = ratings.reduce((a, b) => a+b) / ratings.length
-    } else {
-        ratingStars = 0
-    }
+    const years = Math.floor((Date.now() - new Date(birthDate).getTime()) / 1000 / 60 / 60 / 24 / 365);
+    let ratingStars = '';
+    if (!!ratings && ratings.length !== 0) ratingStars = ratings.reduce((a, b) => a+b) / ratings.length
+    else ratingStars = 0
     ratingStars = 3.3
 
     return(
@@ -43,7 +37,7 @@ function Perfil() {
                     <span className={'col-10 d-flex flex-column justify-content-between text-secondary'}>
 
                         <div id={'perfil-name'} className={''}>
-                            { name }
+                            { name ?? '?' }
                         </div>
 
                         { ratingStars !== 0 ?
@@ -56,11 +50,11 @@ function Perfil() {
                         }
 
                         <div id={'perfil-details'}>
-                            { years } anos - { occupation }
+                            { years ?? '?' } anos - { occupation ?? '?' }
                         </div>
 
                         <div id={'perfil-location'}>
-                            { state }, { city }, { district }
+                            { state ?? '?' }, { city ?? '?' }, { district ?? '?' }
                         </div>
 
                     </span>
@@ -68,7 +62,7 @@ function Perfil() {
 
                 <div className={'row px-4'}>
                     <div id={'about'} className={'text-secondary'}>Sobre</div>
-                    <div>{ description }</div>
+                    <div>{ description ?? '?' }</div>
                 </div>
 
             </Container>

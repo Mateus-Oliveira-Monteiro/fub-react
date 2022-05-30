@@ -93,7 +93,7 @@ function Mais_info() {
 
                                         <h6>Conde Dracula</h6>
                                         <section className={'d-flex align-items-center'}>
-                                            <StarRatingComponent starColor={'#FAC113'} editing={false} value={3} emptyStarColor={'transparent'} renderStarIcon={() => <FontAwesomeIcon className={'px-1'} icon={faStar} />} />
+                                            <StarRatingComponent starColor={'#FAC113'} editing={false} value={3} emptyStarColor={'transparent'} renderStarIcon={() => <FontAwesomeIcon className={'px-1'} icon={faStar} />} className={'position-static'} />
                                             <span>3</span>
                                         </section>
                                     </div>

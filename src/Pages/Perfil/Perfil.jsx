@@ -1,5 +1,5 @@
-import React, {useContext, useEffect} from "react";
-import {Link, useNavigate, useParams} from "react-router-dom"
+import React, {useContext} from "react";
+import {useParams} from "react-router-dom"
 import "./perfil.scss";
 import {Container} from "react-bootstrap";
 import Image from "react-bootstrap/Image";
@@ -8,9 +8,6 @@ import {UsuarioContext} from "../../Contexts/UserContext";
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import StarRatingComponent from "react-star-rating-component";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {useReloadLogin} from "../../Hooks/useReloadLogin";
-import jwtDecode from "jwt-decode";
-import axios from "../../Services/axios";
 
 function Perfil() {
 

@@ -200,7 +200,7 @@ export default function Register() {
 
                     <Image src={ Img11 } width={'70%'} className={'d-flex mx-auto'} />
                     <div className={'d-flex justify-content-end px-5'}>
-                        <button type={'submit'}>Próximo</button>
+                        <button type={'submit'}>Concli</button>
                     </div>
 
                 </div>

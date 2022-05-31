@@ -16,6 +16,7 @@ import Registrar from './Pages/Registrar';
 import {Avaliacao} from "./Pages/Avaliacao/Avaliacao";
 import Cupom from './Pages/Cupom';
 import {useReloadLogin} from "./Hooks/useReloadLogin";
+import EditPerfil from "./Pages/EditPerfil";
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
                 <Route path="/notificacoes" element={<Notificacoes />}/>
                 <Route path="/perfil" element={<Perfil />}/>
                 <Route path={'/perfil/:id'} element={<Perfil />} />
+                <Route path={'/perfil/edit/:id'} element={<EditPerfil />} />
                 <Route path="vagas/mais_info/:id" element={<Mais_info />}/>
                 <Route path="/anunciar" element={<Anunciar />}/>
                 <Route path="/candidatos/:id" element={<Candidatos />}/>

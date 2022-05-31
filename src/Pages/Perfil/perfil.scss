@@ -31,6 +31,16 @@ $light-purple: #a574ee;
       color: $purple;
       font-weight: 500;
       font-size: 2rem;
+
+      .pencil {
+        color: #2C1746;
+        transition: .1s;
+
+        &:hover {
+          cursor: pointer;
+          color: orange;
+        }
+      }
     }
 
     #perfil-details {
@@ -45,6 +55,11 @@ $light-purple: #a574ee;
       letter-spacing: 0;
       font-size: 2rem;
       font-weight: 500;
+    }
+
+    .image {
+      height: 150px;
+      width: 150px;
     }
 
   }

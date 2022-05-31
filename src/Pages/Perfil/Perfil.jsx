@@ -1,15 +1,17 @@
 import React, {useContext} from "react";
-import {useParams} from "react-router-dom"
+import {useNavigate, useParams} from "react-router-dom"
 import "./perfil.scss";
 import {Container} from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import adriano from '../../Assets/Images/Adrian_de_cria.png'
 import {UsuarioContext} from "../../Contexts/UserContext";
-import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { faStar, faPencil } from '@fortawesome/free-solid-svg-icons'
 import StarRatingComponent from "react-star-rating-component";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 function Perfil() {
+
+    const navigate = useNavigate();
 
     const {contract, id} = useParams();
     console.log(contract, id)
@@ -23,6 +25,10 @@ function Perfil() {
     else ratingStars = 0
     ratingStars = 3.3
 
+    const handleEdit = () => {
+        navigate(`/perfil/edit/${UserState.id}`)
+    }
+
     return(
         <div id={'perfil'} className={'p-5 d-flex justify-content-center'}>
 
@@ -30,13 +36,16 @@ function Perfil() {
 
                 <div className={'row'}>
                     <span className={'col-2'}>
-                        <Image src={ imagePath || adriano } roundedCircle className={'w-100 border'} />
+                        <Image src={ imagePath ?? adriano } roundedCircle className={'border image'} />
                     </span>
 
                     <span className={'col-10 d-flex flex-column justify-content-between text-secondary'}>
 
-                        <div id={'perfil-name'} className={''}>
-                            { name }
+                        <div id={'perfil-name'} className={'d-flex justify-content-between'}>
+                            <span>{ name }</span>
+                            <div className={'border-0'}>
+                                <FontAwesomeIcon onClick={handleEdit} className={'pencil w-100 p-1'} icon={faPencil} width={100} height={100} />
+                            </div>
                         </div>
 
                         { ratingStars !== 0 ?

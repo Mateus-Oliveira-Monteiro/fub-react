@@ -1,0 +1,63 @@
+$purple: #070C3B;
+$light-purple: #070C3B;
+
+.edit {
+
+    textarea {
+        resize: none;
+        height: 35vh;
+        border-radius: 10px;
+        padding: 1rem;
+        font: 400 1.5rem 'Roboto';
+        color: $light-purple;
+
+        transition: .2s;
+
+        &:focus {
+            outline: none;
+            color: $purple;
+
+            &::placeholder {
+                transition: .2s;
+                color: #999;
+            }
+        }
+
+        &::placeholder {
+            color: #ccc;
+        }
+    }
+
+    #perfil-location {
+        input[type=text] {
+            width: auto;
+        }
+    }
+
+    #image {
+        cursor: pointer;
+        transition: .2s;
+        width: 150px;
+        height: 150px;
+
+        &:hover {
+            filter: brightness(50%);
+            background-color: #ccc;
+        }
+    }
+
+    div {
+
+        div:nth-child(1) {
+
+            span:nth-child(1) {
+                input[type=file] {
+                    display: none;
+                }
+            }
+
+        }
+
+    }
+
+}

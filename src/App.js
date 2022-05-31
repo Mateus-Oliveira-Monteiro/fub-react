@@ -16,19 +16,16 @@ import Registrar from './Pages/Registrar';
 import {Avaliacao} from "./Pages/Avaliacao/Avaliacao";
 import Cupom from './Pages/Cupom';
 import {useReloadLogin} from "./Hooks/useReloadLogin";
-import { useSelector } from 'react-redux'
 
 function App() {
 
-    const logado = useSelector(state => state.logado);
     useReloadLogin();
 
     return (
       <BrowserRouter>
+            <Navbar />
             <Routes>
-              {logado ?
-                <>
-                <Navbar />
+                <Route index element={<Login />}/>
                 <Route path="/registrar" element={<Registrar />} />
                 <Route path={'/home'} element={<Home />}/>
                 <Route path="/vagas" element={<Vagas />}/>
@@ -42,9 +39,7 @@ function App() {
                 <Route path="/bicos_solicitados" element={<BicosSolicitados />}/>
                 <Route path="/candidatar" element={<Candidatar />}/>
                 <Route path="/avaliacao" element={<Avaliacao />}/>
-                <Route path="/cupom/:id" element={<Cupom />}/> </>
-                :
-                <Route index element={<Login />}/> }
+                <Route path="/cupom/:id" element={<Cupom />}/>
             </Routes>
       </BrowserRouter>
     );

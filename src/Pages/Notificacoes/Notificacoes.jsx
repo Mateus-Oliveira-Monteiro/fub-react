@@ -1,11 +1,18 @@
 import React from 'react';
 import "./notificacoes.scss";
 import {NotificationItem} from "../../Components/NotificationItem";
-
 import adriano from '../../Assets/Images/Adrian_de_cria.png';
+import myaxios from '../../Services/axios';
 
 
 function Notificacoes() {
+
+    const getNotifications = () => {
+        myaxios.get(`/notification/user`)
+        .then(res => console.log(res))
+        .catch((err) => alert(err))
+    }
+
     return(
         <div id={'notifications'}>
             <div id={'notification-header'} className={'d-flex justify-content-center align-items-center flex-column w-100 py-3'}>

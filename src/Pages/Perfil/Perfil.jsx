@@ -30,7 +30,7 @@ function Perfil() {
 
                 <div className={'row'}>
                     <span className={'col-2'}>
-                        <Image src={ imagePath ?? adriano } roundedCircle className={'w-100 border'} />
+                        <Image src={ imagePath || adriano } roundedCircle className={'w-100 border'} />
                     </span>
 
                     <span className={'col-10 d-flex flex-column justify-content-between text-secondary'}>

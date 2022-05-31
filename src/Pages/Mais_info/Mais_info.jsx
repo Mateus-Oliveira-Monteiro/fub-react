@@ -8,7 +8,7 @@ import {Container} from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import StarRatingComponent from "react-star-rating-component";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faStar, faLocationDot, faAnglesLeft, faPhone} from "@fortawesome/free-solid-svg-icons";
+import {faStar, faLocationDot, faAnglesLeft, faPhone, faTrashCan} from "@fortawesome/free-solid-svg-icons";
 import img12 from '../../Assets/Images/12.png';
 import {useReloadLogin} from "../../Hooks/useReloadLogin";
 
@@ -23,6 +23,7 @@ function Mais_info() {
         district: null,
         city: null,
         employer: {
+            phone: null,
             imagePath: null,
             name: null,
             id: null,
@@ -33,7 +34,7 @@ function Mais_info() {
 
     const { title, description, district, city, employer } = contract;
     let proposedValue = contract.proposedValue;
-    proposedValue = parseFloat(proposedValue).toFixed(2);
+    proposedValue = parseFloat(proposedValue).toFixed(2).toString().replace('.', ',');
 
     const navigate = useNavigate();
 
@@ -45,6 +46,8 @@ function Mais_info() {
 
     const handleContract = () => {
         const button = document.getElementById('candidatar')
+
+        myaxios.post()
 
         button.ariaDisabled = true;
         button.innerText = 'Já candidatado';
@@ -61,6 +64,13 @@ function Mais_info() {
 
     const handleBackFunction = () => {
         navigate('/vagas')
+    }
+
+    const deleteBeak = () => {
+        myaxios.delete(`/contract/${id}`)
+        .then(alert(`${title} deletado.`))
+        .then(navigate('/vagas'))
+        .catch((err) => alert(err))
     }
 
     useEffect(() => {
@@ -143,19 +153,25 @@ function Mais_info() {
                             <div id={'phone'} className={'d-flex align-items-center invisible'}>
                                 <div className={'d-flex flex-row p-4 w-100 align-items-center gap-3'}>
                                     <FontAwesomeIcon icon={faPhone} fontSize={40} color={'#D57961'} />
-                                    <span className={'text-dark'}>40028922</span>
+                                    <span className={'text-dark'}>{ employer.phone }</span>
                                 </div>
                             </div>
-
+                            
                             <div className={'d-flex flex-row align-items-center'}>
                                 <span className={'flex-fill'}>
                                     Salário:
                                 </span>
 
                                 <span className={'flex-fill'}>
-                                    R$: { proposedValue }
+                                    R$ { proposedValue }
                                 </span>
+                                { UserState.id !== employer.id ||
+                                <div className={ 'd-flex flex-column delete' }>
+                                    <FontAwesomeIcon icon={ faTrashCan } onClick={(e) => deleteBeak()}
+                                    fontSize={25} color={'#FFFFFF'} />
+                                </div> }
                             </div>
+                            
 
                         </div>
                     </div>

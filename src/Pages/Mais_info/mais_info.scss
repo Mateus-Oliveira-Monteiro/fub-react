@@ -137,6 +137,18 @@
 
     }
 
+    .delete {
+        height: 50px;
+        width: 50px;
+        border-radius: 10px;
+        background-color: red;
+        cursor: pointer;
+    }
+
+    .delete:hover {
+        background-color: yellow;
+    }
+    
     #footerContracted {
 
         div {

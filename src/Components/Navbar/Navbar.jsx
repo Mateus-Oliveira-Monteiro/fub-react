@@ -7,11 +7,6 @@ function Navbar() {
 
   const navigate = useNavigate();
 
-  const logOut = () => {
-    localStorage.clear();
-    navigate('/')
-  }
-
   return (
     <header>
 <div class="header">
@@ -28,7 +23,7 @@ function Navbar() {
                 </li>
                 <li><Link to="/notificacoes"><strong>Notificações</strong></Link></li>
                 <li><Link to="/perfil" className="meu_perfil-nav"><strong>Meu Perfil</strong></Link></li>
-                <li><Link to="/" onClick={(e) => logOut()}><strong>Sair</strong></Link></li>
+                <li><Link to="/" onClick={(e) => localStorage.clear()}><strong>Sair</strong></Link></li>
               
             </ul>
         </nav>

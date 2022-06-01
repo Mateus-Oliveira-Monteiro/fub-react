@@ -21,10 +21,14 @@ export const InterestedEmployee = props => {
 
     const id = props.interested;
 
+    const idContract = props.contract;
+
     const navigate = useNavigate();
 
     const handleContract = () => {
-        alert(`contratando ${id}`)
+        myaxios.put(`/contract/select/${idContract}/employee/${id}`)
+        .then(res => alert(res))
+        .catch((error) => alert(error))
     }
 
     useEffect(() => {

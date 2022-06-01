@@ -135,10 +135,10 @@ function Anunciar (){
                     </div>
                 </div>
                 <div className="botoes-anunciar">
-                    <Link to="/vagas" ><a className="botao-anunciar">
+                    <Link to="/vagas" ><a className="botao_voltar-anunciar">
                         <strong>VOLTAR</strong>
                     </a></Link>
-                    <button className="botao-anunciar" onClick={handleSubmit}>
+                    <button className="botao_salvar-anunciar" onClick={handleSubmit}>
                         <strong>SALVAR</strong>
                     </button>
                 </div>

@@ -12,8 +12,8 @@ function Contratado (){
                <strong>FAZENDO UM BICO</strong>
             </div>
             <div class="bloco2-contratado">
-                <div class="esquerda">
-                    <div class="vaga">
+                <div class="esquerda-contratado">
+                    <div class="vaga-contratado">
                         <strong>Cortar a grama</strong><br /><br />
                         Procuro alguém com experiência para
                         cortar a grama do meu jardim. Já possuo as
@@ -34,22 +34,22 @@ function Contratado (){
                             </div>
                             <div class="classificacao-contratado"></div>
                         </div>
-                        <div class="local">
-                            <img src="" />
+                        <div class="local-contratado">
+                            <img src="7.png" />
                             <div class="localizacao-contratado">
                                     <strong>Colinas de Indaiatuba<br />
                                     Indaiatuba - SP </strong>
                             </div>
                         </div>
-                        <div class="telefone">
-                            <img src="" />
-                            <div class="numero">
+                        <div class="telefone-contratado">
+                            <img src="whats.png" />
+                            <div class="numero-contratado">
                                 <strong>(19) 99384-7556</strong>
                             </div>
                         </div>
-                        <div class="whatsapp">
-                            <img src="" />
-                            <div class="entre_em_contato">
+                        <div class="whatsapp-contratado">
+                            <img src="19.png" />
+                            <div class="entre_em_contato-contratado">
                                 <strong>Clique aqui e entre em contato
                                         pelo WhatsAppp! </strong>
                             </div>
@@ -58,7 +58,7 @@ function Contratado (){
                 </div>
             </div>
             <div class="bloco3-contratado">
-                <img src="" />
+                <img src="19.png" />
                 <div class="recado">
                     <div class="titulo-contratado">
                         <strong>Comece a trabalhar agora!</strong>

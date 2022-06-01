@@ -22,7 +22,7 @@ export const VacancyItem = props => {
             </span>
 
             <span className={'col-3 py-2'}>
-                R$ { budget.toFixed(2).toString().replace('.', ",") }
+                { budget.toLocaleString('pt-BR', { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' }) }
             </span>
 
             <button className={'offset-1 col-2 py-2 border-0'} onClick = {(e) => navigate(contractLink)}>

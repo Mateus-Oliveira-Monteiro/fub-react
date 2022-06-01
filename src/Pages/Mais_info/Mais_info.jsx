@@ -163,7 +163,7 @@ function Mais_info() {
                                 </span>
 
                                 <span className={'flex-fill'}>
-                                    R$ { proposedValue }
+                                    R$ { proposedValue.toLocaleString('pt-BR', { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' }) }
                                 </span>
                                 { UserState.id !== employer.id ||
                                 <div className={ 'd-flex flex-column delete' }>

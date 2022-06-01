@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useEffect} from "react";
 import {useNavigate, useParams} from "react-router-dom"
 import "./perfil.scss";
 import {Container} from "react-bootstrap";
@@ -36,7 +36,7 @@ function Perfil() {
 
                 <div className={'row'}>
                     <span className={'col-2'}>
-                        <Image src={ imagePath ?? adriano } roundedCircle className={'border image'} />
+                        <Image src={ adriano } roundedCircle className={'border image'} />
                     </span>
 
                     <span className={'col-10 d-flex flex-column justify-content-between text-secondary'}>

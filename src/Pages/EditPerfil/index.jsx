@@ -1,5 +1,5 @@
 import React, {useContext, useEffect, useReducer} from "react";
-import {useParams} from "react-router-dom"
+import {useNavigate, useParams} from "react-router-dom"
 import "./edit-perfil.scss";
 import {Container} from "react-bootstrap";
 import Image from "react-bootstrap/Image";
@@ -8,14 +8,13 @@ import {UsuarioContext} from "../../Contexts/UserContext";
 import { faStar, faPencil } from '@fortawesome/free-solid-svg-icons'
 import StarRatingComponent from "react-star-rating-component";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import myaxios from "../../Services/myaxios";
 
 function EditPerfil() {
 
     const { id } = useParams();
 
     const { UserState } = useContext(UsuarioContext);
-
-    const { name } = UserState;
 
     const EditUserReducer = (state, action) => {
 
@@ -50,12 +49,11 @@ function EditPerfil() {
         city: '',
         district: '',
         state: '',
-        profilePicture: '',
     }
 
     const [ editUserFormState, dispatch ] = useReducer(EditUserReducer, INITIAL_STATE);
 
-    const { description, occupation, birthDate, city, district, state, profilePicture } = editUserFormState;
+    const { description, occupation, birthDate, city, district, state, name } = editUserFormState;
 
     const handleChange = e => dispatch({
         type: 'ATUALIZA',
@@ -88,8 +86,25 @@ function EditPerfil() {
         file.click();
     }
 
+    const handleSubmit = () => {
+
+        myaxios.put(
+            `/user/${id}`,
+            editUserFormState,
+        )
+            .then(response => {
+                console.log(response)
+                alert('Resolve')
+                window.location.href = 'http://localhost:3000/perfil'
+            })
+            .catch(e => {
+                console.log(e)
+                alert('rejects')
+            })
+    }
+
     useEffect(() => {
-        const { description, occupation, birthDate, city, district, state, imagePath } = UserState;
+        const { description, occupation, birthDate, city, district, state, imagePath, name } = UserState;
 
         dispatch({
             type: 'INICIALIZA',
@@ -100,7 +115,6 @@ function EditPerfil() {
                 city,
                 district,
                 state,
-                profilePicture: imagePath,
             }
         })
     }, [UserState])
@@ -112,32 +126,49 @@ function EditPerfil() {
     return(
         <div id={'perfil'} className={'p-5 d-flex justify-content-center edit'}>
 
-            <Container id={'perfil-container'} className={'bg-white px-5 py-4 h-100 gap-5 d-flex flex-column'}>
+            <Container id={'perfil-container'} className={'bg-white px-5 py-4 h-100 d-flex flex-column'}>
 
                 <div className={'row w-100 d-flex justify-content-between'}>
-                    <span className={'col-5 row d-flex gap-3'}>
-                        <div className={'col-3'}>
-                            <Image onClick={handleClick} src={ adriano } id={'image'} roundedCircle className={'border'} />
+                    <span className={'col-5 row d-flex align-items-start flex-column'}>
+                        <div className={'col-3 d-flex flex-row align-items-start'}>
+                            <Image src={ adriano } id={'image'} roundedCircle className={'border border-1'} />
                         </div>
-                        <input onClick={handleUpload} id={'file'} type={'file'} className={'w-100'}/>
+                        <input id={'file'} type={'file'} className={''}/>
                     </span>
 
-                    <span className={'col-7 d-flex flex-column justify-content-between text-secondary text-end'}>
+                    <span className={'col-7 d-flex gap-4 flex-column justify-content-between text-secondary text-end'}>
 
-                        <div id={'perfil-name'} className={''}>
-                            <input value={ name } className={'h-100'} />
+                        <div id={'perfil-name'} className={'d-flex flex-column align-items-end'}>
+                            <div className={'h-100 w-100'}>
+                                {name}
+                            </div>
                         </div>
 
-                        <div id={'perfil-location'} className={'d-flex flex-row justify-content-end'}>
-                            <input value={ state } type="text" /> / <input value={ city } type="text" /> / <input value={ district } type="text" />
+                        <div id={'perfil-location'} className={'d-flex flex-row justify-content-end gap-2'}>
+                            <div>
+                                <input className={'state'} onChange={handleChange} name={ 'state' } value={ state } maxLength={ 2 } type="text" />
+                            <small>Estado</small>
+                            </div>
+                            <div>
+                                <input onChange={handleChange} name={ 'city' } value={ city } type="text" />
+                            <small>Cidade</small>
+                            </div>
+                            <div>
+                                <input onChange={handleChange} name={ 'district' } value={ district } type="text" />
+                            <small>Bairro</small>
+                            </div>
                         </div>
 
                     </span>
                 </div>
 
                 <div className={'row px-4'}>
-                    <div id={'about'} className={'text-secondary'}>Sobre</div>
-                    <textarea value={ description } className={'border-1'} />
+                    <div id={'editabout'} className={'text-secondary'}>Sobre</div>
+                    <textarea onChange={handleChange} name={ 'description' } value={ description } className={'border-1'} />
+                </div>
+
+                <div className={'d-flex justify-content-end mt-3'}>
+                    <input onClick={handleSubmit} type={'submit'} className={'border border-1 bg-success'} />
                 </div>
 
             </Container>

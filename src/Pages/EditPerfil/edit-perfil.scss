@@ -3,6 +3,33 @@ $light-purple: #070C3B;
 
 .edit {
 
+    min-width: 1030px;
+
+    .state {
+        text-transform: uppercase;
+    }
+
+    small {
+        font-size: 1rem;
+        padding-right: 10px;
+        color: $purple;
+        font-weight: 500;
+    }
+
+    input[type=text] {
+        padding: 10px;
+        border-radius: 5px;
+        border-width: 1px;
+        border-color: #ccc;
+        font: 500 1rem 'Roboto';
+        color: $purple;
+
+        &:focus {
+            border-width: 1px;
+            border-color: #ccc;
+        }
+    }
+
     textarea {
         resize: none;
         height: 35vh;
@@ -29,21 +56,22 @@ $light-purple: #070C3B;
     }
 
     #perfil-location {
+
         input[type=text] {
             width: auto;
         }
     }
 
     #image {
-        cursor: pointer;
-        transition: .2s;
+        //cursor: pointer;
+        //transition: .2s;
         width: 150px;
         height: 150px;
 
-        &:hover {
-            filter: brightness(50%);
-            background-color: #ccc;
-        }
+        //&:hover {
+        //    filter: brightness(50%);
+        //    background-color: #ccc;
+        //}
     }
 
     div {
@@ -58,6 +86,32 @@ $light-purple: #070C3B;
 
         }
 
+    }
+
+    #perfil-container {
+
+        div:nth-child(2) {
+
+            #editabout {
+                font: 400 2rem 'Roboto';
+            }
+
+        }
+
+        div:nth-child(3) {
+            input[type=submit] {
+                flex: 1 1 200px;
+                transition: .2s;
+                font: 400 2rem 'Roboto';
+                color: white;
+
+                &:hover {
+
+                    color: #333;
+                    opacity: .8;
+                }
+            }
+        }
     }
 
 }

@@ -30,10 +30,6 @@ function BicosSolicitados() {
                   BICOS SOLICITADOS
               </div>
 
-              <div id={'search'} className={'d-flex p-2 row'} >
-                  <input className={'mx-5 col-3 border-0 px-4 text-secondary'} placeholder={'Busque por Bicos'} />
-              </div>
-
           </div>
 
           <div id={'content'} className={'bg-dark p-5'}>

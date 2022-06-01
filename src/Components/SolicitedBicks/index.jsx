@@ -12,7 +12,7 @@ export const SolicitedBicks = props => {
     const contractLink = `/candidatos/${id}`
 
     return (
-        <div className={'row d-flex align-items-center vacancy px-0'}>
+        <div className={'row d-flex align-items-center vacancySolicited px-0'}>
             <span className={'col-3 py-2'}>
                 { service }
             </span>

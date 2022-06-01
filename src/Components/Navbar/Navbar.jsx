@@ -15,10 +15,10 @@ function Navbar() {
             <ul className="nav">
                 <li><Link to="/vagas"><strong>Vagas</strong></Link>
                 <ul className="minimenu">
-	                <li><Link to="/vagas"><strong>BICOS DISPONÍVEIS</strong></Link></li>
-	                <li><Link to="/bicos_solicitados"><strong>BICOS SOLICITADOS</strong></Link></li>
-                  <li><Link to="/Anunciar"><strong>ANUNCIAR VAGA</strong></Link></li>
-                  <li><Link to="/cupom"><strong>CUPONS</strong></Link></li>
+	                <li><Link to="/vagas"><strong>Bicos Disponíveis</strong></Link></li>
+	                <li><Link to="/bicos_solicitados"><strong>Bicos Solicitados</strong></Link></li>
+                  <li><Link to="/Anunciar"><strong>Anunciar Vagas</strong></Link></li>
+                  <li><Link to="/cupom"><strong>Cupons</strong></Link></li>
 	       	      </ul>
                 </li>
                 <li><Link to="/notificacoes"><strong>Notificações</strong></Link></li>

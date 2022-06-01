@@ -40,7 +40,7 @@ nav ul li a{
 }
 nav a:link, :visited{
     color: rgba(147, 85, 218, 0.924);
-    font-size: 32px;
+    font-size: 3px;
     display: inline-block;
     text-decoration: none;
 }
@@ -98,10 +98,11 @@ li {
     
 .minimenu li{
     display:block;
-    width: 350px;
+    width: 300px;
     text-align: center;
     margin-left: 0px;
     height: auto;
+    font-size: 10px;
 }
 .minimenu{
     box-shadow: 0 0 2em black;

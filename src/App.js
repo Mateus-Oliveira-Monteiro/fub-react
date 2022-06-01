@@ -4,7 +4,7 @@ import Vagas from './Pages/Vagas/Vagas';
 import Home from './Pages/Home/Home';
 import Perfil from './Pages/Perfil/Perfil';
 import Notificacoes from './Pages/Notificacoes/Notificacoes';
-import Mais_info from './Pages/Mais_info/Mais_info';
+import MaisInfo from './Pages/Mais_info/Mais_info';
 import Anunciar from './Pages/Anunciar/Anunciar';
 import Candidatos from './Pages/Candidatos/Candidatos';
 import Contratado from './Pages/Contratado/Contratado';
@@ -34,7 +34,7 @@ function App() {
                 <Route path="/perfil" element={<Perfil />}/>
                 <Route path={'/perfil/:id'} element={<Perfil />} />
                 <Route path={'/perfil/edit/:id'} element={<EditPerfil />} />
-                <Route path="vagas/mais_info/:id" element={<Mais_info />}/>
+                <Route path="vagas/mais_info/:id" element={<MaisInfo />}/>
                 <Route path="/anunciar" element={<Anunciar />}/>
                 <Route path="/candidatos/:id" element={<Candidatos />}/>
                 <Route path="/contratado" element={<Contratado />}/>

@@ -4,6 +4,9 @@ import { Link, useNavigate } from "react-router-dom";
 import "./login.scss";
 import AuthDot from "../../Components/AuthDot";
 import loginAxios from "../../Services/loginAxios";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faEye, faEyeSlash} from "@fortawesome/free-solid-svg-icons";
+
 
 function Index() {
 
@@ -64,6 +67,11 @@ function Index() {
         console.table(loginState)
     }, [loginState])
 
+    const [visivel, setVisi] = React.useState(false)
+    async function troca() {
+        setVisi(!visivel)
+    }
+
     return (
         <>
             <AuthDot />
@@ -76,10 +84,12 @@ function Index() {
 
                     <div className="auth-input">
                         <label htmlFor="senha">Senha</label>
-                        <input onChange={handleChange} id="senha" name="password" type="password" required />
+                        <input onChange={handleChange} id="senha" name="password" type={visivel ? 'text' : 'password'} required />
                     </div>
-
-                    <button type="submit">ENTRAR</button>
+                    
+                    <button className="button-olho" type="button" onClick={troca}><FontAwesomeIcon icon={visivel ? faEyeSlash : faEye } color={'#8b54dc'} fontSize={20} /></button>
+                    
+                    <button className="simizu-cabaço" type="submit">ENTRAR</button>
                     <small className="mt-3">
                         <span>Ainda não é cadastrado? </span>
                         <Link to="/registrar" className="cadastre-se">Cadastre-se aqui </Link>!

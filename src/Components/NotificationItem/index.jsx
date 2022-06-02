@@ -3,7 +3,7 @@ import './notificationItem.scss';
 
 export const NotificationItem = props => {
 
-    const { image, title, content, created_at } = props.notification
+    const { image, content, created_at } = props.notification
 
     const minutes = Math.floor((Date.now() - new Date(created_at).getTime()) / 1000 / 60)
 
@@ -14,16 +14,12 @@ export const NotificationItem = props => {
             </span>
 
             <span className={'col-9'}>
-                <div style={{'color': 'orange', 'font-weight': '500'}}>
-                    { title }
-                </div>
-
                 <div>
                     { content }
                 </div>
             </span>
 
-            <span className={'col-2 text-warning'}>
+            <span className={'col-2'}>
                 { minutes } min
             </span>
         </div>

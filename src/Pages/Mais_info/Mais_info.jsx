@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import {Link, useNavigate, useParams} from "react-router-dom"
 import "./mais_info.scss";
-import img13 from '../../Assets/Images/13.png';
-import adriano from '../../Assets/Images/Adrian_de_cria.png';
+import perfil from '../../Assets/Images/perfil.png';
 import myaxios from "../../Services/axios";
 import {Container} from "react-bootstrap";
 import Image from "react-bootstrap/Image";
@@ -27,7 +26,8 @@ function Mais_info() {
             imagePath: null,
             name: null,
             id: null,
-        }
+        },
+        interested: [],
     });
 
     const { UserState } = useReloadLogin();
@@ -47,19 +47,27 @@ function Mais_info() {
     const handleContract = () => {
         const button = document.getElementById('candidatar')
 
-        myaxios.post()
+        myaxios.patch(`/contract/apply/${id}`)
+            .then(() => {
 
-        button.ariaDisabled = true;
-        button.innerText = 'Já candidatado';
+                button.ariaDisabled = true;
+                button.innerText = 'Já candidatado';
 
-        button.classList.remove('text-light');
-        button.classList.add('text-dark');
+                button.classList.remove('text-light');
+                button.classList.add('text-dark');
 
-        button.style.backgroundColor = 'transparent';
-        button.style.borderColor = '#ccc';
+                button.style.backgroundColor = 'transparent';
+                button.style.borderColor = '#ccc';
 
-        document.getElementById('phone').classList.remove('invisible')
-        document.getElementById('footerContracted').classList.remove('hidden')
+                document.getElementById('phone').classList.remove('invisible')
+                document.getElementById('footerContracted').classList.remove('hidden')
+
+            })
+            .catch(e => {
+                console.log('Error: ', e);
+                alert('Erro')
+            })
+
     }
 
     const handleBackFunction = () => {
@@ -76,6 +84,28 @@ function Mais_info() {
     useEffect(() => {
         getContract()
     }, [])
+
+    useEffect(() => {
+
+        if (!contract.interested.filter(interested => interested.id === UserState.id)) {
+
+            const button = document.getElementById('candidatar')
+
+            button.ariaDisabled = true;
+            button.innerText = 'Já candidatado';
+
+            button.classList.remove('text-light');
+            button.classList.add('text-dark');
+
+            button.style.backgroundColor = 'transparent';
+            button.style.borderColor = '#ccc';
+
+            document.getElementById('phone').classList.remove('invisible')
+            document.getElementById('footerContracted').classList.remove('hidden')
+
+        }
+
+    }, contract.interested)
 
     return(
 
@@ -98,22 +128,22 @@ function Mais_info() {
             <Container className={'mt-4'}>
 
                 <div className={'px-5 py-4'}>
-                            <div id={'left_part'} className={'p-3'}>
-                                <h2>{ title }</h2>
-                                <p>{ description }</p>
+                    <div id={'left_part'} className={'p-3'}>
+                        <h2>{ title }</h2>
+                        <p>{ description }</p>
 
-                                {
-                                    UserState.id !== employer.id
-                                        ?
-                                            <div className={'d-flex'}>
-                                                <button onClick={handleContract} id={'candidatar'}
-                                                        className={'text-light'}>Candidatar-se
-                                                </button>
-                                            </div>
-                                        :
-                                            null
-                                }
-                            </div>
+                        {
+                            UserState.id !== employer.id
+                                ?
+                                    <div className={'d-flex'}>
+                                        <button onClick={handleContract} id={'candidatar'}
+                                                className={'text-light'}>Candidatar-se
+                                        </button>
+                                    </div>
+                                :
+                                    null
+                        }
+                    </div>
 
                     <div>
                         <div className={'h-100 w-100'}>
@@ -121,7 +151,7 @@ function Mais_info() {
                             <div className={''}>
 
                                 <div className={'d-flex justify-content-center align-items-center'}>
-                                    <Image src={ employer.imagePath ?? adriano } width={100} className={'border border-1'} roundedCircle />
+                                    <Image src={ employer.imagePath ?? perfil } width={100} className={'border border-1'} roundedCircle />
                                 </div>
 
                                 <div className={'px-3 d-flex align-items-center'}>
@@ -156,7 +186,7 @@ function Mais_info() {
                                     <span className={'text-dark'}>{ employer.phone }</span>
                                 </div>
                             </div>
-                            
+
                             <div className={'d-flex flex-row align-items-center'}>
                                 <span className={'flex-fill'}>
                                     Salário:
@@ -165,13 +195,16 @@ function Mais_info() {
                                 <span className={'flex-fill'}>
                                     R$ { proposedValue.toLocaleString('pt-BR', { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' }) }
                                 </span>
-                                { UserState.id !== employer.id ||
-                                <div className={ 'd-flex flex-column delete' }>
-                                    <FontAwesomeIcon icon={ faTrashCan } onClick={(e) => deleteBeak()}
-                                    fontSize={25} color={'#FFFFFF'} />
-                                </div> }
+                                { UserState.id === employer.id ?
+                                    <div className={ 'd-flex justify-content-center align-items-center delete' }>
+                                        <FontAwesomeIcon icon={ faTrashCan } onClick={(e) => deleteBeak()}
+                                        fontSize={25} color={'#FFFFFF'} />
+                                    </div>
+                                    :
+                                    null
+                                }
                             </div>
-                            
+
 
                         </div>
                     </div>

@@ -3,11 +3,15 @@ $light-purple: #a574ee;
 
 #vagas {
 
+  min-height: 100vh;
+  background-color: #F1E9E9;
+
   #header-main {
 
     #header-bicos {
-      background-color: $light-purple;
-      font: bold 1.5rem 'Roboto';
+      color: #070C3B;
+      background-color: #B4A8B7;
+      font: bold 2rem 'Roboto';
       letter-spacing: 2px;
     }
 
@@ -32,14 +36,15 @@ $light-purple: #a574ee;
   }
 
   #content {
-    background-color: #F1E9E9;
     text-align: center;
   }
 
   #list-vagas {
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px 2px #ccc;
     border-radius: 1rem;
-    font: 600 1.3rem 'Roboto';
-    color: $purple;
+    font: 500 1.3rem 'Roboto';
+    color: #B4A8B7;
     min-height: 60vh;
   }
 

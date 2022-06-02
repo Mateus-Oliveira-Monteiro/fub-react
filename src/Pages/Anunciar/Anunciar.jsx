@@ -1,7 +1,6 @@
 import React, {useContext, useReducer} from "react";
 import {Link, useNavigate} from "react-router-dom"
 import "./anunciar.scss";
-import logo from '../../Assets/Images/logo.png';
 import perfil from '../../Assets/Images/perfil.png';
 import img10 from '../../Assets/Images/10.png';
 import myaxios from "../../Services/axios";

@@ -23,12 +23,8 @@ function Vagas() {
 
             <div id={'header-main'}>
 
-                <div id={'header-bicos'} className={'w-100 d-flex justify-content-center p-2 text-light'}>
+                <div id={'header-bicos'} className={'w-100 d-flex justify-content-center p-2'}>
                     BICOS DISPONÍVEIS
-                </div>
-
-                <div id={'search'} className={'d-flex p-2 row'} >
-                    <input className={'mx-5 col-3 border-0 px-4 text-secondary'} placeholder={'Busque por Bicos'} />
                 </div>
 
             </div>

@@ -3,7 +3,7 @@ import {useNavigate, useParams} from "react-router-dom"
 import "./perfil.scss";
 import {Container} from "react-bootstrap";
 import Image from "react-bootstrap/Image";
-import adriano from '../../Assets/Images/Adrian_de_cria.png'
+import perfil from '../../Assets/Images/perfil.png';
 import {UsuarioContext} from "../../Contexts/UserContext";
 import { faStar, faPencil } from '@fortawesome/free-solid-svg-icons'
 import StarRatingComponent from "react-star-rating-component";
@@ -23,7 +23,6 @@ function Perfil() {
     let ratingStars = '';
     if (!!ratings && ratings.length !== 0) ratingStars = ratings.reduce((a, b) => a+b) / ratings.length
     else ratingStars = 0
-    ratingStars = 3.3
 
     const handleEdit = () => {
         navigate(`/perfil/edit/${UserState.id}`)
@@ -36,7 +35,7 @@ function Perfil() {
 
                 <div className={'row'}>
                     <span className={'col-2'}>
-                        <Image src={ adriano || imagePath } roundedCircle className={'border image'} />
+                        <Image src={ perfil || imagePath } roundedCircle className={'border image'} />
                     </span>
 
                     <span className={'col-10 d-flex flex-column justify-content-between text-secondary'}>

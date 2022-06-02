@@ -1,6 +1,6 @@
 import React, {useContext, useEffect, useState} from 'react'
 import { Link } from 'react-router-dom'
-import './bicos_solicitados.css'
+import '../Vagas/vagas.scss';
 import {SolicitedBicks} from "../../Components/SolicitedBicks";
 import myaxios from "../../Services/axios";
 import {UsuarioContext} from "../../Contexts/UserContext";
@@ -26,13 +26,13 @@ function BicosSolicitados() {
 
           <div id={'header-main'}>
 
-              <div id={'header-bicos'} className={'w-100 d-flex justify-content-center p-2 text-light'}>
+              <div id={'header-bicos'} className={'w-100 d-flex justify-content-center p-2'}>
                   BICOS SOLICITADOS
               </div>
 
           </div>
 
-          <div id={'content'} className={'bg-dark p-5'}>
+          <div id={'content'} className={'p-5'}>
 
               <div id={'list-vagas'} className={'row d-flex flex-column gap-2 bg-light align-items-center pb-5'}>
 

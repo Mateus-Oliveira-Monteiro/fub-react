@@ -1,6 +1,6 @@
 import './interested_employee.scss';
 import Image from "react-bootstrap/Image";
-import adriano from '../../Assets/Images/Adrian_de_cria.png'
+import perfil from '../../Assets/Images/perfil.png';
 import StarRatingComponent from "react-star-rating-component";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faStar} from "@fortawesome/free-solid-svg-icons";
@@ -40,7 +40,7 @@ export const InterestedEmployee = props => {
         <div id={ id } className={'interested bg-light'}>
 
             <div className={'d-flex align-items-center justify-content-center'}>
-                <Image src={adriano} roundedCircle width={100} className={'border border-1'} />
+                <Image src={perfil} roundedCircle width={100} className={'border border-1'} />
             </div>
 
             <div className={'d-flex justify-content-center flex-column'}>

@@ -3,7 +3,7 @@ import {useNavigate, useParams} from "react-router-dom"
 import "./edit-perfil.scss";
 import {Container} from "react-bootstrap";
 import Image from "react-bootstrap/Image";
-import adriano from '../../Assets/Images/Adrian_de_cria.png'
+import perfil from '../../Assets/Images/perfil.png';
 import {UsuarioContext} from "../../Contexts/UserContext";
 import { faStar, faPencil } from '@fortawesome/free-solid-svg-icons'
 import StarRatingComponent from "react-star-rating-component";
@@ -131,7 +131,7 @@ function EditPerfil() {
                 <div className={'row w-100 d-flex justify-content-between'}>
                     <span className={'col-5 row d-flex align-items-start flex-column'}>
                         <div className={'col-3 d-flex flex-row align-items-start'}>
-                            <Image src={ adriano } id={'image'} roundedCircle className={'border border-1'} />
+                            <Image src={ perfil } id={'image'} roundedCircle className={'border border-1'} />
                         </div>
                         <input id={'file'} type={'file'} className={''}/>
                     </span>

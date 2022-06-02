@@ -25,8 +25,8 @@ export const SolicitedBicks = props => {
                 R$ { budget.toFixed(2).toString().replace('.', ",") }
             </span>
 
-            <button className={'offset-1 col-2 py-2 border-0 bg-opacity-50'} onClick = {(e) => navigate(contractLink)}>
-                <FontAwesomeIcon icon={faEye} size={'2x'} color={'white'} />
+            <button className={'offset-1 col-2 py-2 border-0'} onClick = {(e) => navigate(contractLink)}>
+                <FontAwesomeIcon icon={faEye} size={'2x'} color={'gray'} />
             </button>
         </div>
     )

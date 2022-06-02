@@ -19,12 +19,18 @@ const Candidatos = props => {
         employer: '',
     });
 
-    const { title, description, proposedValue, interested, statusContract, employer } = contract;
+    const { title, description, proposedValue, interested, statusContract, employer, employee } = contract;
 
     const getContract = () => {
         myaxios.get(`/contract/${id}`)
             .then(res => setContract(res.data))
             .catch(err => alert(err))
+    }
+
+    const handleEmploy = (interestedId) => {
+        myaxios.put(`/contract/select/${id}/employee/${interestedId}`)
+        .then(res => alert(res))
+        .catch((error) => alert(error))
     }
 
     useEffect(() => {
@@ -56,11 +62,22 @@ const Candidatos = props => {
                 </section>
 
                 <section>
+                    <span>Interessados</span>
                     {
                         !!interested ?
-                            interested.map(interested => <InterestedEmployee interested={interested.id} />)
+                            interested.map(interested => interested.id === employee.id ||
+                            <InterestedEmployee contract={id} interested={interested.id} />)
                         :
-                            null
+                            "Não há interessados"
+                    }
+                    {
+                        employee ?
+                            <>
+                                <span>Contratado</span>
+                                <InterestedEmployee contract={id} interested={employee.id} />
+                            </>
+                        :
+                            "Não há interessados"
                     }
                 </section>
 

@@ -87,7 +87,7 @@ function Mais_info() {
 
     useEffect(() => {
 
-        if (!contract.interested.filter(interested => interested.id === UserState.id)) {
+        if (contract.employer.id !== UserState.id && !!contract.interested.filter(interested => interested.id === UserState.id)) {
 
             const button = document.getElementById('candidatar')
 

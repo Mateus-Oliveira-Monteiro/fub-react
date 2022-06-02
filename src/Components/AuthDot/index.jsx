@@ -1,5 +1,5 @@
 import Image from "react-bootstrap/Image";
-import logoImg from "../../Assets/Images/logo.png";
+import logoImg from "../../Assets/Images/big_penis.png";
 import React from "react";
 
 import './auth-dot.scss';

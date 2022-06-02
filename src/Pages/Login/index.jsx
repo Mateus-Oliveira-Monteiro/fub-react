@@ -87,7 +87,7 @@ function Index() {
                         <input onChange={handleChange} id="senha" name="password" type={visivel ? 'text' : 'password'} required />
                     </div>
                     
-                    <button className="button-olho" type="button" onClick={troca}><FontAwesomeIcon icon={visivel ? faEyeSlash : faEye } color={'#8b54dc'} fontSize={20} /></button>
+                    <button className="button-olho" type="button" onClick={troca}><FontAwesomeIcon icon={visivel ? faEyeSlash : faEye } color={'#070C3B'} fontSize={20} /></button>
                     
                     <button className="simizu-cabaço" type="submit">ENTRAR</button>
                     <small className="mt-3">

@@ -17,34 +17,43 @@ import {Avaliacao} from "./Pages/Avaliacao/Avaliacao";
 import Cupom from './Pages/Cupom';
 import {useReloadLogin} from "./Hooks/useReloadLogin";
 import EditPerfil from "./Pages/EditPerfil";
+import {useContext} from 'react'
+import { UsuarioContext } from './Contexts/UserContext';
 
 function App() {
-
+  const { login } = useContext(UsuarioContext);
+    //const logado = useSelector(state => state.logado);
     useReloadLogin();
 
     return (
       <BrowserRouter>
-            <Navbar />
-            <Routes>
-                <Route index element={<Login />}/>
-                <Route path="/registrar" element={<Registrar />} />
-                <Route path={'/home'} element={<Home />}/>
-                <Route path="/vagas" element={<Vagas />}/>
-                <Route path="/notificacoes" element={<Notificacoes />}/>
-                <Route path="/perfil" element={<Perfil />}/>
-                <Route path={'/perfil/:id'} element={<Perfil />} />
-                <Route path={'/perfil/edit/:id'} element={<EditPerfil />} />
-                <Route path="vagas/mais_info/:id" element={<MaisInfo />}/>
-                <Route path="/anunciar" element={<Anunciar />}/>
-                <Route path="/candidatos/:id" element={<Candidatos />}/>
-                <Route path="/contratado" element={<Contratado />}/>
-                <Route path="/bicos_solicitados" element={<BicosSolicitados />}/>
-                <Route path="/candidatar" element={<Candidatar />}/>
-                <Route path="/avaliacao" element={<Avaliacao />}/>
-                <Route path="/cupom/:id" element={<Cupom />}/>
+      { login ? <Navbar /> : null }
+            <Routes>{
+              login ? <> 
+              
+              <Route path="/registrar" element={<Registrar />} />
+              <Route path={'/home'} element={<Home />}/>
+              <Route path="/vagas" element={<Vagas />}/>
+              <Route path="/notificacoes" element={<Notificacoes />}/>
+              <Route path="/perfil" element={<Perfil />}/>
+              <Route path={'/perfil/:id'} element={<Perfil />} />
+              <Route path={'/perfil/edit/:id'} element={<EditPerfil />} />
+              <Route path="vagas/mais_info/:id" element={<MaisInfo />}/>
+              <Route path="/anunciar" element={<Anunciar />}/>
+              <Route path="/candidatos/:id" element={<Candidatos />}/>
+              <Route path="/contratado" element={<Contratado />}/>
+              <Route path="/bicos_solicitados" element={<BicosSolicitados />}/>
+              <Route path="/candidatar" element={<Candidatar />}/>
+              <Route path="/avaliacao" element={<Avaliacao />}/>
+              <Route path="/cupom/:id" element={<Cupom />}/> 
+              </>
+              : <Route index element={<Login />}/> }
+  
+                
             </Routes>
       </BrowserRouter>
     );
 }
+
 
 export default App;

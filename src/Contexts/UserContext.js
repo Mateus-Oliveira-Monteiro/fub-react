@@ -1,8 +1,10 @@
-import {createContext, useReducer} from "react";
+import {createContext, useReducer, useState} from "react";
 
 export const UsuarioContext = createContext({});
 
 export const UserProvider = props => {
+
+    const [login, setLogin] = useState(false);
 
     const userReducer = (state, action) => {
         switch (action.type) {
@@ -31,7 +33,7 @@ export const UserProvider = props => {
     const [ UserState, dispatch ] = useReducer( userReducer, INITIAL_STATE )
 
     return (
-        <UsuarioContext.Provider value={ {UserState, dispatch} }>
+        <UsuarioContext.Provider value={ {UserState, dispatch, setLogin, login} }>
             { props.children }
         </UsuarioContext.Provider>
     )

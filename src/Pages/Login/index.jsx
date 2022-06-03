@@ -1,4 +1,4 @@
-import React, {useEffect, useReducer} from "react";
+import React, {useEffect, useReducer, useContext} from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import "./login.scss";
@@ -6,10 +6,12 @@ import AuthDot from "../../Components/AuthDot";
 import loginAxios from "../../Services/loginAxios";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEye, faEyeSlash} from "@fortawesome/free-solid-svg-icons";
+import { UsuarioContext } from "../../Contexts/UserContext";
 
 
 function Index() {
 
+    const {setLogin } = useContext(UsuarioContext);
     const navigate = useNavigate();
 
     const INITIAL_STATE = {
@@ -52,6 +54,7 @@ function Index() {
         })
             .then(response => {
                 localStorage.setItem('token', response.data.token)
+                setLogin(true)
                 navigate('/home')
             })
             .catch(() => alert('Email ou Senha incorretos'))

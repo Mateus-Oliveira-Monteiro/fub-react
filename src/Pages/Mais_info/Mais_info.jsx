@@ -87,7 +87,15 @@ function Mais_info() {
 
     useEffect(() => {
 
-        if (contract.employer.id !== UserState.id && !!contract.interested.filter(interested => interested.id === UserState.id)) {
+        console.log(contract);
+
+        let ja_interessado = false;
+
+        contract.interested.forEach(interestedUser => {
+            if (interestedUser.id === UserState.id) ja_interessado = true;
+        })
+
+        if (contract.employer.id !== UserState.id && ja_interessado) {
 
             const button = document.getElementById('candidatar')
 
@@ -141,7 +149,7 @@ function Mais_info() {
                                         </button>
                                     </div>
                                 :
-                                    null
+                                    ''
                         }
                     </div>
 

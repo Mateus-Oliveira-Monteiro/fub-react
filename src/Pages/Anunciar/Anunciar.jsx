@@ -20,7 +20,6 @@ function Anunciar (){
     let ratingStars = '';
     if (!!ratings && ratings.length !== 0) ratingStars = ratings.reduce((a, b) => a+b) / ratings.length
     else ratingStars = 0
-    ratingStars = 3.3
 
     const navigate = useNavigate();
 
@@ -70,7 +69,7 @@ function Anunciar (){
             proposedValue,
             description: description ? description : undefined
         })
-        .then(response => {
+        .then(() => {
             alert('Registrado com sucesso')
             navigate('/')
         })
@@ -90,8 +89,16 @@ function Anunciar (){
                             <strong>{name}</strong>
                         </div>
                         <div className="classificacao d-flex align-items-center gap-2">
-                            <StarRatingComponent starColor={'#FAC113'} editing={false} value={ratingStars} emptyStarColor={'transparent'} renderStarIcon={() => <FontAwesomeIcon className={'px-1'} icon={faStar} />} className={'position-static'} />
-                            <strong className={'text-warning'}>{ ratingStars }</strong>
+                            {
+                                ratingStars !== 0 ?
+                                    <>
+                                        <StarRatingComponent starColor={'#FAC113'} editing={false} value={ratingStars} emptyStarColor={'transparent'} renderStarIcon={() => <FontAwesomeIcon className={'px-1'} icon={faStar} />} className={'position-static'} />
+                                        <strong className={'text-warning'}>{ ratingStars }</strong>
+                                    </>
+                                :
+                                    null
+                            }
+
                         </div>
                         <div className="localizacao-anunciar">
                             <div className="local">
@@ -141,7 +148,7 @@ function Anunciar (){
                         <strong>SALVAR</strong>
                     </button>
                 </div>
-                <img className="imagem"src={img10} />
+                <img className="imagem" src={img10} />
             </div>
         </div>
     )

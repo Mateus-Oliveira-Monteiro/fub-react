@@ -62,22 +62,21 @@ const Candidatos = props => {
                 </section>
 
                 <section>
-                    <span>Interessados</span>
                     {
-                        !!interested ?
+                        interested[0] ?
                             interested.map(interested => interested.id === employee.id ||
                             <InterestedEmployee contract={id} interested={interested.id} />)
                         :
-                            "Não há interessados"
+                            <span style={{ fontWeight: 400, fontSize: '1.8rem' }}>Não há interessados</span>
                     }
                     {
                         employee ?
                             <>
-                                <span>Contratado</span>
-                                <InterestedEmployee contract={id} interested={employee.id} />
+                                <span className={'text-success'} style={{ fontWeight: 400, fontSize: '1.6rem' }}>Contratado</span>
+                                <InterestedEmployee contract={id} interested={employee.id} contratado={true} />
                             </>
                         :
-                            "Não há interessados"
+                            ""
                     }
                 </section>
 

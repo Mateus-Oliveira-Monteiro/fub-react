@@ -29,6 +29,7 @@ function Mais_info() {
         },
         interested: [],
     });
+    const [rating, setRating] = useState(0);
 
     const { UserState } = useReloadLogin();
 
@@ -41,6 +42,15 @@ function Mais_info() {
     const getContract = () => {
         myaxios.get(`/contract/${id}`)
         .then(res => setContract(res.data))
+        .then(
+            () => myaxios.get(`/user/${employer.id}`)
+                .then(response => {
+                    const {ratings} = response;
+                    if (!!ratings && ratings.length !== 0) setRating(ratings.reduce((a, b) => a+b) / ratings.length);
+                    else setRating(0);
+                })
+        )
+
         .catch((err) => alert(err))
     }
 
@@ -87,7 +97,15 @@ function Mais_info() {
 
     useEffect(() => {
 
-        if (contract.employer.id !== UserState.id && !!contract.interested.filter(interested => interested.id === UserState.id)) {
+        console.log(contract);
+
+        let ja_interessado = false;
+
+        contract.interested.forEach(interestedUser => {
+            if (interestedUser.id === UserState.id) ja_interessado = true;
+        })
+
+        if (contract.employer.id !== UserState.id && ja_interessado) {
 
             const button = document.getElementById('candidatar')
 
@@ -141,7 +159,7 @@ function Mais_info() {
                                         </button>
                                     </div>
                                 :
-                                    null
+                                    ''
                         }
                     </div>
 
@@ -159,8 +177,13 @@ function Mais_info() {
 
                                         <h6>{ employer.name }</h6>
                                         <section className={'d-flex align-items-center'}>
-                                            <StarRatingComponent starColor={'#FAC113'} editing={false} value={3} emptyStarColor={'transparent'} renderStarIcon={() => <FontAwesomeIcon className={'px-1'} icon={faStar} />} className={'position-static'} />
-                                            <span>3</span>
+                                            <StarRatingComponent starColor={'#FAC113'} editing={false} value={rating} emptyStarColor={'transparent'} renderStarIcon={() => <FontAwesomeIcon className={'px-1'} icon={faStar} />} className={'position-static'} />
+                                            {
+                                                rating !== 0 ?
+                                                    <span>{rating}</span>
+                                                :
+                                                    null
+                                            }
                                         </section>
                                     </div>
                                 </div>

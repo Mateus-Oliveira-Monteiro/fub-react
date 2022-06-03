@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from "react";
+import React, {useContext, useEffect, useReducer} from "react";
 import {useNavigate, useParams} from "react-router-dom"
 import "./perfil.scss";
 import {Container} from "react-bootstrap";
@@ -8,6 +8,7 @@ import {UsuarioContext} from "../../Contexts/UserContext";
 import { faStar, faPencil } from '@fortawesome/free-solid-svg-icons'
 import StarRatingComponent from "react-star-rating-component";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import myaxios from "../../Services/myaxios";
 
 function Perfil() {
 
@@ -18,7 +19,16 @@ function Perfil() {
 
     const { UserState } = useContext(UsuarioContext);
 
-    const { name, ratings, birthDate, occupation, city, state, district, description, imagePath } = UserState;
+    const userReducer = (state, action) => {
+        switch (action.type) {
+            case 'INICIALIZA':
+                return action.state;
+        }
+    }
+
+    const [user, dispatch] = useReducer(userReducer, UserState);
+
+    let { name, ratings, birthDate, occupation, city, state, district, description, imagePath } = user;
     const years = Math.floor((Date.now() - new Date(birthDate).getTime()) / 1000 / 60 / 60 / 24 / 365);
     let ratingStars = '';
     if (!!ratings && ratings.length !== 0) ratingStars = ratings.reduce((a, b) => a+b) / ratings.length
@@ -27,6 +37,30 @@ function Perfil() {
     const handleEdit = () => {
         navigate(`/perfil/edit/${UserState.id}`)
     }
+
+    useEffect(() => {
+
+        if(id) myaxios.get(`/user/${id}`)
+                .then(response => {
+                    const { name, ratings, birthDate, occupation, city, state, district, description, imagePath } = response.data;
+                    dispatch({
+                        type: 'INICIALIZA',
+                        state: {
+                            name,
+                            ratings,
+                            birthDate,
+                            occupation,
+                            city,
+                            state,
+                            district,
+                            description,
+                            imagePath,
+                        },
+                    });
+                });
+
+
+    }, []);
 
     return(
         <div id={'perfil'} className={'p-5 d-flex justify-content-center'}>

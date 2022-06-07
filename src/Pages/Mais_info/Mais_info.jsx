@@ -42,9 +42,8 @@ function Mais_info() {
     const getContract = () => {
         myaxios.get(`/contract/${id}`)
         .then(res => setContract(res.data))
-        .then(
-            () => myaxios.get(`/user/${employer.id}`)
-                .then(response => {
+        .then(myaxios.get(`/user/${employer.id}`)
+            .then(response => {
                     const {ratings} = response;
                     if (!!ratings && ratings.length !== 0) setRating(ratings.reduce((a, b) => a+b) / ratings.length);
                     else setRating(0);

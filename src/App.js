@@ -1,5 +1,5 @@
 import './App.css';
-import {Route, Routes, BrowserRouter} from "react-router-dom";
+import {Route, Routes, BrowserRouter, Outlet} from "react-router-dom";
 import Vagas from './Pages/Vagas/Vagas';
 import Home from './Pages/Home/Home';
 import Perfil from './Pages/Perfil/Perfil';
@@ -46,11 +46,13 @@ function App() {
               <Route path="/candidatar" element={<Candidatar />}/>
               <Route path="/avaliacao" element={<Avaliacao />}/>
               <Route path="/cupom/:id" element={<Cupom />}/> 
+              <Route path="*" element={<h2>Página não encontrada</h2>}/> 
               </>
-              : <Route index element={<Login />}/> }
+              : <Route exact index element={<Login />}/> }
   
                 
             </Routes>
+            <Outlet />
       </BrowserRouter>
     );
 }

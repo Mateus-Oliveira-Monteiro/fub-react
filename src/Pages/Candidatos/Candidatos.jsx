@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {Link, useParams} from "react-router-dom"
+import {Link, useParams, useNavigate} from "react-router-dom"
 import "./candidatos.scss";
 import {InterestedEmployee} from "../../Components/InterestedEmployee";
 import myaxios from "../../Services/axios";
@@ -9,6 +9,7 @@ import myaxios from "../../Services/axios";
 const Candidatos = props => {
 
     const { id } = useParams();
+    const navigate = useNavigate();
 
     const [contract, setContract] = useState({
         title: '',
@@ -19,7 +20,7 @@ const Candidatos = props => {
         employer: '',
     });
 
-    const { title, description, proposedValue, interested, statusContract, employer, employee } = contract;
+    const { title, description, proposedValue, interested, statusContract, employer, employee, generatedCoupon } = contract;
 
     const getContract = () => {
         myaxios.get(`/contract/${id}`)
@@ -36,10 +37,6 @@ const Candidatos = props => {
     useEffect(() => {
         getContract()
     }, [])
-
-    useEffect(() => {
-        console.log(interested)
-    }, [interested])
 
     return (
         <div id={'candidatos'} className={''}>
@@ -58,6 +55,10 @@ const Candidatos = props => {
                                 R$ { proposedValue }
                             </span>
                         </div>
+                        { generatedCoupon ? 
+                        <button onClick={(e) => navigate(`/cupom/${id}`)}>ver cupom</button> 
+                        : 
+                        <button>criar cupom</button> }
                     </div>
                 </section>
 

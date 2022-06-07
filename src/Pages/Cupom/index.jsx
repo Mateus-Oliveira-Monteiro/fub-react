@@ -7,10 +7,14 @@ import Moment from 'react-moment';
 const Cupom = () => {
     const { id } = useParams();
     const [ coupon, setCoupon ] = useState(null);
+    const [contract, setContract] = useState(null)
 
     const getCoupon = () => {
         myaxios.get(`/coupon/contract/${id}`)
             .then(res => setCoupon(res.data[0]))
+            .catch((error) => alert(error))
+        myaxios.get(`/contract/${id}`)
+            .then(res => setContract(res.data))
             .catch((error) => alert(error))
     }
 
@@ -36,13 +40,13 @@ const Cupom = () => {
             </div>
             <div className="cupom-sobre">
                 <div className="cupom-detalhes">
-                    {/* Bico: {coupon.contract.title} */}
+                    Bico: {contract.title}
                 </div>
                 <div className="cupom-detalhes">
-                    {/* Contratante: {contract.employer.name} */}
+                    Contratante: {contract.employer.name}
                 </div>
                 <div className="cupom-detalhes">
-                    {/* Contratado: {contract.employer.name} */}
+                    Contratado: {contract.employee.name}
                 </div>
                 <div className="cupom-detalhes">
                     Preço: { coupon.value.toLocaleString('pt-BR', { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' }) }
@@ -53,7 +57,7 @@ const Cupom = () => {
             </div>
         </div>
         <div className="cupom-espaco">
-            
+
         </div>
         <a href="" className="cupom-botao">
             <strong>EXCLUIR CUPOM</strong>

@@ -40,7 +40,6 @@ const Candidatos = props => {
 
     return (
         <div id={'candidatos'} className={''}>
-
             <main className={'w-100 p-5'}>
 
                 <section className={'row'}>
@@ -55,7 +54,7 @@ const Candidatos = props => {
                                 R$ { proposedValue }
                             </span>
                         </div>
-                        { generatedCoupon ? 
+                        { !employee || generatedCoupon ? 
                         <button onClick={(e) => navigate(`/cupom/${id}`)}>ver cupom</button> 
                         : 
                         <button>criar cupom</button> }
@@ -65,7 +64,7 @@ const Candidatos = props => {
                 <section>
                     {
                         interested[0] ?
-                            interested.map(interested => interested.id === employee.id ||
+                            interested.map(interested => employee.id !== null && interested.id === employee.id ||
                             <InterestedEmployee contract={id} interested={interested.id} />)
                         :
                             <span style={{ fontWeight: 400, fontSize: '1.8rem' }}>Não há interessados</span>
@@ -82,7 +81,6 @@ const Candidatos = props => {
                 </section>
 
             </main>
-
         </div>
     )
 }

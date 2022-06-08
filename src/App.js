@@ -19,6 +19,7 @@ import {useReloadLogin} from "./Hooks/useReloadLogin";
 import EditPerfil from "./Pages/EditPerfil";
 import {useContext} from 'react'
 import { UsuarioContext } from './Contexts/UserContext';
+import EditCupom from './Components/EditCupom';
 
 function App() {
   const { login } = useContext(UsuarioContext);
@@ -46,6 +47,7 @@ function App() {
               <Route path="/candidatar" element={<Candidatar />}/>
               <Route path="/avaliacao" element={<Avaliacao />}/>
               <Route path="/cupom/:id" element={<Cupom />}/> 
+              <Route path="/editcupom/:id" element={<EditCupom />}/> 
               <Route path="*" element={<h2>Página não encontrada</h2>}/> 
               </>
               : <Route exact index element={<Login />}/> }

@@ -64,7 +64,7 @@ const Candidatos = props => {
                 <section>
                     {
                         interested[0] ?
-                            interested.map(interested => employee.id !== null && interested.id === employee.id ||
+                            interested.map(interested => !!employee ||
                             <InterestedEmployee contract={id} interested={interested.id} />)
                         :
                             <span style={{ fontWeight: 400, fontSize: '1.8rem' }}>Não há interessados</span>

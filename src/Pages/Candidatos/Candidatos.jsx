@@ -54,10 +54,10 @@ const Candidatos = props => {
                                 R$ { proposedValue }
                             </span>
                         </div>
-                        { !employee || generatedCoupon ? 
+                        { generatedCoupon ? 
                         <button onClick={(e) => navigate(`/cupom/${id}`)}>ver cupom</button> 
                         : 
-                        <button>criar cupom</button> }
+                            <button onClick={(e) => navigate(`/editcupom/${id}`)}>criar cupom</button> }
                     </div>
                 </section>
 

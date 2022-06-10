@@ -19,7 +19,7 @@ import {useReloadLogin} from "./Hooks/useReloadLogin";
 import EditPerfil from "./Pages/EditPerfil";
 import {useContext} from 'react'
 import { UsuarioContext } from './Contexts/UserContext';
-import EditCupom from './Components/EditCupom';
+import EditCoupon from './Pages/EditCoupon';
 
 function App() {
   const { login } = useContext(UsuarioContext);
@@ -32,7 +32,6 @@ function App() {
             <Routes>{
               login ? <> 
               
-              <Route path="/registrar" element={<Registrar />} />
               <Route path={'/home'} element={<Home />}/>
               <Route path="/vagas" element={<Vagas />}/>
               <Route path="/notificacoes" element={<Notificacoes />}/>
@@ -47,10 +46,11 @@ function App() {
               <Route path="/candidatar" element={<Candidatar />}/>
               <Route path="/avaliacao" element={<Avaliacao />}/>
               <Route path="/cupom/:id" element={<Cupom />}/> 
-              <Route path="/editcupom/:id" element={<EditCupom />}/> 
+              <Route path="/editcupom/:id" element={<EditCoupon />}/> 
               <Route path="*" element={<h2>Página não encontrada</h2>}/> 
               </>
-              : <Route exact index element={<Login />}/> }
+              : <><Route exact index element={<Login />}/> 
+              <Route path="/registrar" element={<Registrar />} /></> }
   
                 
             </Routes>

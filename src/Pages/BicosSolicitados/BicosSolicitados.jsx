@@ -19,7 +19,7 @@ function BicosSolicitados() {
 
     useEffect(() => {
         getContracts()
-    }, [contracts])
+    }, [])
 
   return (
       <div id={'vagas'}>

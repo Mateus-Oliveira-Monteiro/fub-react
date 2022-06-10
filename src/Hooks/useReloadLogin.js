@@ -2,7 +2,6 @@ import {useContext, useEffect} from "react";
 import {UsuarioContext} from "../Contexts/UserContext";
 import jwtDecode from "jwt-decode";
 import axios from "../Services/axios";
-import { useNavigate } from "react-router";
 
 export const useReloadLogin = () => {
 

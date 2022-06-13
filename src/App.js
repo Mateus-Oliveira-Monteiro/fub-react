@@ -23,11 +23,11 @@ import EditCoupon from './Pages/EditCoupon';
 
 function App() {
   const { login } = useContext(UsuarioContext);
-    //const logado = useSelector(state => state.logado);
-    useReloadLogin();
-
-    return (
-      <BrowserRouter>
+  //const logado = useSelector(state => state.logado);
+  useReloadLogin();
+  
+  return (
+    <BrowserRouter>
       { login ? <Navbar /> : null }
             <Routes>{
               login ? <> 

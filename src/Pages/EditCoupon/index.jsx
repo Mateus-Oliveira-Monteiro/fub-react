@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import myaxios from '../../Services/myaxios';
+import "./editCupom.scss";
 
 const EditCoupon = () => {
     const { id } = useParams();
@@ -31,10 +32,10 @@ const EditCoupon = () => {
     
 
   return (
-    <div>
-      <input type="date" onChange={(e) => setDeadline(e.target.value)} />
-      {value ? <span>{ value }</span> : "cu"}
-      <button onClick={(e) => createCoupon}>Criar cupom</button>
+    <div className={'d-flex flex-column align-items-center px-5 campo-edit-coupon'} >
+      <h1 className={'mt-5'}><label htmlFor="deadline">Insira o prazo do seu bico</label></h1>
+      <input id="deadline" type="date" className={'mt-3'} onChange={(e) => setDeadline(e.target.value)} />
+      <button onClick={(e) => createCoupon} className={'mt-3'} >Criar cupom</button>
     </div>
   )
 }

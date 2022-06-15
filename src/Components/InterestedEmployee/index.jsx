@@ -61,10 +61,10 @@ export const InterestedEmployee = props => {
             </div>
 
             <div className={'d-flex align-items-center flex-row'}>
-                    <button onClick={() => navigate(`/perfil/${id}`)} className={'flex-fill bg-primary bg-opacity-75 text-light border-0'}>Ver Perfil</button>
+                    <button onClick={() => navigate(`/perfil/${id}`)} className={'flex-fill bg-opacity-75 text-light border-0'}>Ver Perfil</button>
                 {
                     !contratado ?
-                            <button onClick={handleContract} className={'flex-fill text-light bg-success border-0'}>Contratar</button>
+                            <button onClick={handleContract} className={'flex-fill text-light border-0'}>Contratar</button>
                     :
                         null
                 }

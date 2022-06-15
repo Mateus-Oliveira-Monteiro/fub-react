@@ -141,12 +141,13 @@
         height: 50px;
         width: 50px;
         border-radius: 10px;
-        background-color: red;
+        background-color: #070C3B;
+        transition: .2s;
         cursor: pointer;
     }
 
     .delete:hover {
-        background-color: yellow;
+        background-color: red;
     }
     
     #footerContracted {

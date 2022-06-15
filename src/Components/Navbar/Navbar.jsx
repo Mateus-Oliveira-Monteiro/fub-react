@@ -9,10 +9,10 @@ function Navbar() {
 
   return (
     <header>
-<div class="header">
+<div class="header d-flex justify-content-between flex-row">
         <Link to="/"><img src={logo} alt="logo" class="logo" /></Link>
-        <nav>
-            <ul className="nav">
+        <nav className='m-0 text-right'>
+            <ul className="nav d-flex justify-content-end mx-5">
                 <li><Link to="/vagas"><strong>Vagas</strong></Link>
                 <ul className="minimenu">
 	                <li><Link to="/vagas"><strong>Bicos Disponíveis</strong></Link></li>

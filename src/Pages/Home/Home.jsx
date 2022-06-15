@@ -1,7 +1,8 @@
 import React, {useContext, useEffect} from "react";
 import {Link} from "react-router-dom"
 import "./home.css";
-import image from '../../Assets/Images/imagem.jpg'
+import image1 from '../../Assets/Images/imagem.jpg'
+import image2 from '../../Assets/Images/carrossel.jpg'
 import logo from '../../Assets/Images/logo.png'
 import image9 from '../../Assets/Images/9.1.png'
 import jwtDecode from "jwt-decode";
@@ -17,11 +18,11 @@ function Home() {
             <>
                 <section className="carrossel">
                     <div className="imagens-home">
-                        <img src={image} alt="imagem1" />
-                        <img src={image} alt="imagem2" />
-                        <img src={image} alt="imagem3" />
-                        <img src={image} alt="imagem4" />
-                        <img src={image} alt="imagem5" />
+                        <img src={image1} alt="imagem1" />
+                        <img src={image2} alt="imagem2" />
+                        <img src={image1} alt="imagem3" />
+                        <img src={image2} alt="imagem4" />
+                        <img src={image1} alt="imagem5" />
                     </div>
                 </section>
                 <section>

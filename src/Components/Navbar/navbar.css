@@ -37,7 +37,7 @@ nav ul li a{
 }
 nav a:link, :visited{
     color: rgba(147, 85, 218, 0.924);
-    font-size: 3px;
+    font-size: 30px;
     display: inline-block;
     text-decoration: none;
 }

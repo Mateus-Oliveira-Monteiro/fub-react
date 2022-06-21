@@ -53,7 +53,9 @@ function EditPerfil() {
 
     const [ editUserFormState, dispatch ] = useReducer(EditUserReducer, INITIAL_STATE);
 
-    const { description, occupation, birthDate, city, district, state, name } = editUserFormState;
+    const { description, occupation, birthDate, city, district, state, } = editUserFormState;
+
+    const { name } = UserState;
 
     const handleChange = e => dispatch({
         type: 'ATUALIZA',
@@ -126,7 +128,7 @@ function EditPerfil() {
     return(
         <div id={'perfil'} className={'p-5 d-flex justify-content-center edit'}>
 
-            <Container id={'perfil-container'} className={'bg-white px-5 py-4 h-100 d-flex flex-column'}>
+            <Container id={'perfil-container'} className={'bg-white px-5 py-4 h-100 d-flex flex-column gap-3'}>
 
                 <div className={'row w-100 d-flex justify-content-between'}>
                     <span className={'col-5 row d-flex align-items-start flex-column'}>
@@ -144,18 +146,18 @@ function EditPerfil() {
                             </div>
                         </div>
 
-                        <div id={'perfil-location'} className={'d-flex flex-row justify-content-end gap-2'}>
-                            <div>
+                        <div id={'perfil-location'} className={'d-flex flex-row justify-content-end gap-4'}>
+                            <div className={'address'}>
+                                <small>Estado</small>
                                 <input className={'state'} onChange={handleChange} name={ 'state' } value={ state } maxLength={ 2 } type="text" />
-                            <small>Estado</small>
                             </div>
-                            <div>
+                            <div className={'address'}>
+                                <small>Cidade</small>
                                 <input onChange={handleChange} name={ 'city' } value={ city } type="text" />
-                            <small>Cidade</small>
                             </div>
-                            <div>
+                            <div className={'address'}>
+                                <small>Bairro</small>
                                 <input onChange={handleChange} name={ 'district' } value={ district } type="text" />
-                            <small>Bairro</small>
                             </div>
                         </div>
 

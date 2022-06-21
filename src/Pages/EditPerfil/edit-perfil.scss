@@ -9,6 +9,12 @@ $light-purple: #070C3B;
         text-transform: uppercase;
     }
 
+    .address {
+        display: flex;
+        align-items: center;
+        max-width: 19rem;
+    }
+
     small {
         font-size: 1rem;
         padding-right: 10px;
@@ -21,8 +27,10 @@ $light-purple: #070C3B;
         border-radius: 5px;
         border-width: 1px;
         border-color: #ccc;
+        background-color: #ffe;
         font: 500 1rem 'Roboto';
         color: $purple;
+        flex: 1 1;
 
         &:focus {
             border-width: 1px;
@@ -55,18 +63,11 @@ $light-purple: #070C3B;
         }
     }
 
-    #perfil-location {
-
-        input[type=text] {
-            width: auto;
-        }
-    }
-
     #image {
         //cursor: pointer;
         //transition: .2s;
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
 
         //&:hover {
         //    filter: brightness(50%);

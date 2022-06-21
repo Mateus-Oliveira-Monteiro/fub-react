@@ -36,7 +36,7 @@ export const NotificationItem = props => {
                 type: 'INICIALIZA',
                 state: {
                     time: Math.floor(minutes / 60 / 24),
-                    format: 'dia',
+                    format: 'dias',
                 },
             });
         } else if(minutes >= 60) {

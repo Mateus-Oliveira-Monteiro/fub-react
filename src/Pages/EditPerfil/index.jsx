@@ -95,9 +95,9 @@ function EditPerfil() {
             editUserFormState,
         )
             .then(response => {
-                console.log(response)
-                alert('Resolve')
-                window.location.href = 'http://localhost:3000/perfil'
+                console.log(response);
+                alert('Dados atualizados');
+                window.location.href = 'http://localhost:3000/perfil';
             })
             .catch(e => {
                 console.log(e)
@@ -157,7 +157,7 @@ function EditPerfil() {
                             </div>
                             <div className={'address'}>
                                 <small>Bairro</small>
-                                <input onChange={handleChange} name={ 'district' } value={ district } type="text" />
+                                <input className={'district'} onChange={handleChange} name={ 'district' } value={ district } type="text" />
                             </div>
                         </div>
 

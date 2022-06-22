@@ -7,17 +7,22 @@ $light-purple: #070C3B;
 
     .state {
         text-transform: uppercase;
+        width: 3rem;
+    }
+
+    .district {
+        width: 20rem;
     }
 
     .address {
         display: flex;
         align-items: center;
-        max-width: 19rem;
+        gap: 10px;
+        flex: 1;
     }
 
     small {
         font-size: 1rem;
-        padding-right: 10px;
         color: $purple;
         font-weight: 500;
     }
@@ -30,7 +35,6 @@ $light-purple: #070C3B;
         background-color: #ffe;
         font: 500 1rem 'Roboto';
         color: $purple;
-        flex: 1 1;
 
         &:focus {
             border-width: 1px;

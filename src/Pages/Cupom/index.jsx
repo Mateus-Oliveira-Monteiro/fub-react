@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import myaxios from "../../Services/axios";
 import './cupom.css'
-import Moment from 'react-moment';
 
 const Cupom = () => {
     const { id } = useParams();
@@ -52,7 +51,7 @@ const Cupom = () => {
                     Preço: { coupon.value.toLocaleString('pt-BR', { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' }) }
                 </div>
                 <div className="cupom-detalhes">
-                    Prazo: <Moment date={coupon.deadline} format="DD/MM/YYYY" />
+                    Prazo: 01/07/2022
                 </div>
             </div>
         </div>

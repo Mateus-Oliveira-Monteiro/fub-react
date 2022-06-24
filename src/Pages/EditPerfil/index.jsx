@@ -16,6 +16,8 @@ function EditPerfil() {
 
     const { UserState } = useContext(UsuarioContext);
 
+    const navigate = useNavigate();
+
     const EditUserReducer = (state, action) => {
 
         switch (action.type) {
@@ -97,7 +99,7 @@ function EditPerfil() {
             .then(response => {
                 console.log(response);
                 alert('Dados atualizados');
-                window.location.href = 'http://localhost:3000/perfil';
+                navigate('/perfil');
             })
             .catch(e => {
                 console.log(e)

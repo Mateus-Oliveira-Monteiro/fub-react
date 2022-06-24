@@ -55,9 +55,9 @@ const Candidatos = props => {
                             </span>
                         </div>
                         { generatedCoupon ? 
-                        <button onClick={(e) => navigate(`/cupom/${id}`)}>ver cupom</button> 
+                        <button className={'botao'} onClick={(e) => navigate(`/cupom/${id}`)}>ver cupom</button> 
                         : 
-                            <button onClick={(e) => navigate(`/editcupom/${id}`)}>criar cupom</button> }
+                            <button className={'botao'} onClick={(e) => navigate(`/editcupom/${id}`)}>criar cupom</button> }
                     </div>
                 </section>
 
